@@ -4,11 +4,7 @@
 
 默认ISO-8859-1，解析中文肯定出错
 
-<<<<<<< HEAD
-\#The encoding to be used if none is provided (default ISO-8859-1)
-=======
 \# The encoding to be used if none is provided (default ISO-8859-1)
->>>>>>> 2f7f6d13cd10b937b5394d221fef3e4a8e58de66
 
 \#sampleresult.default.encoding=ISO-8859-1
 
