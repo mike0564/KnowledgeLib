@@ -4,6 +4,7 @@
 默认ISO-8859-1，解析中文肯定出错
 
 \# The encoding to be used if none is provided (default ISO-8859-1)
+
 \#sampleresult.default.encoding=ISO-8859-1
 
 例如查看结果树中的中文为乱码，可以通过以下方式进行修改解决：
