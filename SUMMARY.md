@@ -10,5 +10,7 @@
         * [Jmeter压力测试案例http&socket](工具/Jmeter/Jmeter压力测试案例http&socket.md)
     * [Loadrunner](工具/Loadrunner/Loadrunner.md)
     * [Appium](工具/Appium/Appium.md)
+    * [Git](工具/Git/Git.md)
+        * [GitBook的基本使用方法](工具/Git/GitBook的基本使用方法.md)
 * [操作系统](操作系统/README.md)
 

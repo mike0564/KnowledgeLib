@@ -4,7 +4,7 @@
 
 默认ISO-8859-1，解析中文肯定出错
 
-\# The encoding to be used if none is provided (default ISO-8859-1)
+\#The encoding to be used if none is provided (default ISO-8859-1)
 
 \#sampleresult.default.encoding=ISO-8859-1
 
