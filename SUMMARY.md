@@ -7,6 +7,7 @@
         * [Jmeter查看结果数中的响应数据中文乱码](工具/Jmeter/Jmeter查看结果数中的响应数据中文乱码.md)
         * [Jmeter接口测试与压力测试](工具/Jmeter/Jmeter接口测试与压力测试.md)
         * [Jmeter压力测试简单教程](工具/Jmeter/Jmeter压力测试简单教程.md)
+        * [Jmeter使用自定义编写代码](工具/Jmeter/Jmeter使用自定义编写代码.md)
     * [Loadrunner](工具/Loadrunner/Loadrunner.md)
     * [Appium](工具/Appium/Appium.md)
     * [Git](工具/Git/Git.md)
