@@ -122,7 +122,7 @@ Markdown具有书写代码块(code block)的功能，而且可以为不同的语
 
 [简书](http://jianshu.io)
 
-在 Markdown 中，插入图片不需要其他按钮，你只需要使用 ![](图片链接地址) 这样的语法即可，例如：
+在 Markdown 中，插入图片不需要其他按钮，你只需要使用 \!\[](图片链接地址) 这样的语法即可，例如：
 
 \!\[](http://ww4.sinaimg.cn/bmiddle/aa397b7fjw1dzplsgpdw5j.jpg)
 
