@@ -17,3 +17,4 @@
     step1：指定请求节点下，新建后置控制器"BeanShell PostProcessor"
     step2：其脚本框中输入：prev.setDataEncoding("UTF-8");
     step3：保存
+![](./images/jmeter_01_01.png)

@@ -24,7 +24,11 @@
 
 登录 http://jmeter.apache.org/download_jmeter.cgi ，根据自己平台，下载对应文件
 
+![](./images/jmeter_03_01.png)
+
 历史版本下载地址：https://archive.apache.org/dist/jmeter/binaries/
+
+![](./images/jmeter_03_02.png)
 
 安装JDK，配置环境变量（具体步骤不做介绍）
 
@@ -55,6 +59,9 @@
 	/licenses目录——软件许可文件，不用管
 	/printable_docs目录——Jmeter用户手册
 
+![](./images/jmeter_03_03.png)
+![](./images/jmeter_03_04.png)
+
 ### Jmeter相关插件安装
 
 #### 插件安装
@@ -71,6 +78,7 @@
 	下载地址：https://jmeter-plugins.org/install/Install/
 	下载好之后，将该jar包放入到jmeter的安装路径下的 lib/ext 目录下，重启jmeter即可
 	Jmeter界面--Options--Plugins Manager
+![](./images/jmeter_03_05.png)
 
 常用插件推荐
 
