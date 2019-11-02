@@ -13,5 +13,6 @@
     * [Git](工具/Git/Git.md)
         * [GitBook的基本使用方法](工具/Git/GitBook的基本使用方法.md)
         * [Git插入图片](工具/Git/Git插入图片.md)
+        * [Git常用命令](工具/Git/Git常用命令.md)
+        * [Git常见报错与解决方案](工具/Git/Git常见报错与解决方案.md)
 * [操作系统](操作系统/README.md)
-
