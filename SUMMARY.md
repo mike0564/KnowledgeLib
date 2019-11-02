@@ -12,5 +12,6 @@
     * [Appium](工具/Appium/Appium.md)
     * [Git](工具/Git/Git.md)
         * [GitBook的基本使用方法](工具/Git/GitBook的基本使用方法.md)
+        * [Git插入图片](工具/Git/Git插入图片.md)
 * [操作系统](操作系统/README.md)
 
