@@ -14,6 +14,7 @@
         * [Jmeter参数变量中包含引号导致异常](工具/Jmeter/Jmeter参数变量中包含引号导致异常.md)
     * [Loadrunner](工具/Loadrunner/README.md)
     * [Appium](工具/Appium/README.md)
+        * [Appium之获取appPackage和appActivity](工具/Appium/Appium之获取appPackage和appActivity.md)
     * [Git](工具/Git/README.md)
         * [GitBook的基本使用方法](工具/Git/GitBook的基本使用方法.md)
         * [Git插入图片](工具/Git/Git插入图片.md)
