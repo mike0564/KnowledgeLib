@@ -8,6 +8,7 @@
         * [Jmeter接口测试与压力测试](工具/Jmeter/Jmeter接口测试与压力测试.md)
         * [Jmeter压力测试简单教程](工具/Jmeter/Jmeter压力测试简单教程.md)
         * [Jmeter使用自定义编写代码](工具/Jmeter/Jmeter使用自定义编写代码.md)
+        * [Jmeter参数化](工具/Jmeter/Jmeter参数化.md)
     * [Loadrunner](工具/Loadrunner/Loadrunner.md)
     * [Appium](工具/Appium/Appium.md)
     * [Git](工具/Git/Git.md)
