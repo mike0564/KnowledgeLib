@@ -31,3 +31,11 @@
 1.文件夹以及图片命名中不要用到空格和特殊字符
 
 2.将相对路径进行URL编码，URL编码链接http://tool.oschina.net/encode?type=4
+
+如果想改变图片的尺寸，可以通过代码标签
+
+\.<img src="url" width="300" height="450" />
+
+如果想改变图片居中
+
+\.<div align=center><img src="url" width="300" height="450" /></div>
