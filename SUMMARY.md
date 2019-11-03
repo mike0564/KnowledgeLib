@@ -23,7 +23,7 @@
         * [Git常见报错与解决方案](工具/Git/Git常见报错与解决方案.md)
 * [操作系统](操作系统/README.md)
     * [IOS](操作系统/IOS/README.md)
-        * [IOS模拟器命令xcrun simctl系列](操作系统/IOS/IOS模拟器命令xcrun simctl系列.md)
+        * [IOS模拟器命令xcrun_simctl系列](操作系统/IOS/IOS模拟器命令xcrun_simctl系列.md)
     * [Android](操作系统/Android/README.md)
         * [Android性能问题分析神器Systrace](操作系统/Android/Android性能问题分析神器Systrace.md)
     * [Windows](操作系统/Windows/README.md)
