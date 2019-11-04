@@ -92,3 +92,17 @@ Action()
 ![](./images/lr_06_01.png)
 此时，执行脚本后，发现在本地电脑D:\下载目录下生成下载文件，如图：
 ![](./images/lr_06_02.png)
+
+这个脚本如果在controller中直接进行性能测试的话，跟实际还是会有点差距的，由于实际业务场景里面各个用户都是选择不一样的报表进行导出，因此再对导出请求中的两个报表名进行关联，ord属性配置为参数，让vuser每次选择不一样的报表进行导出，例如：
+```
+web_reg_save_param_ex(
+"ParamName=CorrelationParameter_2",
+"LB=\">",
+"RB=",
+"Ordinal={报表行数}",
+SEARCH_FILTERS,
+"Scope=Body",
+"RequestUrl=*/CsgPlanDrawReportQuery.jsp*",
+LAST);
+```
+最后，就实现了报表模块中，针对各个不同报表执行导出操作并下载到本地的性能测试目的。
