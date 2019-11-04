@@ -20,6 +20,7 @@
         * [Loadrunner录制https协议](工具/Loadrunner/Loadrunner录制https协议.md)
         * [LoadrunnerVuser进程线程两种运行方式](工具/Loadrunner/LoadrunnerVuser进程线程两种运行方式.md)
         * [Loadrunner报错信息整理](工具/Loadrunner/Loadrunner报错信息整理.md)
+        * [Loadrunner经典面试题](工具/Loadrunner/Loadrunner经典面试题.md)
     * [Appium](工具/Appium/README.md)
         * [Appium之获取appPackage和appActivity](工具/Appium/Appium之获取appPackage和appActivity.md)
         * [AppiumAPI](工具/Appium/AppiumAPI.md)
