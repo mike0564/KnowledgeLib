@@ -8,7 +8,7 @@
 
 - default.cfg
 - default.usp
-- *.prm（将*的位置改为脚本的名字）
+- \*.prm（将\*的位置改为脚本的名字）
 
 再次运行脚本，可以正常运行
 
@@ -631,3 +631,23 @@ In order to get all the other options that go with the command, run mmdrv.exe fr
 ### 【问题】请问"int64这个类型,在LR中怎么表示"。我将一段C的代码放在LR中,LR不认int64这个类型,怎么解决?
 
 解决办法：把那段C代码做成DLL，然后在LR中调用。
+
+### 【问题】loadrunner运行场景时，用户卡在run状态，且退出时卡在gradual exiting状态
+
+原因分析：当你设置了集合点的脚本运行场景时，出现部分用户一直卡在run状态，当你没有设置集合点的脚本运行场景时，在用户退出是部分用户一直卡在gradual exiting状态，且出现错误step download timeout (120 seconds) has expired，以上这两种情况都是一个原因导致的，就是这些卡在run状态或者gradual exiting状态的用户线程已经卡死，一直无法完成本次迭代。
+
+解决办法：
+
+降低一个mmdrv进程的启动数量（mmdrv为loadrunner启动虚拟用户线程的进程，一个mmdrv进程默认启动50个线程）
+
+配置详情：
+
+进入loadrunner安装目录下\HP\LoadRunner\dat\protocols\目录，根据你脚本的协议找到对应的*.lrp文件
+
+如：web(http/html)协议选择http.lrp文件、Mobile协议选择Mobile.lrp文件
+
+使用文本方式打开对应的*.lrp文件
+
+找到文件中[Vugen]这一行，在这一行下方加入MaxThreadPerProcess=20，20表示每个进程启动20个线程，根据实际情况调整，也可是试试30。
+
+![](./images/lr_07_01.png)
