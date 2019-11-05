@@ -48,6 +48,7 @@
         * [Python3之sublime配置](语言/Python/Python3之sublime配置.md)
         * [Python自动监控启动进程](语言/Python/Python自动监控启动进程.md)
         * [Python实现对Linux服务器的监控](语言/Python/Python实现对Linux服务器的监控.md)
+        * [Python读写Excel文件](语言/Python/Python读写Excel文件.md)
     * [Java](语言/Java/README.md)
     * [C](语言/C/README.md)
         * [C生成身份证号](语言/C/C生成身份证号.md)
