@@ -46,6 +46,7 @@
 * [语言](语言/README.md)
     * [Python](语言/Python/README.md)
         * [Python3之sublime配置](语言/Python/Python3之sublime配置.md)
+        * [Python自动监控启动进程](语言/Python/Python自动监控启动进程.md)
     * [Java](语言/Java/README.md)
     * [C](语言/C/README.md)
         * [C生成身份证号](语言/C/C生成身份证号.md)
