@@ -32,3 +32,6 @@ no moduel named ‘selenium’
 Tools->Build System中选择刚才新建的python3后，使用command+shift+B执行即可。
 
 ![](./images/python_01_02.png)
+
+附：
+[download chromedriver](http://chromedriver.storage.googleapis.com/index.html)
