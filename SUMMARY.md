@@ -48,6 +48,7 @@
         * [Python3之sublime配置](语言/Python/Python3之sublime配置.md)
     * [Java](语言/Java/README.md)
     * [C](语言/C/README.md)
+        * [C生成身份证号](语言/C/C生成身份证号.md)
 * [数据库](数据库/README.md)
     * [Oracle](数据库/Oracle/README.md)
     * [Mysql](数据库/Mysql/README.md)
