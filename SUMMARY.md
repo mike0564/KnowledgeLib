@@ -54,6 +54,7 @@
         * [Python使用itchat调用调用微信接口](语言/Python/Python使用itchat调用调用微信接口.md)
         * [Python微信库itchat的用法](语言/Python/Python微信库itchat的用法.md)
     * [Java](语言/Java/README.md)
+        * [Java中hashcode相等两个类一定相等吗](语言/Java/Java中hashcode相等两个类一定相等吗.md)
     * [C](语言/C/README.md)
         * [C生成身份证号](语言/C/C生成身份证号.md)
 * [数据库](数据库/README.md)
