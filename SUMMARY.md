@@ -57,6 +57,7 @@
         * [Java中hashcode相等两个类一定相等吗](语言/Java/Java中hashcode相等两个类一定相等吗.md)
         * [Java之voliate,synchronized,AtomicInteger使用](语言/Java/Java之voliate,synchronized,AtomicInteger使用.md)
         * [Java内存溢出OOM异常完全指南](语言/Java/Java内存溢出OOM异常完全指南.md)
+        * [Java之JVM虚拟机GC](语言/Java/Java之JVM虚拟机GC.md)
     * [C](语言/C/README.md)
         * [C生成身份证号](语言/C/C生成身份证号.md)
 * [数据库](数据库/README.md)
