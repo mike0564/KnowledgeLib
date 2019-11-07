@@ -61,6 +61,7 @@
         * [Java之jvm性能调优工具jcmd](语言/Java/Java之jvm性能调优工具jcmd.md)
     * [C](语言/C/README.md)
         * [C生成身份证号](语言/C/C生成身份证号.md)
+        * [Linux下几款C++程序中的内存泄露检查工具](语言/C/Linux下几款C++程序中的内存泄露检查工具.md)
 * [数据库](数据库/README.md)
     * [Oracle](数据库/Oracle/README.md)
     * [Mysql](数据库/Mysql/README.md)
