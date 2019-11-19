@@ -74,4 +74,7 @@
         * [Mysql删除库中所有表的数据](数据库/Mysql/Mysql删除库中所有表的数据.md)
     * [DB2](数据库/DB2/README.md)
     * [Informix](数据库/Informix/README.md)
+* [应用](应用/README.md)
+    * [Nginx](应用/Nginx/README.md)
+        * [Nginx配置参数中文说明](应用/Nginx/Nginx配置参数中文说明.md)
 
