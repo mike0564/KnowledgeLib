@@ -71,6 +71,7 @@
     * [Oracle](数据库/Oracle/README.md)
     * [Mysql](数据库/Mysql/README.md)
         * [Mysql之MacOS安装mysqlclient](数据库/Mysql/Mysql之MacOS安装mysqlclient.md)
+        * [Mysql删除库中所有表的数据](数据库/Mysql/Mysql删除库中所有表的数据.md)
     * [DB2](数据库/DB2/README.md)
     * [Informix](数据库/Informix/README.md)
 
