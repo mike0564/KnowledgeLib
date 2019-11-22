@@ -42,6 +42,7 @@
     * [Windows](操作系统/Windows/README.md)
         * [Windows系统下TCP参数优化](操作系统/Windows/Windows系统下TCP参数优化.md)
         * [Windows通过ssh连接远程服务器](操作系统/Windows/Windows通过ssh连接远程服务器.md)
+        * [Windows中bat脚本延时执行](操作系统/Windows/Windows中bat脚本延时执行.md)
     * [Linux](操作系统/Linux/README.md)
         * [Linux使用SSH首次登陆无需确认](操作系统/Linux/Linux使用SSH首次登陆无需确认.md)
     * [AIX](操作系统/AIX/README.md)
