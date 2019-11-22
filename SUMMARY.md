@@ -47,6 +47,7 @@
         * [Linux使用SSH首次登陆无需确认](操作系统/Linux/Linux使用SSH首次登陆无需确认.md)
     * [AIX](操作系统/AIX/README.md)
     * [AS400](操作系统/AS400/README.md)
+        * [AS400常用命令](操作系统/AS400/AS400常用命令.md)
 * [语言](语言/README.md)
     * [Python](语言/Python/README.md)
         * [Python3之sublime配置](语言/Python/Python3之sublime配置.md)
