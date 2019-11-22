@@ -75,6 +75,7 @@
         * [Mysql之MacOS安装mysqlclient](数据库/Mysql/Mysql之MacOS安装mysqlclient.md)
         * [Mysql删除库中所有表的数据](数据库/Mysql/Mysql删除库中所有表的数据.md)
         * [数据库分库分表策略和分库分表后数据的查询](数据库/Mysql/数据库分库分表策略和分库分表后数据的查询.md)
+        * [MYSQL显示完整的processlist中info信息](数据库/Mysql/MYSQL显示完整的processlist中info信息.md)
     * [DB2](数据库/DB2/README.md)
     * [Informix](数据库/Informix/README.md)
 * [应用](应用/README.md)
