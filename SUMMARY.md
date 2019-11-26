@@ -82,4 +82,6 @@
 * [应用](应用/README.md)
     * [Nginx](应用/Nginx/README.md)
         * [Nginx配置参数中文说明](应用/Nginx/Nginx配置参数中文说明.md)
+    * [分布式](应用/分布式/README.md)
+        * [分布式架构知识体系](应用/分布式/分布式架构知识体系.md)
 
