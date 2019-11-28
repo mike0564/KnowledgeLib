@@ -78,6 +78,7 @@
         * [MYSQL显示完整的processlist中info信息](数据库/Mysql/MYSQL显示完整的processlist中info信息.md)
         * [MySQL高性能优化实战总结](数据库/Mysql/MySQL高性能优化实战总结.md)
     * [DB2](数据库/DB2/README.md)
+        * [DB2高危操作LOAD命令风险详解](数据库/DB2/DB2高危操作LOAD命令风险详解.md)
     * [Informix](数据库/Informix/README.md)
 * [应用](应用/README.md)
     * [Nginx](应用/Nginx/README.md)
