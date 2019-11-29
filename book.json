@@ -1,0 +1,20 @@
+{
+    "title": "KnowledgeLib",
+    "description": "对平时遇到的一些问题、知识进行记录总结",
+    "author": "Roboytim",
+    "language": "zh-hans",
+    "gitbook": "3.2.3",
+    "root": ".",
+    "links": {
+      "sidebar": {
+        "主页": "https://github.com/mike0564/KnowledgeLib",
+        "Github源码": "https://github.com/mike0564/KnowledgeLib"
+      }
+    },
+    "plugins": [
+        "-search",
+        "back-to-top-button",
+        "expandable-chapters-small",
+        "insert-logo"
+    ]
+  }
