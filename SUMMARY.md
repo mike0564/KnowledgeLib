@@ -49,6 +49,7 @@
     * [Linux](操作系统/Linux/README.md)
         * [Linux使用SSH首次登陆无需确认](操作系统/Linux/Linux使用SSH首次登陆无需确认.md)
         * [SSH常用命令](操作系统/Linux/SSH常用命令.md)
+        * [Linux中最常用的一套Sed技巧](操作系统/Linux/Linux中最常用的一套Sed技巧.md)
     * [AIX](操作系统/AIX/README.md)
     * [AS400](操作系统/AS400/README.md)
         * [AS400常用命令](操作系统/AS400/AS400常用命令.md)
