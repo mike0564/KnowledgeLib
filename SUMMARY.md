@@ -69,6 +69,7 @@
         * [Java之jvm性能调优工具jcmd](语言/Java/Java之jvm性能调优工具jcmd.md)
         * [使用Java编写Tuxedo应用](语言/Java/使用Java编写Tuxedo应用.md)
         * [JVM原理讲解和调优](语言/Java/JVM原理讲解和调优.md)
+        * [Java调优经验谈](语言/Java/Java调优经验谈.md)
     * [C](语言/C/README.md)
         * [C生成身份证号](语言/C/C生成身份证号.md)
         * [Linux下几款C++程序中的内存泄露检查工具](语言/C/Linux下几款C++程序中的内存泄露检查工具.md)
