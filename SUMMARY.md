@@ -62,7 +62,7 @@
         * [Python读写Excel文件](语言/Python/Python读写Excel文件.md)
         * [Python鲜为人知的语法](语言/Python/Python鲜为人知的语法.md)
         * [Python中matplotlib的颜色及线条控制](语言/Python/Python中matplotlib的颜色及线条控制.md)
-        * [Python使用itchat调用调用微信接口](语言/Python/Python使用itchat调用调用微信接口.md)
+        * [Python使用itchat调用微信接口](语言/Python/Python使用itchat调用微信接口.md)
         * [Python微信库itchat的用法](语言/Python/Python微信库itchat的用法.md)
     * [Java](语言/Java/README.md)
         * [Java中hashcode相等两个类一定相等吗](语言/Java/Java中hashcode相等两个类一定相等吗.md)

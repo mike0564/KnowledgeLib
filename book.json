@@ -12,9 +12,14 @@
       }
     },
     "plugins": [
-        "-search",
         "back-to-top-button",
         "expandable-chapters-small",
-        "insert-logo"
+        "chapter-fold",
+        "-lunr", 
+        "-search", 
+        "search-pro",
+        "emphasize",
+        "splitter",
+        "ancre-navigation"
     ]
   }

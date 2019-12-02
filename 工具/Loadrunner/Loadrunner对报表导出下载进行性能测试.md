@@ -41,6 +41,7 @@
 ### 4.关闭文件fclose(filedes); 
 
 代码如下：
+
 ```
 Action()
 {
@@ -48,30 +49,22 @@ Action()
     int flen;   //文件大小    
     long  filedes;   //响应数据内容大小
     char filename[1024];    //文件名
- 
 	web_set_max_html_param_len("90000000");  //设置最大长度
- 
 	web_reg_save_param("fcontent","LB=","RB=","Search=Body",LAST); //将响应信息存放到fcontent变量
- 
 	lr_start_transaction("导出");
- 
 	web_url("exportOrderExcel.shtml", 
-		"URL=http://10.201.60.110/receive-web/omsweb/fileController/exportOrderExcel.shtml?jsonData={%22initialEntry%22:null,%22eoorLogisticNo%22:null,%22createTimeStart%22:%222018-11-26%2000:00:00%22,%22createTimeEnd%22:%222018-11-26%2023:59:59%22,%22eoorWaybillNo%22:null,%22eoorProductName%22:null,%22eoorProductCode%22:null,%22eoorCustomerMonthlyCard%22:null,%22eoorRequireConsigneeTimeFm%22:null,%22eoorRequireConsigneeTimeTo%22:null,%22eoorStatusCode%22:null,%22eoorShipperCityAreaNo%22:null,"
-		"%22eoorDestinationCityAreaNo%22:null,%22eoorStationName%22:null,%22eoorStationCode%22:null,%22eoorWebsiteName%22:null,%22eoorWebsiteCode%22:null,%22eoorCustomerResource%22:null}&language=zh_cn", 
+		"URL=http://10.201.60.110/receive-web/omsweb/fileController/exportOrderExcel.shtml&language=zh_cn", 
 		"TargetFrame=", 
 		"Resource=1", 
 		"RecContentType=application/x-msdownload", 
 		"Referer=http://10.201.60.110/receive-web/security/public/index.html", 
 		"Snapshot=t38.inf", 
 		LAST);
- 
 	lr_end_transaction("导出", LR_AUTO);
- 
     flen = web_get_int_property(HTTP_INFO_DOWNLOAD_SIZE);    //获取响应中的文件长度
     strcpy(filename,"D:\\下载\\order_");      		 //生成随机的文件名称，便于并发
     strcat(filename,lr_eval_string("{Num}"));
     strcat(filename,".xlsx");
- 
     if(flen > 0){
         //以写方式打开文件  
         if((filedes = fopen(filename, "wb")) == NULL){
@@ -83,7 +76,6 @@ Action()
         //关闭文件
         fclose(filedes);
     }
- 
 	return 0;
 }
 ```
