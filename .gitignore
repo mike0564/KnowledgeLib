@@ -1,4 +1,5 @@
 ##ignore this file##
+/_book/
 /node_modules/
 .classpath
 .project

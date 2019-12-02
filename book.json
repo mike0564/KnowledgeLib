@@ -12,7 +12,6 @@
       }
     },
     "plugins": [
-        "back-to-top-button",
         "expandable-chapters-small",
         "chapter-fold",
         "code",
@@ -21,6 +20,23 @@
         "search-pro",
         "emphasize",
         "splitter",
-        "ancre-navigation"
-    ]
+        "ancre-navigation",
+        "-sharing", "sharing-plus"
+    ],
+    "pluginsConfig": {
+      "sharing": {
+           "douban": false,
+           "facebook": false,
+           "google": true,
+           "pocket": false,
+           "qq": false,
+           "qzone": true,
+           "twitter": false,
+           "weibo": true,
+        "all": [
+             "douban", "facebook", "google", "instapaper", "linkedin","twitter", "weibo", 
+             "messenger","qq", "qzone","viber","whatsapp"
+         ]
+     }
+  }
   }
