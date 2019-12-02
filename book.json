@@ -15,6 +15,7 @@
         "back-to-top-button",
         "expandable-chapters-small",
         "chapter-fold",
+        "code",
         "-lunr", 
         "-search", 
         "search-pro",
