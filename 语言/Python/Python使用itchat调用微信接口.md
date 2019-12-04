@@ -9,7 +9,10 @@ sudo pip install itchat
 ```
 
 ## 登录
-itchat.auto_login() 这种方法将会通过微信扫描二维码登录，但是这种登录的方式确实短时间的登录，并不会保留登录的状态，也就是下次登录时还是需要扫描二维码，如果加上hotReload==True,那么就会保留登录的状态，至少在后面的几次登录过程中不会再次扫描二维码，该参数生成一个静态文件itchat.pkl用于存储登录状态。
+
+`itchat.auto_login()`
+
+这种方法将会通过微信扫描二维码登录，但是这种登录的方式确实短时间的登录，并不会保留登录的状态，也就是下次登录时还是需要扫描二维码，如果加上hotReload==True,那么就会保留登录的状态，至少在后面的几次登录过程中不会再次扫描二维码，该参数生成一个静态文件itchat.pkl用于存储登录状态。
 
 退出及登录完成后调用的特定的方法
 
@@ -39,9 +42,10 @@ friends = itchat.get_friends(update=True)[0:]
 
 ### send
 
-send(msg="Text Message", toUserName=None)
+`send(msg="Text Message", toUserName=None)`
 
 #### 参数：
+
 - msg : 文本消息内容
 - @fil@path_to_file : 发送文件
 - @img@path_to_img : 发送图片
@@ -49,7 +53,9 @@ send(msg="Text Message", toUserName=None)
 - toUserName : 发送对象, 如果留空, 将发送给自己.
 
 #### 返回值
+
 True or False
+
 #### 实例代码
 ```
 # coding-utf-8
@@ -63,32 +69,40 @@ ithcat.send("@vid@%s" % '/tmp/test.mkv')
 
 ### send_msg
 
-send_msg(msg='Text Message', toUserName=None)
+`send_msg(msg='Text Message', toUserName=None)`
 
 #### 参数：
+
 - 其中的的msg是要发送的文本
 - toUserName是发送对象, 如果留空, 将发送给自己
 
 #### 返回值
+
 True or False
 
 #### 实例代码
+
 ```
 import itchat
 itchat.auto_login()
 itchat.send_msg("hello world.")
 ```
+
 ### send_file
-send_file(fileDir, toUserName=None) 
+
+`send_file(fileDir, toUserName=None) `
 
 #### 参数：
+
 - fileDir是文件路径, 当文件不存在时, 将打印无此文件的提醒。
 - toUserName是发送对象, 如果留空, 将发送给自己
 
 #### 返回值
+
 True or False
 
 #### 实例代码
+
 ```
 import itchat
 itchat.auto_login()
@@ -96,16 +110,20 @@ itchat.send_file("/tmp/test.txt")
 ```
 
 ### send_image
-send_image(fileDir, toUserName=None) 
+
+`send_image(fileDir, toUserName=None) `
 
 #### 参数：
+
 - fileDir是文件路径, 当文件不存在时, 将打印无此文件的提醒。
 - toUserName是发送对象, 如果留空, 将发送给自己
 
 #### 返回值
+
 True or False
 
 #### 实例代码
+
 ```
 import itchat
 itchat.auto_login()
@@ -113,13 +131,16 @@ itchat.send_img("/tmp/test.txt")
 ```
 
 ### send_video
-send_video(fileDir, toUserName=None)
+
+`send_video(fileDir, toUserName=None)`
 
 #### 参数：
+
 - fileDir是文件路径, 当文件不存在时, 将打印无此文件的提醒。
 - toUserName是发送对象, 如果留空, 将发送给自己
 
 #### 返回值
+
 True or False
 
 #### 实例代码
@@ -129,11 +150,15 @@ itchat.auto_login()
 itchat.send_video("/tmp/test.txt")
 ```
 ## 注册消息方法
+
 itchat 将根据接受到的消息类型寻找对应的已注册的方法。如果一个消息类型没有对应的注册方法, 该消息将会被舍弃。在运行过程中也可以动态注册方法, 注册方式与结果不变。
 
 ### 注册方法
+
 #### 不带具体对象注册
+
 将注册为普通消息的回复方法。
+
 ```
 import itchat
 from itchat.content import *
@@ -145,7 +170,9 @@ def simple_reply(msg):
 ```
 
 #### 带对象参数注册
+
 对应消息对象将调用该方法，其中isFriendChat表示好友之间，isGroupChat表示群聊，isMapChat表示公众号
+
 ```
 import itchat
 from itchat.content import *
@@ -194,10 +221,13 @@ def download_files(msg):
 #### 群消息
 
 增加了三个键值，如下：
+
 - isAt 判断是否 @ 本号
 - ActualNickName : 实际 NickName(昵称)
 - Content : 实际 Content
+
 #### 测试程序
+
 ```
 import itcaht
 from itchat.content import TEXT
@@ -217,7 +247,7 @@ itchat.run()
 
 ### 消息内容
 
-注意：所有的消息内容都是可以用键值对来访问的，如msg["FromUserName]就是查看发送者，itchat.search_friends(userName=msg['FromUserName'])['NickName']查看的是当发送者昵称
+`注意：所有的消息内容都是可以用键值对来访问的，如msg["FromUserName]就是查看发送者，itchat.search_friends(userName=msg['FromUserName'])['NickName']查看的是当发送者昵称`
 
 #### 一般消息
 
@@ -642,11 +672,17 @@ memberList = itchat.update_chatroom('@@abcdefg1234567', detailedMember=True)
 ```
 memberList = itchat.get_frients()[1:]
 # 创建群聊, topic 键值为群聊名称.
+
 chatroomUserName = itchat.create_chatroom(memberList, "test chatroom")
+
 # 删除群聊内的用户
+
 itchat.delete_member_from_chatroom(chatroomUserName, memberList[0])
+
 # 增加用户进入群聊.
+
 itchat.add_member_into_chatroom(chatroomUserName, memberList[0], useInvitation=False)
+
 ```
 
 ## 方法汇总
@@ -709,7 +745,7 @@ itchat.msg_register
 
 ## 实例
 
-下面是博主写的一个程序，该程序的主要功能是监控撤回消息，并且如果有消息撤回就会撤回的消息发送给你，以后再也不用担心看不到好友的撤回的消息了，由于注释写的很详细，因此这里就不在详细的讲解了，直接贴代码
+下面是写的一个程序，该程序的主要功能是监控撤回消息，并且如果有消息撤回就会撤回的消息发送给你，以后再也不用担心看不到好友的撤回的消息了，由于注释写的很详细，因此这里就不在详细的讲解了，直接贴代码
 
 代码
 
