@@ -81,6 +81,7 @@
         * [使用SSH远程连接发送命令](语言/Shell/使用SSH远程连接发送命令.md)
 * [数据库](数据库/README.md)
     * [Oracle](数据库/Oracle/README.md)
+        * [如何读懂AWR](数据库/Oracle/如何读懂AWR.md)
     * [Mysql](数据库/Mysql/README.md)
         * [Mysql之MacOS安装mysqlclient](数据库/Mysql/Mysql之MacOS安装mysqlclient.md)
         * [Mysql删除库中所有表的数据](数据库/Mysql/Mysql删除库中所有表的数据.md)
