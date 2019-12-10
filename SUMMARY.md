@@ -90,6 +90,7 @@
         * [MySQL高性能优化实战总结](数据库/Mysql/MySQL高性能优化实战总结.md)
         * [数据库原理](数据库/Mysql/数据库原理.md)
         * [Mysql数据库死锁监控](数据库/Mysql/Mysql数据库死锁监控.md)
+        * [Mysql锁表问题解决](数据库/Mysql/Mysql锁表问题解决.md)
     * [DB2](数据库/DB2/README.md)
         * [DB2高危操作LOAD命令风险详解](数据库/DB2/DB2高危操作LOAD命令风险详解.md)
     * [Informix](数据库/Informix/README.md)
