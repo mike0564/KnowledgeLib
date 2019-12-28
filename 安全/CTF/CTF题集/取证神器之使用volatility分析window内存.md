@@ -125,7 +125,7 @@ volatility -f mem.vmem --profile=WinXPSP2x86 memdump -p 1464 -D ./
 
 稍等片刻即可获得名叫1464.dmp的文件。
 
-##### 2.2 获得最终的flag
+##### 2.3 获得最终的flag
 
 这里就又需要使用到另外一款名叫Elcomsoft Forensic Disk Decryptor（Elcomsoft硬盘取证解密器，简称为EFDD）的工具了，目的是获取加密用的key和破解加密文件。这个工具目前只找到了win版的，mac下还未找到同类工具，没办法，只能上虚拟机了。（老规矩，自行百度下载，这个软件不难找）
 
