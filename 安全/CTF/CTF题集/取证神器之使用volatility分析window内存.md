@@ -119,7 +119,7 @@ TrueCrypy.exe是一款加密程序，而我们可以推出，suspicion为加密�
 ```
 #获取进程中的信息 -p 进程号（使用pslist查到的）-D dump文件保存路径
 volatility -f mem.vmem --profile=WinXPSP2x86 memdump -p 1464 -D ./
-#这里需要注意的是，并不是获取TrueCrypt进程的信息，而是explorer.exe进程的（explorer.exe是Windows程序管理器或者文件资源管理器，它用于管理Windows图形壳，包括桌面和文件管理）
+#这里需要注意的是，并不是获取TrueCrypt进程的信息，而是explorer.exe进程的（explorer.exe是Windows程序管理器或者文件资源管理器，它用于管理Windows图形壳，包括桌面和文件管理），估计这也是题目中是window，而不是windows的原因 - -！
 ```
 ![](images/2019-12-28-14-54-22.png)
 
