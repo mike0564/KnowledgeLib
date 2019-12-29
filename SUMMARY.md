@@ -123,4 +123,5 @@
             * [取证神器之使用volatility分析window内存](安全/CTF/CTF题集/取证神器之使用volatility分析window内存.md)
             * [图片隐写术pigs](安全/CTF/CTF题集/图片隐写术pigs.md)
             * [webshell流量分析](安全/CTF/CTF题集/webshell流量分析.md)
+            * [逆向工程之密码分析](安全/CTF/CTF题集/逆向工程之密码分析.md)
 
