@@ -124,4 +124,5 @@
             * [图片隐写术pigs](安全/CTF/CTF题集/图片隐写术pigs.md)
             * [webshell流量分析](安全/CTF/CTF题集/webshell流量分析.md)
             * [逆向工程之密码分析](安全/CTF/CTF题集/逆向工程之密码分析.md)
+            * [密码学之摩斯电码](安全/CTF/CTF题集/密码学之摩斯电码.md)
 
