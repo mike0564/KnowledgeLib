@@ -128,4 +128,5 @@
             * [逆向工程之阿拉丁神灯](安全/CTF/CTF题集/逆向工程之阿拉丁神灯.md)
             * [逆向工程easyflag](安全/CTF/CTF题集/逆向工程easyflag.md)
             * [密码学之md5](安全/CTF/CTF题集/密码学之md5.md)
+            * [图片隐写术之教练我想打CTF](安全/CTF/CTF题集/图片隐写术之教练我想打CTF.md)
 
