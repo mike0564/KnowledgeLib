@@ -1,0 +1,2581 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>MySQL高性能优化实战总结 · KnowledgeLib</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Roboytim">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ancre-navigation/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="数据库原理.html" />
+    
+    
+    <link rel="prev" href="MYSQL显示完整的processlist中info信息.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/mike0564/KnowledgeLib" target="_blank" class="custom-link">主页</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://github.com/mike0564/KnowledgeLib" target="_blank" class="custom-link">Github源码</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../工具/">
+            
+                <a href="../../工具/">
+            
+                    
+                    工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../工具/Jmeter/">
+            
+                <a href="../../工具/Jmeter/">
+            
+                    
+                    Jmeter
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../工具/Jmeter/Jmeter入门.html">
+            
+                <a href="../../工具/Jmeter/Jmeter入门.html">
+            
+                    
+                    Jmeter入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../工具/Jmeter/Jmeter查看结果数中的响应数据中文乱码.html">
+            
+                <a href="../../工具/Jmeter/Jmeter查看结果数中的响应数据中文乱码.html">
+            
+                    
+                    Jmeter查看结果数中的响应数据中文乱码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../../工具/Jmeter/Jmeter接口测试与压力测试.html">
+            
+                <a href="../../工具/Jmeter/Jmeter接口测试与压力测试.html">
+            
+                    
+                    Jmeter接口测试与压力测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../../工具/Jmeter/Jmeter压力测试简单教程.html">
+            
+                <a href="../../工具/Jmeter/Jmeter压力测试简单教程.html">
+            
+                    
+                    Jmeter压力测试简单教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="../../工具/Jmeter/Jmeter使用自定义编写代码.html">
+            
+                <a href="../../工具/Jmeter/Jmeter使用自定义编写代码.html">
+            
+                    
+                    Jmeter使用自定义编写代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6" data-path="../../工具/Jmeter/Jmeter参数化.html">
+            
+                <a href="../../工具/Jmeter/Jmeter参数化.html">
+            
+                    
+                    Jmeter参数化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.7" data-path="../../工具/Jmeter/Jmeter进行https协议的压测.html">
+            
+                <a href="../../工具/Jmeter/Jmeter进行https协议的压测.html">
+            
+                    
+                    Jmeter进行https协议的压测
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.8" data-path="../../工具/Jmeter/Jmeter之Non-GUIMode.html">
+            
+                <a href="../../工具/Jmeter/Jmeter之Non-GUIMode.html">
+            
+                    
+                    Jmeter之Non-GUIMode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.9" data-path="../../工具/Jmeter/Jmeter参数变量中包含引号导致异常.html">
+            
+                <a href="../../工具/Jmeter/Jmeter参数变量中包含引号导致异常.html">
+            
+                    
+                    Jmeter参数变量中包含引号导致异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.10" data-path="../../工具/Jmeter/Jmeter和Ant的html报告优化及DashboardReport介绍.html">
+            
+                <a href="../../工具/Jmeter/Jmeter和Ant的html报告优化及DashboardReport介绍.html">
+            
+                    
+                    Jmeter和Ant的html报告优化及DashboardReport介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.11" data-path="../../工具/Jmeter/JMeter+Ant安装配置使用.html">
+            
+                <a href="../../工具/Jmeter/JMeter+Ant安装配置使用.html">
+            
+                    
+                    JMeter+Ant安装配置使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../工具/Loadrunner/">
+            
+                <a href="../../工具/Loadrunner/">
+            
+                    
+                    Loadrunner
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../../工具/Loadrunner/Loadrunner解决HTTP请求中传参的BASE64加密方法.html">
+            
+                <a href="../../工具/Loadrunner/Loadrunner解决HTTP请求中传参的BASE64加密方法.html">
+            
+                    
+                    Loadrunner解决HTTP请求中传参的BASE64加密方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../../工具/Loadrunner/Loadrunner安装后启动慢的解决方法.html">
+            
+                <a href="../../工具/Loadrunner/Loadrunner安装后启动慢的解决方法.html">
+            
+                    
+                    Loadrunner安装后启动慢的解决方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../../工具/Loadrunner/Loadrunner对字符串进行BASE64编码.html">
+            
+                <a href="../../工具/Loadrunner/Loadrunner对字符串进行BASE64编码.html">
+            
+                    
+                    Loadrunner对字符串进行BASE64编码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="../../工具/Loadrunner/Loadrunner使用JDBC执行sql对数据库进行压测.html">
+            
+                <a href="../../工具/Loadrunner/Loadrunner使用JDBC执行sql对数据库进行压测.html">
+            
+                    
+                    Loadrunner使用JDBC执行sql对数据库进行压测
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="../../工具/Loadrunner/Loadrunner录制https协议.html">
+            
+                <a href="../../工具/Loadrunner/Loadrunner录制https协议.html">
+            
+                    
+                    Loadrunner录制https协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" data-path="../../工具/Loadrunner/LoadrunnerVuser进程线程两种运行方式.html">
+            
+                <a href="../../工具/Loadrunner/LoadrunnerVuser进程线程两种运行方式.html">
+            
+                    
+                    LoadrunnerVuser进程线程两种运行方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.7" data-path="../../工具/Loadrunner/Loadrunner报错信息整理.html">
+            
+                <a href="../../工具/Loadrunner/Loadrunner报错信息整理.html">
+            
+                    
+                    Loadrunner报错信息整理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.8" data-path="../../工具/Loadrunner/Loadrunner经典面试题.html">
+            
+                <a href="../../工具/Loadrunner/Loadrunner经典面试题.html">
+            
+                    
+                    Loadrunner经典面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.9" data-path="../../工具/Loadrunner/Loadrunner对IBMMQ进行性能测试.html">
+            
+                <a href="../../工具/Loadrunner/Loadrunner对IBMMQ进行性能测试.html">
+            
+                    
+                    Loadrunner对IBMMQ进行性能测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.10" data-path="../../工具/Loadrunner/Loadrunner使用初探.html">
+            
+                <a href="../../工具/Loadrunner/Loadrunner使用初探.html">
+            
+                    
+                    Loadrunner使用初探
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.11" data-path="../../工具/Loadrunner/Loadrunner中浏览器仿真器的缓存设置.html">
+            
+                <a href="../../工具/Loadrunner/Loadrunner中浏览器仿真器的缓存设置.html">
+            
+                    
+                    Loadrunner中浏览器仿真器的缓存设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.12" data-path="../../工具/Loadrunner/Loadrunner对报表导出下载进行性能测试.html">
+            
+                <a href="../../工具/Loadrunner/Loadrunner对报表导出下载进行性能测试.html">
+            
+                    
+                    Loadrunner对报表导出下载进行性能测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.13" data-path="../../工具/Loadrunner/Loadrunner在Linux下安装负载机Generator.html">
+            
+                <a href="../../工具/Loadrunner/Loadrunner在Linux下安装负载机Generator.html">
+            
+                    
+                    Loadrunner在Linux下安装负载机Generator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.14" data-path="../../工具/Loadrunner/LR测试脚本开发WebService.html">
+            
+                <a href="../../工具/Loadrunner/LR测试脚本开发WebService.html">
+            
+                    
+                    LR测试脚本开发WebService
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../工具/Appium/">
+            
+                <a href="../../工具/Appium/">
+            
+                    
+                    Appium
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../../工具/Appium/Appium之获取appPackage和appActivity.html">
+            
+                <a href="../../工具/Appium/Appium之获取appPackage和appActivity.html">
+            
+                    
+                    Appium之获取appPackage和appActivity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../../工具/Appium/AppiumAPI.html">
+            
+                <a href="../../工具/Appium/AppiumAPI.html">
+            
+                    
+                    AppiumAPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../工具/Git/">
+            
+                <a href="../../工具/Git/">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../../工具/Git/GitBook的基本使用方法.html">
+            
+                <a href="../../工具/Git/GitBook的基本使用方法.html">
+            
+                    
+                    GitBook的基本使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../../工具/Git/Git插入图片.html">
+            
+                <a href="../../工具/Git/Git插入图片.html">
+            
+                    
+                    Git插入图片
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="../../工具/Git/Git常用命令.html">
+            
+                <a href="../../工具/Git/Git常用命令.html">
+            
+                    
+                    Git常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="../../工具/Git/Git常见报错与解决方案.html">
+            
+                <a href="../../工具/Git/Git常见报错与解决方案.html">
+            
+                    
+                    Git常见报错与解决方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.5" data-path="../../工具/Git/Gitbook插入表格.html">
+            
+                <a href="../../工具/Git/Gitbook插入表格.html">
+            
+                    
+                    Gitbook插入表格
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../工具/Prometheus/">
+            
+                <a href="../../工具/Prometheus/">
+            
+                    
+                    Prometheus
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="../../工具/Prometheus/Prometheus服务端部署.html">
+            
+                <a href="../../工具/Prometheus/Prometheus服务端部署.html">
+            
+                    
+                    Prometheus服务端部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="../../工具/Prometheus/Prometheus监控JVM.html">
+            
+                <a href="../../工具/Prometheus/Prometheus监控JVM.html">
+            
+                    
+                    Prometheus监控JVM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.3" data-path="../../工具/Prometheus/Prometheus监控MySQL数据库.html">
+            
+                <a href="../../工具/Prometheus/Prometheus监控MySQL数据库.html">
+            
+                    
+                    Prometheus监控MySQL数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.4" data-path="../../工具/Prometheus/Prometheus监控Oracle数据库.html">
+            
+                <a href="../../工具/Prometheus/Prometheus监控Oracle数据库.html">
+            
+                    
+                    Prometheus监控Oracle数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.5" data-path="../../工具/Prometheus/Prometheus监控Linux主机.html">
+            
+                <a href="../../工具/Prometheus/Prometheus监控Linux主机.html">
+            
+                    
+                    Prometheus监控Linux主机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.6" data-path="../../工具/Prometheus/Prometheus监控Windows主机.html">
+            
+                <a href="../../工具/Prometheus/Prometheus监控Windows主机.html">
+            
+                    
+                    Prometheus监控Windows主机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.7" data-path="../../工具/Prometheus/Prometheus监控容器.html">
+            
+                <a href="../../工具/Prometheus/Prometheus监控容器.html">
+            
+                    
+                    Prometheus监控容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../操作系统/">
+            
+                <a href="../../操作系统/">
+            
+                    
+                    操作系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../操作系统/IOS/">
+            
+                <a href="../../操作系统/IOS/">
+            
+                    
+                    IOS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../操作系统/IOS/IOS模拟器命令xcrun_simctl系列.html">
+            
+                <a href="../../操作系统/IOS/IOS模拟器命令xcrun_simctl系列.html">
+            
+                    
+                    IOS模拟器命令xcrun_simctl系列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../操作系统/Android/">
+            
+                <a href="../../操作系统/Android/">
+            
+                    
+                    Android
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../操作系统/Android/Android性能问题分析神器Systrace.html">
+            
+                <a href="../../操作系统/Android/Android性能问题分析神器Systrace.html">
+            
+                    
+                    Android性能问题分析神器Systrace
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../操作系统/Windows/">
+            
+                <a href="../../操作系统/Windows/">
+            
+                    
+                    Windows
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../../操作系统/Windows/Windows系统下TCP参数优化.html">
+            
+                <a href="../../操作系统/Windows/Windows系统下TCP参数优化.html">
+            
+                    
+                    Windows系统下TCP参数优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../../操作系统/Windows/Windows通过ssh连接远程服务器.html">
+            
+                <a href="../../操作系统/Windows/Windows通过ssh连接远程服务器.html">
+            
+                    
+                    Windows通过ssh连接远程服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../../操作系统/Windows/Windows中bat脚本延时执行.html">
+            
+                <a href="../../操作系统/Windows/Windows中bat脚本延时执行.html">
+            
+                    
+                    Windows中bat脚本延时执行
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../操作系统/Linux/">
+            
+                <a href="../../操作系统/Linux/">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../../操作系统/Linux/Linux使用SSH首次登陆无需确认.html">
+            
+                <a href="../../操作系统/Linux/Linux使用SSH首次登陆无需确认.html">
+            
+                    
+                    Linux使用SSH首次登陆无需确认
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="../../操作系统/Linux/SSH常用命令.html">
+            
+                <a href="../../操作系统/Linux/SSH常用命令.html">
+            
+                    
+                    SSH常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="../../操作系统/Linux/Linux中最常用的一套Sed技巧.html">
+            
+                <a href="../../操作系统/Linux/Linux中最常用的一套Sed技巧.html">
+            
+                    
+                    Linux中最常用的一套Sed技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.4" data-path="../../操作系统/Linux/Linux中sed命令完全攻略.html">
+            
+                <a href="../../操作系统/Linux/Linux中sed命令完全攻略.html">
+            
+                    
+                    Linux中sed命令完全攻略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.5" data-path="../../操作系统/Linux/CPULoad指标理解.html">
+            
+                <a href="../../操作系统/Linux/CPULoad指标理解.html">
+            
+                    
+                    CPULoad指标理解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.6" data-path="../../操作系统/Linux/Linux执行Shell脚本报语法错误.html">
+            
+                <a href="../../操作系统/Linux/Linux执行Shell脚本报语法错误.html">
+            
+                    
+                    Linux执行shell脚本报语法错误
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../操作系统/AIX/">
+            
+                <a href="../../操作系统/AIX/">
+            
+                    
+                    AIX
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../../操作系统/AS400/">
+            
+                <a href="../../操作系统/AS400/">
+            
+                    
+                    AS400
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.6.1" data-path="../../操作系统/AS400/AS400常用命令.html">
+            
+                <a href="../../操作系统/AS400/AS400常用命令.html">
+            
+                    
+                    AS400常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../语言/">
+            
+                <a href="../../语言/">
+            
+                    
+                    语言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../语言/Python/">
+            
+                <a href="../../语言/Python/">
+            
+                    
+                    Python
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../../语言/Python/Python3之sublime配置.html">
+            
+                <a href="../../语言/Python/Python3之sublime配置.html">
+            
+                    
+                    Python3之sublime配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../../语言/Python/Python自动监控启动进程.html">
+            
+                <a href="../../语言/Python/Python自动监控启动进程.html">
+            
+                    
+                    Python自动监控启动进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../../语言/Python/Python实现对Linux服务器的监控.html">
+            
+                <a href="../../语言/Python/Python实现对Linux服务器的监控.html">
+            
+                    
+                    Python实现对Linux服务器的监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../../语言/Python/Python读写Excel文件.html">
+            
+                <a href="../../语言/Python/Python读写Excel文件.html">
+            
+                    
+                    Python读写Excel文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../../语言/Python/Python鲜为人知的语法.html">
+            
+                <a href="../../语言/Python/Python鲜为人知的语法.html">
+            
+                    
+                    Python鲜为人知的语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../../语言/Python/Python中matplotlib的颜色及线条控制.html">
+            
+                <a href="../../语言/Python/Python中matplotlib的颜色及线条控制.html">
+            
+                    
+                    Python中matplotlib的颜色及线条控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../../语言/Python/Python使用itchat调用微信接口.html">
+            
+                <a href="../../语言/Python/Python使用itchat调用微信接口.html">
+            
+                    
+                    Python使用itchat调用微信接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../../语言/Python/Python微信库itchat的用法.html">
+            
+                <a href="../../语言/Python/Python微信库itchat的用法.html">
+            
+                    
+                    Python微信库itchat的用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../语言/Java/">
+            
+                <a href="../../语言/Java/">
+            
+                    
+                    Java
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../../语言/Java/Java中hashcode相等两个类一定相等吗.html">
+            
+                <a href="../../语言/Java/Java中hashcode相等两个类一定相等吗.html">
+            
+                    
+                    Java中hashcode相等两个类一定相等吗
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../../语言/Java/Java之voliate,synchronized,AtomicInteger使用.html">
+            
+                <a href="../../语言/Java/Java之voliate,synchronized,AtomicInteger使用.html">
+            
+                    
+                    Java之voliate,synchronized,AtomicInteger使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../../语言/Java/Java内存溢出OOM异常完全指南.html">
+            
+                <a href="../../语言/Java/Java内存溢出OOM异常完全指南.html">
+            
+                    
+                    Java内存溢出OOM异常完全指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../../语言/Java/Java之JVM虚拟机GC.html">
+            
+                <a href="../../语言/Java/Java之JVM虚拟机GC.html">
+            
+                    
+                    Java之JVM虚拟机GC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../../语言/Java/Java之jvm性能调优工具jcmd.html">
+            
+                <a href="../../语言/Java/Java之jvm性能调优工具jcmd.html">
+            
+                    
+                    Java之jvm性能调优工具jcmd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../../语言/Java/使用Java编写Tuxedo应用.html">
+            
+                <a href="../../语言/Java/使用Java编写Tuxedo应用.html">
+            
+                    
+                    使用Java编写Tuxedo应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.7" data-path="../../语言/Java/JVM原理讲解和调优.html">
+            
+                <a href="../../语言/Java/JVM原理讲解和调优.html">
+            
+                    
+                    JVM原理讲解和调优
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.8" data-path="../../语言/Java/Java调优经验谈.html">
+            
+                <a href="../../语言/Java/Java调优经验谈.html">
+            
+                    
+                    Java调优经验谈
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../语言/C/">
+            
+                <a href="../../语言/C/">
+            
+                    
+                    C
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../../语言/C/C生成身份证号.html">
+            
+                <a href="../../语言/C/C生成身份证号.html">
+            
+                    
+                    C生成身份证号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../../语言/C/Linux下几款C++程序中的内存泄露检查工具.html">
+            
+                <a href="../../语言/C/Linux下几款C++程序中的内存泄露检查工具.html">
+            
+                    
+                    Linux下几款C++程序中的内存泄露检查工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../语言/Shell/">
+            
+                <a href="../../语言/Shell/">
+            
+                    
+                    Shell
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../../语言/Shell/使用SSH远程连接发送命令.html">
+            
+                <a href="../../语言/Shell/使用SSH远程连接发送命令.html">
+            
+                    
+                    使用SSH远程连接发送命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../语言/Assembly-on-macOS-master/">
+            
+                <a href="../../语言/Assembly-on-macOS-master/">
+            
+                    
+                    汇编语言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" data-path="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（一）——引言.html">
+            
+                <a href="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（一）——引言.html">
+            
+                    
+                    macOS上的汇编入门（一）——引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2" data-path="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（二）——数学基础.html">
+            
+                <a href="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（二）——数学基础.html">
+            
+                    
+                    macOS上的汇编入门（二）——数学基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.3" data-path="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（三）——硬件基础.html">
+            
+                <a href="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（三）——硬件基础.html">
+            
+                    
+                    macOS上的汇编入门（三）——硬件基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.4" data-path="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（四）——操作系统基础.html">
+            
+                <a href="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（四）——操作系统基础.html">
+            
+                    
+                    macOS上的汇编入门（四）——操作系统基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.5" data-path="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（五）——第一个汇编程序.html">
+            
+                <a href="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（五）——第一个汇编程序.html">
+            
+                    
+                    macOS上的汇编入门（五）——第一个汇编程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.6" data-path="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（六）——汇编语言初识.html">
+            
+                <a href="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（六）——汇编语言初识.html">
+            
+                    
+                    macOS上的汇编入门（六）——汇编语言初识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.7" data-path="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（七）——字面量与局部变量.html">
+            
+                <a href="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（七）——字面量与局部变量.html">
+            
+                    
+                    macOS上的汇编入门（七）——字面量与局部变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.8" data-path="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（八）——寻址方式与全局变量.html">
+            
+                <a href="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（八）——寻址方式与全局变量.html">
+            
+                    
+                    macOS上的汇编入门（八）——寻址方式与全局变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.9" data-path="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（九）——跳转与函数.html">
+            
+                <a href="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（九）——跳转与函数.html">
+            
+                    
+                    macOS上的汇编入门（九）——跳转与函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.10" data-path="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（十）——再探函数.html">
+            
+                <a href="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（十）——再探函数.html">
+            
+                    
+                    macOS上的汇编入门（十）——再探函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.11" data-path="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（十一）——系统调用.html">
+            
+                <a href="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（十一）——系统调用.html">
+            
+                    
+                    macOS上的汇编入门（十一）——系统调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.12" data-path="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（十二）——调试.html">
+            
+                <a href="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（十二）——调试.html">
+            
+                    
+                    macOS上的汇编入门（十二）——调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.13" data-path="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（十三）——从编译到执行.html">
+            
+                <a href="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（十三）——从编译到执行.html">
+            
+                    
+                    macOS上的汇编入门（十三）——从编译到执行
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Oracle/">
+            
+                <a href="../Oracle/">
+            
+                    
+                    Oracle
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../Oracle/如何读懂AWR.html">
+            
+                <a href="../Oracle/如何读懂AWR.html">
+            
+                    
+                    如何读懂AWR
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Mysql
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="Mysql之MacOS安装mysqlclient.html">
+            
+                <a href="Mysql之MacOS安装mysqlclient.html">
+            
+                    
+                    Mysql之MacOS安装mysqlclient
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="Mysql删除库中所有表的数据.html">
+            
+                <a href="Mysql删除库中所有表的数据.html">
+            
+                    
+                    Mysql删除库中所有表的数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.3" data-path="数据库分库分表策略和分库分表后数据的查询.html">
+            
+                <a href="数据库分库分表策略和分库分表后数据的查询.html">
+            
+                    
+                    数据库分库分表策略和分库分表后数据的查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.4" data-path="MYSQL显示完整的processlist中info信息.html">
+            
+                <a href="MYSQL显示完整的processlist中info信息.html">
+            
+                    
+                    MYSQL显示完整的processlist中info信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.2.5" data-path="MySQL高性能优化实战总结.html">
+            
+                <a href="MySQL高性能优化实战总结.html">
+            
+                    
+                    MySQL高性能优化实战总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.6" data-path="数据库原理.html">
+            
+                <a href="数据库原理.html">
+            
+                    
+                    数据库原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.7" data-path="Mysql数据库死锁监控.html">
+            
+                <a href="Mysql数据库死锁监控.html">
+            
+                    
+                    Mysql数据库死锁监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.8" data-path="Mysql锁表问题解决.html">
+            
+                <a href="Mysql锁表问题解决.html">
+            
+                    
+                    Mysql锁表问题解决
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.9" data-path="MySql慢查询优化.html">
+            
+                <a href="MySql慢查询优化.html">
+            
+                    
+                    MySql慢查询优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../DB2/">
+            
+                <a href="../DB2/">
+            
+                    
+                    DB2
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../DB2/DB2高危操作LOAD命令风险详解.html">
+            
+                <a href="../DB2/DB2高危操作LOAD命令风险详解.html">
+            
+                    
+                    DB2高危操作LOAD命令风险详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../Informix/">
+            
+                <a href="../Informix/">
+            
+                    
+                    Informix
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../应用/">
+            
+                <a href="../../应用/">
+            
+                    
+                    应用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../应用/Nginx/">
+            
+                <a href="../../应用/Nginx/">
+            
+                    
+                    Nginx
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../../应用/Nginx/Nginx配置参数中文说明.html">
+            
+                <a href="../../应用/Nginx/Nginx配置参数中文说明.html">
+            
+                    
+                    Nginx配置参数中文说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../应用/分布式/">
+            
+                <a href="../../应用/分布式/">
+            
+                    
+                    分布式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../../应用/分布式/分布式架构知识体系.html">
+            
+                <a href="../../应用/分布式/分布式架构知识体系.html">
+            
+                    
+                    分布式架构知识体系
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../安全/">
+            
+                <a href="../../安全/">
+            
+                    
+                    安全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../安全/CTF/">
+            
+                <a href="../../安全/CTF/">
+            
+                    
+                    CTF
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="../../安全/CTF/CTF之隐写术破解.html">
+            
+                <a href="../../安全/CTF/CTF之隐写术破解.html">
+            
+                    
+                    CTF之隐写术破解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.2" data-path="../../安全/CTF/BMP图片分析.html">
+            
+                <a href="../../安全/CTF/BMP图片分析.html">
+            
+                    
+                    BMP图片分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.3" data-path="../../安全/CTF/Radare2使用全解.html">
+            
+                <a href="../../安全/CTF/Radare2使用全解.html">
+            
+                    
+                    Radare2使用全解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4" data-path="../../安全/CTF/CTF题集/">
+            
+                <a href="../../安全/CTF/CTF题集/">
+            
+                    
+                    CTF题集
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.4.1" data-path="../../安全/CTF/CTF题集/流量分析之文件简单提取.html">
+            
+                <a href="../../安全/CTF/CTF题集/流量分析之文件简单提取.html">
+            
+                    
+                    流量分析之文件简单提取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4.2" data-path="../../安全/CTF/CTF题集/取证神器之使用volatility分析window内存.html">
+            
+                <a href="../../安全/CTF/CTF题集/取证神器之使用volatility分析window内存.html">
+            
+                    
+                    取证神器之使用volatility分析window内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4.3" data-path="../../安全/CTF/CTF题集/图片隐写术pigs.html">
+            
+                <a href="../../安全/CTF/CTF题集/图片隐写术pigs.html">
+            
+                    
+                    图片隐写术pigs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4.4" data-path="../../安全/CTF/CTF题集/webshell流量分析.html">
+            
+                <a href="../../安全/CTF/CTF题集/webshell流量分析.html">
+            
+                    
+                    webshell流量分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4.5" data-path="../../安全/CTF/CTF题集/逆向工程之密码分析.html">
+            
+                <a href="../../安全/CTF/CTF题集/逆向工程之密码分析.html">
+            
+                    
+                    逆向工程之密码分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4.6" data-path="../../安全/CTF/CTF题集/密码学之摩斯电码.html">
+            
+                <a href="../../安全/CTF/CTF题集/密码学之摩斯电码.html">
+            
+                    
+                    密码学之摩斯电码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4.7" data-path="../../安全/CTF/CTF题集/逆向工程之阿拉丁神灯.html">
+            
+                <a href="../../安全/CTF/CTF题集/逆向工程之阿拉丁神灯.html">
+            
+                    
+                    逆向工程之阿拉丁神灯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4.8" data-path="../../安全/CTF/CTF题集/逆向工程easyflag.html">
+            
+                <a href="../../安全/CTF/CTF题集/逆向工程easyflag.html">
+            
+                    
+                    逆向工程easyflag
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4.9" data-path="../../安全/CTF/CTF题集/密码学之md5.html">
+            
+                <a href="../../安全/CTF/CTF题集/密码学之md5.html">
+            
+                    
+                    密码学之md5
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4.10" data-path="../../安全/CTF/CTF题集/图片隐写术之教练我想打CTF.html">
+            
+                <a href="../../安全/CTF/CTF题集/图片隐写术之教练我想打CTF.html">
+            
+                    
+                    图片隐写术之教练我想打CTF
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../测试/">
+            
+                <a href="../../测试/">
+            
+                    
+                    测试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../测试/非功能测试/">
+            
+                <a href="../../测试/非功能测试/">
+            
+                    
+                    非功能测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >MySQL高性能优化实战总结</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#mysql&#x9AD8;&#x6027;&#x80FD;&#x4F18;&#x5316;&#x5B9E;&#x6218;&#x603B;&#x7ED3;"><b></b>MySQL&#x9AD8;&#x6027;&#x80FD;&#x4F18;&#x5316;&#x5B9E;&#x6218;&#x603B;&#x7ED3;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4F18;&#x5316;&#x7684;&#x54F2;&#x5B66;"><b></b>&#x4F18;&#x5316;&#x7684;&#x54F2;&#x5B66;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4F18;&#x5316;&#x53EF;&#x80FD;&#x5E26;&#x6765;&#x7684;&#x95EE;&#x9898;&#xFF1A;"><b></b>&#x4F18;&#x5316;&#x53EF;&#x80FD;&#x5E26;&#x6765;&#x7684;&#x95EE;&#x9898;&#xFF1A;</a></li><li><span class="title-icon "></span><a href="#&#x4F18;&#x5316;&#x7684;&#x9700;&#x6C42;&#xFF1A;"><b></b>&#x4F18;&#x5316;&#x7684;&#x9700;&#x6C42;&#xFF1A;</a></li></ul><li><span class="title-icon "></span><a href="#&#x4F18;&#x5316;&#x601D;&#x8DEF;"><b></b>&#x4F18;&#x5316;&#x601D;&#x8DEF;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4F18;&#x5316;&#x4EC0;&#x4E48;"><b></b>&#x4F18;&#x5316;&#x4EC0;&#x4E48;</a></li><li><span class="title-icon "></span><a href="#&#x4F18;&#x5316;&#x7684;&#x8303;&#x56F4;&#x6709;&#x54EA;&#x4E9B;"><b></b>&#x4F18;&#x5316;&#x7684;&#x8303;&#x56F4;&#x6709;&#x54EA;&#x4E9B;</a></li><li><span class="title-icon "></span><a href="#&#x4F18;&#x5316;&#x7EF4;&#x5EA6;"><b></b>&#x4F18;&#x5316;&#x7EF4;&#x5EA6;</a></li><li><span class="title-icon "></span><a href="#&#x4F18;&#x5316;&#x9009;&#x62E9;&#xFF1A;"><b></b>&#x4F18;&#x5316;&#x9009;&#x62E9;&#xFF1A;</a></li></ul><li><span class="title-icon "></span><a href="#&#x4F18;&#x5316;&#x5DE5;&#x5177;&#x6709;&#x5565;"><b></b>&#x4F18;&#x5316;&#x5DE5;&#x5177;&#x6709;&#x5565;</a></li><ul><li><span class="title-icon "></span><a href="#&#x6570;&#x636E;&#x5E93;&#x5C42;&#x9762;"><b></b>&#x6570;&#x636E;&#x5E93;&#x5C42;&#x9762;</a></li><li><span class="title-icon "></span><a href="#&#x4E0D;&#x5E38;&#x7528;&#x4F46;&#x597D;&#x7528;&#x7684;-7-&#x4E2A;&#x5DE5;&#x5177;&#xFF1A;"><b></b>&#x4E0D;&#x5E38;&#x7528;&#x4F46;&#x597D;&#x7528;&#x7684; 7 &#x4E2A;&#x5DE5;&#x5177;&#xFF1A;</a></li></ul><li><span class="title-icon "></span><a href="#&#x6570;&#x636E;&#x5E93;&#x5C42;&#x9762;&#x95EE;&#x9898;&#x89E3;&#x51B3;&#x601D;&#x8DEF;"><b></b>&#x6570;&#x636E;&#x5E93;&#x5C42;&#x9762;&#x95EE;&#x9898;&#x89E3;&#x51B3;&#x601D;&#x8DEF;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5E38;&#x89C4;&#x8C03;&#x4F18;&#x601D;&#x8DEF;"><b></b>&#x5E38;&#x89C4;&#x8C03;&#x4F18;&#x601D;&#x8DEF;</a></li><li><span class="title-icon "></span><a href="#&#x7CFB;&#x7EDF;&#x5C42;&#x9762;"><b></b>&#x7CFB;&#x7EDF;&#x5C42;&#x9762;</a></li></ul><li><span class="title-icon "></span><a href="#&#x57FA;&#x7840;&#x4F18;&#x5316;"><b></b>&#x57FA;&#x7840;&#x4F18;&#x5316;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4F18;&#x5316;&#x601D;&#x8DEF;_1"><b></b>&#x4F18;&#x5316;&#x601D;&#x8DEF;</a></li><li><span class="title-icon "></span><a href="#&#x786C;&#x4EF6;&#x4F18;&#x5316;"><b></b>&#x786C;&#x4EF6;&#x4F18;&#x5316;</a></li><li><span class="title-icon "></span><a href="#&#x670D;&#x52A1;&#x5668;&#x786C;&#x4EF6;&#x4F18;&#x5316;"><b></b>&#x670D;&#x52A1;&#x5668;&#x786C;&#x4EF6;&#x4F18;&#x5316;</a></li><li><span class="title-icon "></span><a href="#&#x7CFB;&#x7EDF;&#x4F18;&#x5316;"><b></b>&#x7CFB;&#x7EDF;&#x4F18;&#x5316;</a></li><li><span class="title-icon "></span><a href="#&#x5E94;&#x7528;&#x4F18;&#x5316;"><b></b>&#x5E94;&#x7528;&#x4F18;&#x5316;</a></li><li><span class="title-icon "></span><a href="#&#x6570;&#x636E;&#x5E93;&#x53C2;&#x6570;&#x4F18;&#x5316;"><b></b>&#x6570;&#x636E;&#x5E93;&#x53C2;&#x6570;&#x4F18;&#x5316;</a></li></ul></ul></ul></div><a href="#mysql&#x9AD8;&#x6027;&#x80FD;&#x4F18;&#x5316;&#x5B9E;&#x6218;&#x603B;&#x7ED3;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="mysql&#x9AD8;&#x6027;&#x80FD;&#x4F18;&#x5316;&#x5B9E;&#x6218;&#x603B;&#x7ED3;"><a name="mysql&#x9AD8;&#x6027;&#x80FD;&#x4F18;&#x5316;&#x5B9E;&#x6218;&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#mysql&#x9AD8;&#x6027;&#x80FD;&#x4F18;&#x5316;&#x5B9E;&#x6218;&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>MySQL&#x9AD8;&#x6027;&#x80FD;&#x4F18;&#x5316;&#x5B9E;&#x6218;&#x603B;&#x7ED3;</h1>
+<p>MySQL &#x5BF9;&#x4E8E;&#x5F88;&#x591A; Linux &#x4ECE;&#x4E1A;&#x8005;&#x800C;&#x8A00;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x68D8;&#x624B;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x90FD;&#x662F;&#x56E0;&#x4E3A;&#x5BF9;&#x6570;&#x636E;&#x5E93;&#x51FA;&#x73B0;&#x95EE;&#x9898;&#x7684;&#x60C5;&#x51B5;&#x548C;&#x5904;&#x7406;&#x601D;&#x8DEF;&#x4E0D;&#x6E05;&#x6670;&#x3002;</p>
+<p>&#x5728;&#x8FDB;&#x884C; MySQL &#x7684;&#x4F18;&#x5316;&#x4E4B;&#x524D;&#x5FC5;&#x987B;&#x8981;&#x4E86;&#x89E3;&#x7684;&#x5C31;&#x662F; MySQL &#x7684;&#x67E5;&#x8BE2;&#x8FC7;&#x7A0B;&#xFF0C;&#x5F88;&#x591A;&#x7684;&#x67E5;&#x8BE2;&#x4F18;&#x5316;&#x5DE5;&#x4F5C;&#x5B9E;&#x9645;&#x4E0A;&#x5C31;&#x662F;&#x9075;&#x5FAA;&#x4E00;&#x4E9B;&#x539F;&#x5219;&#x8BA9; MySQL &#x7684;&#x4F18;&#x5316;&#x5668;&#x80FD;&#x591F;&#x6309;&#x7167;&#x9884;&#x60F3;&#x7684;&#x5408;&#x7406;&#x65B9;&#x5F0F;&#x8FD0;&#x884C;&#x800C;&#x5DF2;&#x3002;</p>
+<p>MySQL &#x67E5;&#x8BE2;&#x8FC7;&#x7A0B;</p>
+<h2 id="&#x4F18;&#x5316;&#x7684;&#x54F2;&#x5B66;"><a name="&#x4F18;&#x5316;&#x7684;&#x54F2;&#x5B66;" class="anchor-navigation-ex-anchor" href="#&#x4F18;&#x5316;&#x7684;&#x54F2;&#x5B66;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F18;&#x5316;&#x7684;&#x54F2;&#x5B66;</h2>
+<p>&#x6CE8;&#xFF1A;&#x4F18;&#x5316;&#x6709;&#x98CE;&#x9669;&#xFF0C;&#x4FEE;&#x6539;&#x9700;&#x8C28;&#x614E;&#x3002;</p>
+<h3 id="&#x4F18;&#x5316;&#x53EF;&#x80FD;&#x5E26;&#x6765;&#x7684;&#x95EE;&#x9898;&#xFF1A;"><a name="&#x4F18;&#x5316;&#x53EF;&#x80FD;&#x5E26;&#x6765;&#x7684;&#x95EE;&#x9898;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x4F18;&#x5316;&#x53EF;&#x80FD;&#x5E26;&#x6765;&#x7684;&#x95EE;&#x9898;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F18;&#x5316;&#x53EF;&#x80FD;&#x5E26;&#x6765;&#x7684;&#x95EE;&#x9898;&#xFF1A;</h3>
+<ul>
+<li>&#x4F18;&#x5316;&#x4E0D;&#x603B;&#x662F;&#x5BF9;&#x4E00;&#x4E2A;&#x5355;&#x7EAF;&#x7684;&#x73AF;&#x5883;&#x8FDB;&#x884C;&#xFF0C;&#x8FD8;&#x5F88;&#x53EF;&#x80FD;&#x662F;&#x4E00;&#x4E2A;&#x590D;&#x6742;&#x7684;&#x5DF2;&#x6295;&#x4EA7;&#x7684;&#x7CFB;&#x7EDF;&#x3002;</li>
+<li>&#x4F18;&#x5316;&#x624B;&#x6BB5;&#x672C;&#x6765;&#x5C31;&#x6709;&#x5F88;&#x5927;&#x7684;&#x98CE;&#x9669;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#x4F60;&#x6CA1;&#x80FD;&#x529B;&#x610F;&#x8BC6;&#x5230;&#x548C;&#x9884;&#x89C1;&#x5230;&#x3002;</li>
+<li>&#x4EFB;&#x4F55;&#x7684;&#x6280;&#x672F;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x4F46;&#x5FC5;&#x7136;&#x5B58;&#x5728;&#x5E26;&#x6765;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#x7684;&#x98CE;&#x9669;&#x3002;</li>
+<li>&#x5BF9;&#x4E8E;&#x4F18;&#x5316;&#x6765;&#x8BF4;&#x89E3;&#x51B3;&#x95EE;&#x9898;&#x800C;&#x5E26;&#x6765;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x63A7;&#x5236;&#x5728;&#x53EF;&#x63A5;&#x53D7;&#x7684;&#x8303;&#x56F4;&#x5185;&#x624D;&#x662F;&#x6709;&#x6210;&#x679C;&#x3002;</li>
+<li>&#x4FDD;&#x6301;&#x73B0;&#x72B6;&#x6216;&#x51FA;&#x73B0;&#x66F4;&#x5DEE;&#x7684;&#x60C5;&#x51B5;&#x90FD;&#x662F;&#x5931;&#x8D25;&#x3002;</li>
+</ul>
+<h3 id="&#x4F18;&#x5316;&#x7684;&#x9700;&#x6C42;&#xFF1A;"><a name="&#x4F18;&#x5316;&#x7684;&#x9700;&#x6C42;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x4F18;&#x5316;&#x7684;&#x9700;&#x6C42;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F18;&#x5316;&#x7684;&#x9700;&#x6C42;&#xFF1A;</h3>
+<ul>
+<li>&#x7A33;&#x5B9A;&#x6027;&#x548C;&#x4E1A;&#x52A1;&#x53EF;&#x6301;&#x7EED;&#x6027;&#xFF0C;&#x901A;&#x5E38;&#x6BD4;&#x6027;&#x80FD;&#x66F4;&#x91CD;&#x8981;&#x3002;</li>
+<li>&#x4F18;&#x5316;&#x4E0D;&#x53EF;&#x907F;&#x514D;&#x6D89;&#x53CA;&#x5230;&#x53D8;&#x66F4;&#xFF0C;&#x53D8;&#x66F4;&#x5C31;&#x6709;&#x98CE;&#x9669;&#x3002;</li>
+<li>&#x4F18;&#x5316;&#x4F7F;&#x6027;&#x80FD;&#x53D8;&#x597D;&#xFF0C;&#x7EF4;&#x6301;&#x548C;&#x53D8;&#x5DEE;&#x662F;&#x7B49;&#x6982;&#x7387;&#x4E8B;&#x4EF6;&#x3002;</li>
+<li>&#x5207;&#x8BB0;&#x4F18;&#x5316;&#xFF0C;&#x5E94;&#x8BE5;&#x662F;&#x5404;&#x90E8;&#x95E8;&#x534F;&#x540C;&#xFF0C;&#x5171;&#x540C;&#x53C2;&#x4E0E;&#x7684;&#x5DE5;&#x4F5C;&#xFF0C;&#x4EFB;&#x4F55;&#x5355;&#x4E00;&#x90E8;&#x95E8;&#x90FD;&#x4E0D;&#x80FD;&#x5BF9;&#x6570;&#x636E;&#x5E93;&#x8FDB;&#x884C;&#x4F18;&#x5316;&#x3002;</li>
+</ul>
+<p>&#x6240;&#x4EE5;&#x4F18;&#x5316;&#x5DE5;&#x4F5C;&#xFF0C;&#x662F;&#x7531;&#x4E1A;&#x52A1;&#x9700;&#x6C42;&#x9A71;&#x4F7F;&#x7684;&#xFF01;</p>
+<p>&#x4F18;&#x5316;&#x7531;&#x8C01;&#x53C2;&#x4E0E;&#xFF1F;&#x5728;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5E93;&#x4F18;&#x5316;&#x65F6;&#xFF0C;&#x5E94;&#x7531;&#x6570;&#x636E;&#x5E93;&#x7BA1;&#x7406;&#x5458;&#x3001;&#x4E1A;&#x52A1;&#x90E8;&#x95E8;&#x4EE3;&#x8868;&#x3001;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x67B6;&#x6784;&#x5E08;&#x3001;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;&#x4EBA;&#x5458;&#x3001;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x3001;&#x786C;&#x4EF6;&#x53CA;&#x7CFB;&#x7EDF;&#x7BA1;&#x7406;&#x5458;&#x3001;&#x5B58;&#x50A8;&#x7BA1;&#x7406;&#x5458;&#x7B49;&#xFF0C;&#x4E1A;&#x52A1;&#x76F8;&#x5173;&#x4EBA;&#x5458;&#x5171;&#x540C;&#x53C2;&#x4E0E;&#x3002; </p>
+<h2 id="&#x4F18;&#x5316;&#x601D;&#x8DEF;"><a name="&#x4F18;&#x5316;&#x601D;&#x8DEF;" class="anchor-navigation-ex-anchor" href="#&#x4F18;&#x5316;&#x601D;&#x8DEF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F18;&#x5316;&#x601D;&#x8DEF;</h2>
+<h3 id="&#x4F18;&#x5316;&#x4EC0;&#x4E48;"><a name="&#x4F18;&#x5316;&#x4EC0;&#x4E48;" class="anchor-navigation-ex-anchor" href="#&#x4F18;&#x5316;&#x4EC0;&#x4E48;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F18;&#x5316;&#x4EC0;&#x4E48;</h3>
+<p>&#x5728;&#x6570;&#x636E;&#x5E93;&#x4F18;&#x5316;&#x4E0A;&#x6709;&#x4E24;&#x4E2A;&#x4E3B;&#x8981;&#x65B9;&#x9762;&#xFF1A;</p>
+<ul>
+<li>&#x5B89;&#x5168;&#xFF1A;&#x6570;&#x636E;&#x53EF;&#x6301;&#x7EED;&#x6027;&#x3002;</li>
+<li>&#x6027;&#x80FD;&#xFF1A;&#x6570;&#x636E;&#x7684;&#x9AD8;&#x6027;&#x80FD;&#x8BBF;&#x95EE;&#x3002;</li>
+</ul>
+<h3 id="&#x4F18;&#x5316;&#x7684;&#x8303;&#x56F4;&#x6709;&#x54EA;&#x4E9B;"><a name="&#x4F18;&#x5316;&#x7684;&#x8303;&#x56F4;&#x6709;&#x54EA;&#x4E9B;" class="anchor-navigation-ex-anchor" href="#&#x4F18;&#x5316;&#x7684;&#x8303;&#x56F4;&#x6709;&#x54EA;&#x4E9B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F18;&#x5316;&#x7684;&#x8303;&#x56F4;&#x6709;&#x54EA;&#x4E9B;</h3>
+<h4 id="&#x5B58;&#x50A8;&#x3001;&#x4E3B;&#x673A;&#x548C;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x65B9;&#x9762;&#xFF1A;"><a name="&#x5B58;&#x50A8;&#x3001;&#x4E3B;&#x673A;&#x548C;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x65B9;&#x9762;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x5B58;&#x50A8;&#x3001;&#x4E3B;&#x673A;&#x548C;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x65B9;&#x9762;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B58;&#x50A8;&#x3001;&#x4E3B;&#x673A;&#x548C;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x65B9;&#x9762;&#xFF1A;</h4>
+<ul>
+<li>&#x4E3B;&#x673A;&#x67B6;&#x6784;&#x7A33;&#x5B9A;&#x6027;</li>
+<li>I/O &#x89C4;&#x5212;&#x53CA;&#x914D;&#x7F6E;</li>
+<li>Swap &#x4EA4;&#x6362;&#x5206;&#x533A;</li>
+<li>OS &#x5185;&#x6838;&#x53C2;&#x6570;&#x548C;&#x7F51;&#x7EDC;&#x95EE;&#x9898;</li>
+</ul>
+<h4 id="&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x65B9;&#x9762;&#xFF1A;"><a name="&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x65B9;&#x9762;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x65B9;&#x9762;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x65B9;&#x9762;&#xFF1A;</h4>
+<ul>
+<li>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7A33;&#x5B9A;&#x6027;</li>
+<li>SQL &#x8BED;&#x53E5;&#x6027;&#x80FD;</li>
+<li>&#x4E32;&#x884C;&#x8BBF;&#x95EE;&#x8D44;&#x6E90;</li>
+<li>&#x6027;&#x80FD;&#x6B20;&#x4F73;&#x4F1A;&#x8BDD;&#x7BA1;&#x7406;</li>
+<li>&#x8FD9;&#x4E2A;&#x5E94;&#x7528;&#x9002;&#x4E0D;&#x9002;&#x5408;&#x7528; MySQL</li>
+</ul>
+<h4 id="&#x6570;&#x636E;&#x5E93;&#x4F18;&#x5316;&#x65B9;&#x9762;&#xFF1A;"><a name="&#x6570;&#x636E;&#x5E93;&#x4F18;&#x5316;&#x65B9;&#x9762;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x636E;&#x5E93;&#x4F18;&#x5316;&#x65B9;&#x9762;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x636E;&#x5E93;&#x4F18;&#x5316;&#x65B9;&#x9762;&#xFF1A;</h4>
+<ul>
+<li>&#x5185;&#x5B58;</li>
+<li>&#x6570;&#x636E;&#x5E93;&#x7ED3;&#x6784;&#xFF08;&#x7269;&#x7406;&amp;&#x903B;&#x8F91;. </li>
+<li>&#x5B9E;&#x4F8B;&#x914D;&#x7F6E;</li>
+</ul>
+<p>&#x8BF4;&#x660E;&#xFF1A;&#x4E0D;&#x7BA1;&#x662F;&#x8BBE;&#x8BA1;&#x7CFB;&#x7EDF;&#x3001;&#x5B9A;&#x4F4D;&#x95EE;&#x9898;&#x8FD8;&#x662F;&#x4F18;&#x5316;&#xFF0C;&#x90FD;&#x53EF;&#x4EE5;&#x6309;&#x7167;&#x8FD9;&#x4E2A;&#x987A;&#x5E8F;&#x6267;&#x884C;&#x3002;</p>
+<h3 id="&#x4F18;&#x5316;&#x7EF4;&#x5EA6;"><a name="&#x4F18;&#x5316;&#x7EF4;&#x5EA6;" class="anchor-navigation-ex-anchor" href="#&#x4F18;&#x5316;&#x7EF4;&#x5EA6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F18;&#x5316;&#x7EF4;&#x5EA6;</h3>
+<p>&#x6570;&#x636E;&#x5E93;&#x4F18;&#x5316;&#x7EF4;&#x5EA6;&#x6709;&#x5982;&#x4E0B;&#x56DB;&#x4E2A;&#xFF1A;</p>
+<ul>
+<li>&#x786C;&#x4EF6;</li>
+<li>&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;</li>
+<li>&#x6570;&#x636E;&#x5E93;&#x8868;&#x7ED3;&#x6784;</li>
+<li>SQL &#x53CA;&#x7D22;&#x5F15;</li>
+</ul>
+<h3 id="&#x4F18;&#x5316;&#x9009;&#x62E9;&#xFF1A;"><a name="&#x4F18;&#x5316;&#x9009;&#x62E9;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x4F18;&#x5316;&#x9009;&#x62E9;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F18;&#x5316;&#x9009;&#x62E9;&#xFF1A;</h3>
+<ul>
+<li>&#x4F18;&#x5316;&#x6210;&#x672C;&#xFF1A;&#x786C;&#x4EF6;&gt;&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;&gt;&#x6570;&#x636E;&#x5E93;&#x8868;&#x7ED3;&#x6784;&gt;SQL &#x53CA;&#x7D22;&#x5F15;&#x3002;</li>
+<li>&#x4F18;&#x5316;&#x6548;&#x679C;&#xFF1A;&#x786C;&#x4EF6;&lt;&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;&lt;&#x6570;&#x636E;&#x5E93;&#x8868;&#x7ED3;&#x6784;&lt;SQL &#x53CA;&#x7D22;&#x5F15;&#x3002;</li>
+</ul>
+<h2 id="&#x4F18;&#x5316;&#x5DE5;&#x5177;&#x6709;&#x5565;"><a name="&#x4F18;&#x5316;&#x5DE5;&#x5177;&#x6709;&#x5565;" class="anchor-navigation-ex-anchor" href="#&#x4F18;&#x5316;&#x5DE5;&#x5177;&#x6709;&#x5565;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F18;&#x5316;&#x5DE5;&#x5177;&#x6709;&#x5565;</h2>
+<h3 id="&#x6570;&#x636E;&#x5E93;&#x5C42;&#x9762;"><a name="&#x6570;&#x636E;&#x5E93;&#x5C42;&#x9762;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x636E;&#x5E93;&#x5C42;&#x9762;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x636E;&#x5E93;&#x5C42;&#x9762;</h3>
+<p>&#x68C0;&#x67E5;&#x95EE;&#x9898;&#x5E38;&#x7528;&#x7684; 12 &#x4E2A;&#x5DE5;&#x5177;&#xFF1A;</p>
+<ul>
+<li>MySQL</li>
+<li>mysqladmin&#xFF1A;MySQL &#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x53EF;&#x8FDB;&#x884C;&#x7BA1;&#x7406;&#x64CD;&#x4F5C;</li>
+<li>mysqlshow&#xFF1A;&#x529F;&#x80FD;&#x5F3A;&#x5927;&#x7684;&#x67E5;&#x770B; shell &#x547D;&#x4EE4;</li>
+<li>SHOW [SESSION | GLOBAL] variables&#xFF1A;&#x67E5;&#x770B;&#x6570;&#x636E;&#x5E93;&#x53C2;&#x6570;&#x4FE1;&#x606F;</li>
+<li>SHOW [SESSION | GLOBAL] STATUS&#xFF1A;&#x67E5;&#x770B;&#x6570;&#x636E;&#x5E93;&#x7684;&#x72B6;&#x6001;&#x4FE1;&#x606F;</li>
+<li>information_schema&#xFF1A;&#x83B7;&#x53D6;&#x5143;&#x6570;&#x636E;&#x7684;&#x65B9;&#x6CD5;</li>
+<li>SHOW ENGINE INNODB STATUS&#xFF1A;Innodb &#x5F15;&#x64CE;&#x7684;&#x6240;&#x6709;&#x72B6;&#x6001;</li>
+<li>SHOW PROCESSLIST&#xFF1A;&#x67E5;&#x770B;&#x5F53;&#x524D;&#x6240;&#x6709;&#x8FDE;&#x63A5;&#x7684; session &#x72B6;&#x6001;</li>
+<li>explain&#xFF1A;&#x83B7;&#x53D6;&#x67E5;&#x8BE2;&#x8BED;&#x53E5;&#x7684;&#x6267;&#x884C;&#x8BA1;&#x5212;</li>
+<li>show index&#xFF1A;&#x67E5;&#x770B;&#x8868;&#x7684;&#x7D22;&#x5F15;&#x4FE1;&#x606F;</li>
+<li>slow-log&#xFF1A;&#x8BB0;&#x5F55;&#x6162;&#x67E5;&#x8BE2;&#x8BED;&#x53E5;</li>
+<li>mysqldumpslow&#xFF1A;&#x5206;&#x6790; slowlog &#x6587;&#x4EF6;&#x7684;&#x5DE5;&#x5177;</li>
+</ul>
+<h3 id="&#x4E0D;&#x5E38;&#x7528;&#x4F46;&#x597D;&#x7528;&#x7684;-7-&#x4E2A;&#x5DE5;&#x5177;&#xFF1A;"><a name="&#x4E0D;&#x5E38;&#x7528;&#x4F46;&#x597D;&#x7528;&#x7684;-7-&#x4E2A;&#x5DE5;&#x5177;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x4E0D;&#x5E38;&#x7528;&#x4F46;&#x597D;&#x7528;&#x7684;-7-&#x4E2A;&#x5DE5;&#x5177;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E0D;&#x5E38;&#x7528;&#x4F46;&#x597D;&#x7528;&#x7684; 7 &#x4E2A;&#x5DE5;&#x5177;&#xFF1A;</h3>
+<ul>
+<li>Zabbix&#xFF1A;&#x76D1;&#x63A7;&#x4E3B;&#x673A;&#x3001;&#x7CFB;&#x7EDF;&#x3001;&#x6570;&#x636E;&#x5E93;&#xFF08;&#x90E8;&#x7F72; Zabbix &#x76D1;&#x63A7;&#x5E73;&#x53F0;. </li>
+<li>pt-query-digest&#xFF1A;&#x5206;&#x6790;&#x6162;&#x65E5;&#x5FD7;</li>
+<li>MySQL slap&#xFF1A;&#x5206;&#x6790;&#x6162;&#x65E5;&#x5FD7;</li>
+<li>sysbench&#xFF1A;&#x538B;&#x529B;&#x6D4B;&#x8BD5;&#x5DE5;&#x5177;</li>
+<li>MySQL profiling&#xFF1A;&#x7EDF;&#x8BA1;&#x6570;&#x636E;&#x5E93;&#x6574;&#x4F53;&#x72B6;&#x6001;&#x5DE5;&#x5177;    </li>
+<li>Performance Schema&#xFF1A;MySQL &#x6027;&#x80FD;&#x72B6;&#x6001;&#x7EDF;&#x8BA1;&#x7684;&#x6570;&#x636E;</li>
+<li>workbench&#xFF1A;&#x7BA1;&#x7406;&#x3001;&#x5907;&#x4EFD;&#x3001;&#x76D1;&#x63A7;&#x3001;&#x5206;&#x6790;&#x3001;&#x4F18;&#x5316;&#x5DE5;&#x5177;&#xFF08;&#x6BD4;&#x8F83;&#x8D39;&#x8D44;&#x6E90;. </li>
+</ul>
+<h2 id="&#x6570;&#x636E;&#x5E93;&#x5C42;&#x9762;&#x95EE;&#x9898;&#x89E3;&#x51B3;&#x601D;&#x8DEF;"><a name="&#x6570;&#x636E;&#x5E93;&#x5C42;&#x9762;&#x95EE;&#x9898;&#x89E3;&#x51B3;&#x601D;&#x8DEF;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x636E;&#x5E93;&#x5C42;&#x9762;&#x95EE;&#x9898;&#x89E3;&#x51B3;&#x601D;&#x8DEF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x636E;&#x5E93;&#x5C42;&#x9762;&#x95EE;&#x9898;&#x89E3;&#x51B3;&#x601D;&#x8DEF;</h2>
+<p>&#x4E00;&#x822C;&#x5E94;&#x6025;&#x8C03;&#x4F18;&#x7684;&#x601D;&#x8DEF;&#xFF1A;&#x9488;&#x5BF9;&#x7A81;&#x7136;&#x7684;&#x4E1A;&#x52A1;&#x529E;&#x7406;&#x5361;&#x987F;&#xFF0C;&#x65E0;&#x6CD5;&#x8FDB;&#x884C;&#x6B63;&#x5E38;&#x7684;&#x4E1A;&#x52A1;&#x5904;&#x7406;&#xFF0C;&#x9700;&#x8981;&#x9A6C;&#x4E0A;&#x89E3;&#x51B3;&#x7684;&#x573A;&#x666F;&#x3002;</p>
+<pre><code>1&#x3001;show processlist
+2&#x3001;explain  select id ,name from stu where name=&apos;clsn&apos;; # ALL  id name age  sex
+   select id,name from stu  where id=2-1 &#x51FD;&#x6570; &#x7ED3;&#x679C;&#x96C6;&gt;30;
+   show index from table;
+3&#x3001;&#x901A;&#x8FC7;&#x6267;&#x884C;&#x8BA1;&#x5212;&#x5224;&#x65AD;&#xFF0C;&#x7D22;&#x5F15;&#x95EE;&#x9898;&#xFF08;&#x6709;&#x6CA1;&#x6709;&#x3001;&#x5408;&#x4E0D;&#x5408;&#x7406;. &#x6216;&#x8005;&#x8BED;&#x53E5;&#x672C;&#x8EAB;&#x95EE;&#x9898;
+4&#x3001;show status  like &apos;%lock%&apos;;    # &#x67E5;&#x8BE2;&#x9501;&#x72B6;&#x6001;
+   kill SESSION_ID;   # &#x6740;&#x6389;&#x6709;&#x95EE;&#x9898;&#x7684;session
+</code></pre><h3 id="&#x5E38;&#x89C4;&#x8C03;&#x4F18;&#x601D;&#x8DEF;"><a name="&#x5E38;&#x89C4;&#x8C03;&#x4F18;&#x601D;&#x8DEF;" class="anchor-navigation-ex-anchor" href="#&#x5E38;&#x89C4;&#x8C03;&#x4F18;&#x601D;&#x8DEF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E38;&#x89C4;&#x8C03;&#x4F18;&#x601D;&#x8DEF;</h3>
+<p>&#x9488;&#x5BF9;&#x4E1A;&#x52A1;&#x5468;&#x671F;&#x6027;&#x7684;&#x5361;&#x987F;&#xFF0C;&#x4F8B;&#x5982;&#x5728;&#x6BCF;&#x5929; 10-11 &#x70B9;&#x4E1A;&#x52A1;&#x7279;&#x522B;&#x6162;&#xFF0C;&#x4F46;&#x662F;&#x8FD8;&#x80FD;&#x591F;&#x4F7F;&#x7528;&#xFF0C;&#x8FC7;&#x4E86;&#x8FD9;&#x6BB5;&#x65F6;&#x95F4;&#x5C31;&#x597D;&#x4E86;&#x3002;</p>
+<ol>
+<li>&#x67E5;&#x770B;slowlog&#xFF0C;&#x5206;&#x6790;slowlog&#xFF0C;&#x5206;&#x6790;&#x51FA;&#x67E5;&#x8BE2;&#x6162;&#x7684;&#x8BED;&#x53E5;&#xFF1B;</li>
+<li>&#x6309;&#x7167;&#x4E00;&#x5B9A;&#x4F18;&#x5148;&#x7EA7;&#xFF0C;&#x4E00;&#x4E2A;&#x4E00;&#x4E2A;&#x6392;&#x67E5;&#x6240;&#x6709;&#x6162;&#x8BED;&#x53E5;&#xFF1B;</li>
+<li>&#x5206;&#x6790;top SQL&#xFF0C;&#x8FDB;&#x884C;explain&#x8C03;&#x8BD5;&#xFF0C;&#x67E5;&#x770B;&#x8BED;&#x53E5;&#x6267;&#x884C;&#x65F6;&#x95F4;&#xFF1B;</li>
+<li>&#x8C03;&#x6574;&#x7D22;&#x5F15;&#x6216;&#x8BED;&#x53E5;&#x672C;&#x8EAB;&#x3002;</li>
+</ol>
+<h3 id="&#x7CFB;&#x7EDF;&#x5C42;&#x9762;"><a name="&#x7CFB;&#x7EDF;&#x5C42;&#x9762;" class="anchor-navigation-ex-anchor" href="#&#x7CFB;&#x7EDF;&#x5C42;&#x9762;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7CFB;&#x7EDF;&#x5C42;&#x9762;</h3>
+<p>CPU&#x65B9;&#x9762;&#xFF1A;vmstat&#x3001;sar top&#x3001;htop&#x3001;nmon&#x3001;mpstat&#x3002;</p>
+<p>&#x5185;&#x5B58;&#xFF1A;free&#x3001;ps-aux&#x3002;</p>
+<p>IO &#x8BBE;&#x5907;&#xFF08;&#x78C1;&#x76D8;&#x3001;&#x7F51;&#x7EDC;. &#xFF1A;iostat&#x3001;ss&#x3001;netstat&#x3001;iptraf&#x3001;iftop&#x3001;lsof&#x3002;</p>
+<p>vmstat &#x547D;&#x4EE4;&#x8BF4;&#x660E;&#xFF1A;</p>
+<ul>
+<li>Procs&#xFF1A;r &#x663E;&#x793A;&#x6709;&#x591A;&#x5C11;&#x8FDB;&#x7A0B;&#x6B63;&#x5728;&#x7B49;&#x5F85; CPU &#x65F6;&#x95F4;&#x3002;b &#x663E;&#x793A;&#x5904;&#x4E8E;&#x4E0D;&#x53EF;&#x4E2D;&#x65AD;&#x7684;&#x4F11;&#x7720;&#x7684;&#x8FDB;&#x7A0B;&#x6570;&#x91CF;&#x3002;&#x5728;&#x7B49;&#x5F85; I/O&#x3002;</li>
+<li>Memory&#xFF1A;swpd &#x663E;&#x793A;&#x88AB;&#x4EA4;&#x6362;&#x5230;&#x78C1;&#x76D8;&#x7684;&#x6570;&#x636E;&#x5757;&#x7684;&#x6570;&#x91CF;&#x3002;&#x672A;&#x88AB;&#x4F7F;&#x7528;&#x7684;&#x6570;&#x636E;&#x5757;&#xFF0C;&#x7528;&#x6237;&#x7F13;&#x51B2;&#x6570;&#x636E;&#x5757;&#xFF0C;&#x7528;&#x4E8E;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x6570;&#x636E;&#x5757;&#x7684;&#x6570;&#x91CF;&#x3002;</li>
+<li>Swap&#xFF1A;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x6BCF;&#x79D2;&#x4ECE;&#x78C1;&#x76D8;&#x4E0A;&#x4EA4;&#x6362;&#x5230;&#x5185;&#x5B58;&#x548C;&#x4ECE;&#x5185;&#x5B58;&#x4EA4;&#x6362;&#x5230;&#x78C1;&#x76D8;&#x7684;&#x6570;&#x636E;&#x5757;&#x7684;&#x6570;&#x91CF;&#x3002;s1 &#x548C; s0 &#x6700;&#x597D;&#x662F; 0&#x3002;</li>
+<li>IO&#xFF1A;&#x6BCF;&#x79D2;&#x4ECE;&#x8BBE;&#x5907;&#x4E2D;&#x8BFB;&#x5165; b1 &#x7684;&#x5199;&#x5165;&#x5230;&#x8BBE;&#x5907; b0 &#x7684;&#x6570;&#x636E;&#x5757;&#x7684;&#x6570;&#x91CF;&#x3002;&#x53CD;&#x6620;&#x4E86;&#x78C1;&#x76D8; I/O&#x3002;</li>
+<li>System&#xFF1A;&#x663E;&#x793A;&#x4E86;&#x6BCF;&#x79D2;&#x53D1;&#x751F;&#x4E2D;&#x65AD;&#x7684;&#x6570;&#x91CF;&#xFF08;in. &#x548C;&#x4E0A;&#x4E0B;&#x6587;&#x4EA4;&#x6362;&#xFF08;cs. &#x7684;&#x6570;&#x91CF;&#x3002;</li>
+<li>CPU&#xFF1A;&#x663E;&#x793A;&#x7528;&#x4E8E;&#x8FD0;&#x884C;&#x7528;&#x6237;&#x4EE3;&#x7801;&#xFF0C;&#x7CFB;&#x7EDF;&#x4EE3;&#x7801;&#xFF0C;&#x7A7A;&#x95F2;&#xFF0C;&#x7B49;&#x5F85; I/O &#x7684; CPU &#x65F6;&#x95F4;&#x3002;</li>
+</ul>
+<p>iostat &#x547D;&#x4EE4;&#x8BF4;&#x660E;&#xFF1A;</p>
+<ul>
+<li>&#x5B9E;&#x4F8B;&#x547D;&#x4EE4;&#xFF1A;iostat -dk 1 5&#xFF1B;iostat -d -k -x 5 &#xFF08;&#x67E5;&#x770B;&#x8BBE;&#x5907;&#x4F7F;&#x7528;&#x7387;&#xFF08;%util. &#x548C;&#x54CD;&#x5E94;&#x65F6;&#x95F4;&#xFF08;await. . &#x3002;</li>
+<li>TPS&#xFF1A;&#x8BE5;&#x8BBE;&#x5907;&#x6BCF;&#x79D2;&#x7684;&#x4F20;&#x8F93;&#x6B21;&#x6570;&#x3002;&#x201C;&#x4E00;&#x6B21;&#x4F20;&#x8F93;&#x201D;&#x610F;&#x601D;&#x662F;&#x201C;&#x4E00;&#x6B21; I/O &#x8BF7;&#x6C42;&#x201D;&#x3002;&#x591A;&#x4E2A;&#x903B;&#x8F91;&#x8BF7;&#x6C42;&#x53EF;&#x80FD;&#x4F1A;&#x88AB;&#x5408;&#x5E76;&#x4E3A;&#x201C;&#x4E00;&#x6B21; I/O &#x8BF7;&#x6C42;&#x201D;&#x3002;</li>
+<li>iops &#xFF1A;&#x786C;&#x4EF6;&#x51FA;&#x5382;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5382;&#x5BB6;&#x5B9A;&#x4E49;&#x7684;&#x4E00;&#x4E2A;&#x6BCF;&#x79D2;&#x6700;&#x5927;&#x7684; IO &#x6B21;&#x6570;&#x3002;</li>
+<li>&quot;&#x4E00;&#x6B21;&#x4F20;&#x8F93;&quot;&#x8BF7;&#x6C42;&#x7684;&#x5927;&#x5C0F;&#x662F;&#x672A;&#x77E5;&#x7684;&#x3002;</li>
+<li>KB_read/s&#xFF1A;&#x6BCF;&#x79D2;&#x4ECE;&#x8BBE;&#x5907;&#xFF08;drive expressed. &#x8BFB;&#x53D6;&#x7684;&#x6570;&#x636E;&#x91CF;&#x3002;</li>
+<li>KB_wrtn/s&#xFF1A;&#x6BCF;&#x79D2;&#x5411;&#x8BBE;&#x5907;&#xFF08;drive expressed. &#x5199;&#x5165;&#x7684;&#x6570;&#x636E;&#x91CF;&#x3002;</li>
+<li>KB_read&#xFF1A;&#x8BFB;&#x53D6;&#x7684;&#x603B;&#x6570;&#x636E;&#x91CF;&#x3002;</li>
+<li>KB_wrtn&#xFF1A;&#x5199;&#x5165;&#x7684;&#x603B;&#x6570;&#x91CF;&#x6570;&#x636E;&#x91CF;&#xFF1B;&#x8FD9;&#x4E9B;&#x5355;&#x4F4D;&#x90FD;&#x4E3A; Kilobytes&#x3002;</li>
+</ul>
+<h4 id="&#x7CFB;&#x7EDF;&#x5C42;&#x9762;&#x95EE;&#x9898;&#x89E3;&#x51B3;&#x529E;&#x6CD5;"><a name="&#x7CFB;&#x7EDF;&#x5C42;&#x9762;&#x95EE;&#x9898;&#x89E3;&#x51B3;&#x529E;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x7CFB;&#x7EDF;&#x5C42;&#x9762;&#x95EE;&#x9898;&#x89E3;&#x51B3;&#x529E;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7CFB;&#x7EDF;&#x5C42;&#x9762;&#x95EE;&#x9898;&#x89E3;&#x51B3;&#x529E;&#x6CD5;</h4>
+<p>&#x4F60;&#x8BA4;&#x4E3A;&#x5230;&#x5E95;&#x8D1F;&#x8F7D;&#x9AD8;&#x597D;&#xFF0C;&#x8FD8;&#x662F;&#x4F4E;&#x597D;&#x5462;&#xFF1F;&#x5728;&#x5B9E;&#x9645;&#x7684;&#x751F;&#x4EA7;&#x4E2D;&#xFF0C;&#x4E00;&#x822C;&#x8BA4;&#x4E3A; CPU &#x53EA;&#x8981;&#x4E0D;&#x8D85;&#x8FC7; 90% &#x90FD;&#x6CA1;&#x4EC0;&#x4E48;&#x95EE;&#x9898;&#x3002;&#x5F53;&#x7136;&#x4E0D;&#x6392;&#x9664;&#x4E0B;&#x9762;&#x8FD9;&#x4E9B;&#x7279;&#x6B8A;&#x60C5;&#x51B5;&#x3002;</p>
+<p>CPU &#x8D1F;&#x8F7D;&#x9AD8;&#xFF0C;IO &#x8D1F;&#x8F7D;&#x4F4E;&#xFF1A;</p>
+<ul>
+<li>&#x5185;&#x5B58;&#x4E0D;&#x591F;</li>
+<li>&#x78C1;&#x76D8;&#x6027;&#x80FD;&#x5DEE;</li>
+<li>SQL &#x95EE;&#x9898;&#xFF1A;&#x53BB;&#x6570;&#x636E;&#x5E93;&#x5C42;&#xFF0C;&#x8FDB;&#x4E00;&#x6B65;&#x6392;&#x67E5; SQL &#x95EE;&#x9898;</li>
+<li>IO &#x51FA;&#x95EE;&#x9898;&#x4E86;&#xFF08;&#x78C1;&#x76D8;&#x5230;&#x4E34;&#x754C;&#x4E86;&#x3001;raid &#x8BBE;&#x8BA1;&#x4E0D;&#x597D;&#x3001;raid &#x964D;&#x7EA7;&#x3001;&#x9501;&#x3001;&#x5728;&#x5355;&#x4F4D;&#x65F6;&#x95F4;&#x5185; TPS &#x8FC7;&#x9AD8;. </li>
+<li>TPS &#x8FC7;&#x9AD8;&#xFF1A;&#x5927;&#x91CF;&#x7684;&#x5C0F;&#x6570;&#x636E; IO&#x3001;&#x5927;&#x91CF;&#x7684;&#x5168;&#x8868;&#x626B;&#x63CF;</li>
+</ul>
+<p>IO &#x8D1F;&#x8F7D;&#x9AD8;&#xFF0C;CPU &#x8D1F;&#x8F7D;&#x4F4E;&#xFF1A;</p>
+<ul>
+<li>&#x5927;&#x91CF;&#x5C0F;&#x7684; IO &#x5199;&#x64CD;&#x4F5C;</li>
+<li>autocommit&#xFF0C;&#x4EA7;&#x751F;&#x5927;&#x91CF;&#x5C0F; IO&#xFF1B;IO/PS&#xFF0C;&#x78C1;&#x76D8;&#x7684;&#x4E00;&#x4E2A;&#x5B9A;&#x503C;&#xFF0C;&#x786C;&#x4EF6;&#x51FA;&#x5382;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5382;&#x5BB6;&#x5B9A;&#x4E49;&#x7684;&#x4E00;&#x4E2A;&#x6BCF;&#x79D2;&#x6700;&#x5927;&#x7684; IO &#x6B21;&#x6570;&#x3002;</li>
+<li>&#x5927;&#x91CF;&#x5927;&#x7684; IO &#x5199;&#x64CD;&#x4F5C;&#xFF1A;SQL &#x95EE;&#x9898;&#x7684;&#x51E0;&#x7387;&#x6BD4;&#x8F83;&#x5927;</li>
+</ul>
+<p>IO&#x548C; CPU &#x8D1F;&#x8F7D;&#x90FD;&#x5F88;&#x9AD8;&#xFF1A;</p>
+<ul>
+<li>&#x786C;&#x4EF6;&#x4E0D;&#x591F;&#x4E86;&#x6216; SQL &#x5B58;&#x5728;&#x95EE;&#x9898;</li>
+</ul>
+<h2 id="&#x57FA;&#x7840;&#x4F18;&#x5316;"><a name="&#x57FA;&#x7840;&#x4F18;&#x5316;" class="anchor-navigation-ex-anchor" href="#&#x57FA;&#x7840;&#x4F18;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x57FA;&#x7840;&#x4F18;&#x5316;</h2>
+<h3 id="&#x4F18;&#x5316;&#x601D;&#x8DEF;_1"><a name="&#x4F18;&#x5316;&#x601D;&#x8DEF;_1" class="anchor-navigation-ex-anchor" href="#&#x4F18;&#x5316;&#x601D;&#x8DEF;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F18;&#x5316;&#x601D;&#x8DEF;</h3>
+<p>&#x5B9A;&#x4F4D;&#x95EE;&#x9898;&#x70B9;&#x542E;&#x5438;&#xFF1A;&#x786C;&#x4EF6;&gt;&#x7CFB;&#x7EDF;&gt;&#x5E94;&#x7528;&gt;&#x6570;&#x636E;&#x5E93;&gt;&#x67B6;&#x6784;&#xFF08;&#x9AD8;&#x53EF;&#x7528;&#x3001;&#x8BFB;&#x5199;&#x5206;&#x79BB;&#x3001;&#x5206;&#x5E93;&#x5206;&#x8868;. &#x3002;</p>
+<p>&#x5904;&#x7406;&#x65B9;&#x5411;&#xFF1A;&#x660E;&#x786E;&#x4F18;&#x5316;&#x76EE;&#x6807;&#x3001;&#x6027;&#x80FD;&#x548C;&#x5B89;&#x5168;&#x7684;&#x6298;&#x4E2D;&#x3001;&#x9632;&#x60A3;&#x672A;&#x7136;&#x3002;</p>
+<h3 id="&#x786C;&#x4EF6;&#x4F18;&#x5316;"><a name="&#x786C;&#x4EF6;&#x4F18;&#x5316;" class="anchor-navigation-ex-anchor" href="#&#x786C;&#x4EF6;&#x4F18;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x786C;&#x4EF6;&#x4F18;&#x5316;</h3>
+<h4 id="&#x4E3B;&#x673A;&#x65B9;&#x9762;"><a name="&#x4E3B;&#x673A;&#x65B9;&#x9762;" class="anchor-navigation-ex-anchor" href="#&#x4E3B;&#x673A;&#x65B9;&#x9762;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E3B;&#x673A;&#x65B9;&#x9762;</h4>
+<p>&#x6839;&#x636E;&#x6570;&#x636E;&#x5E93;&#x7C7B;&#x578B;&#xFF0C;&#x4E3B;&#x673A; CPU &#x9009;&#x62E9;&#x3001;&#x5185;&#x5B58;&#x5BB9;&#x91CF;&#x9009;&#x62E9;&#x3001;&#x78C1;&#x76D8;&#x9009;&#x62E9;&#xFF1A;</p>
+<ul>
+<li>&#x5E73;&#x8861;&#x5185;&#x5B58;&#x548C;&#x78C1;&#x76D8;&#x8D44;&#x6E90;</li>
+<li>&#x968F;&#x673A;&#x7684; I/O &#x548C;&#x987A;&#x5E8F;&#x7684; I/O</li>
+<li>&#x4E3B;&#x673A; RAID &#x5361;&#x7684; BBU&#xFF08;Battery Backup Unit. &#x5173;&#x95ED;</li>
+</ul>
+<h4 id="cpu-&#x7684;&#x9009;&#x62E9;"><a name="cpu-&#x7684;&#x9009;&#x62E9;" class="anchor-navigation-ex-anchor" href="#cpu-&#x7684;&#x9009;&#x62E9;"><i class="fa fa-link" aria-hidden="true"></i></a>CPU &#x7684;&#x9009;&#x62E9;</h4>
+<p>CPU &#x7684;&#x4E24;&#x4E2A;&#x5173;&#x952E;&#x56E0;&#x7D20;&#xFF1A;&#x6838;&#x6570;&#x3001;&#x4E3B;&#x9891;&#x3002;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x4E1A;&#x52A1;&#x7C7B;&#x578B;&#x8FDB;&#x884C;&#x9009;&#x62E9;&#xFF1A;</p>
+<ul>
+<li>CPU &#x5BC6;&#x96C6;&#x578B;&#xFF1A;&#x8BA1;&#x7B97;&#x6BD4;&#x8F83;&#x591A;&#xFF0C;OLTP &#x4E3B;&#x9891;&#x5F88;&#x9AD8;&#x7684; CPU&#x3001;&#x6838;&#x6570;&#x8FD8;&#x8981;&#x591A;&#x3002;</li>
+<li>IO &#x5BC6;&#x96C6;&#x578B;&#xFF1A;&#x67E5;&#x8BE2;&#x6BD4;&#x8F83;&#xFF0C;OLAP &#x6838;&#x6570;&#x8981;&#x591A;&#xFF0C;&#x4E3B;&#x9891;&#x4E0D;&#x4E00;&#x5B9A;&#x9AD8;&#x7684;&#x3002;</li>
+</ul>
+<h4 id="&#x5185;&#x5B58;&#x7684;&#x9009;&#x62E9;"><a name="&#x5185;&#x5B58;&#x7684;&#x9009;&#x62E9;" class="anchor-navigation-ex-anchor" href="#&#x5185;&#x5B58;&#x7684;&#x9009;&#x62E9;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5185;&#x5B58;&#x7684;&#x9009;&#x62E9;</h4>
+<p>OLAP &#x7C7B;&#x578B;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x9700;&#x8981;&#x66F4;&#x591A;&#x5185;&#x5B58;&#xFF0C;&#x548C;&#x6570;&#x636E;&#x83B7;&#x53D6;&#x91CF;&#x7EA7;&#x6709;&#x5173;&#x3002;OLTP &#x7C7B;&#x578B;&#x6570;&#x636E;&#x4E00;&#x822C;&#x5185;&#x5B58;&#x662F; CPU &#x6838;&#x5FC3;&#x6570;&#x91CF;&#x7684; 2 &#x500D;&#x5230; 4 &#x500D;&#xFF0C;&#x6CA1;&#x6709;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;&#x3002;</p>
+<h4 id="&#x5B58;&#x50A8;&#x65B9;&#x9762;"><a name="&#x5B58;&#x50A8;&#x65B9;&#x9762;" class="anchor-navigation-ex-anchor" href="#&#x5B58;&#x50A8;&#x65B9;&#x9762;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B58;&#x50A8;&#x65B9;&#x9762;</h4>
+<p>&#x6839;&#x636E;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x79CD;&#x7C7B;&#x7684;&#x4E0D;&#x540C;&#xFF0C;&#x9009;&#x62E9;&#x4E0D;&#x540C;&#x7684;&#x5B58;&#x50A8;&#x8BBE;&#x5907;&#xFF0C;&#x914D;&#x7F6E;&#x5408;&#x7406;&#x7684; RAID &#x7EA7;&#x522B;&#xFF08;raid5&#x3001;raid10&#x3001;&#x70ED;&#x5907;&#x76D8;. &#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x6765;&#x8BB2;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x592A;&#x7279;&#x6B8A;&#x7684;&#x9009;&#x62E9;&#xFF0C;&#x6700;&#x597D;&#x505A;&#x597D;&#x5197;&#x4F59;&#xFF08;raid1. &#xFF08;ssd&#x3001;sas&#x3001;sata. &#x3002;</p>
+<p>&#x4E3B;&#x673A; raid &#x5361;&#x9009;&#x62E9;&#xFF1A;</p>
+<ul>
+<li>&#x5B9E;&#x73B0;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x78C1;&#x76D8;&#x7684;&#x5197;&#x4F59;&#xFF08;raid1. </li>
+<li>&#x5E73;&#x8861;&#x5185;&#x5B58;&#x548C;&#x78C1;&#x76D8;&#x8D44;&#x6E90;</li>
+<li>&#x968F;&#x673A;&#x7684; I/O &#x548C;&#x987A;&#x5E8F;&#x7684; I/O</li>
+<li>&#x4E3B;&#x673A; raid &#x5361;&#x7684; BBU&#xFF08;Battery Backup Unit. &#x8981;&#x5173;&#x95ED;</li>
+</ul>
+<h4 id="&#x7F51;&#x7EDC;&#x8BBE;&#x5907;&#x65B9;&#x9762;"><a name="&#x7F51;&#x7EDC;&#x8BBE;&#x5907;&#x65B9;&#x9762;" class="anchor-navigation-ex-anchor" href="#&#x7F51;&#x7EDC;&#x8BBE;&#x5907;&#x65B9;&#x9762;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7F51;&#x7EDC;&#x8BBE;&#x5907;&#x65B9;&#x9762;</h4>
+<p>&#x4F7F;&#x7528;&#x6D41;&#x91CF;&#x652F;&#x6301;&#x66F4;&#x9AD8;&#x7684;&#x7F51;&#x7EDC;&#x8BBE;&#x5907;&#xFF08;&#x4EA4;&#x6362;&#x673A;&#x3001;&#x8DEF;&#x7531;&#x5668;&#x3001;&#x7F51;&#x7EBF;&#x3001;&#x7F51;&#x5361;&#x3001;HBA &#x5361;. &#x3002;&#x6CE8;&#x610F;&#xFF1A;&#x4EE5;&#x4E0A;&#x8FD9;&#x4E9B;&#x89C4;&#x5212;&#x5E94;&#x8BE5;&#x5728;&#x521D;&#x59CB;&#x8BBE;&#x8BA1;&#x7CFB;&#x7EDF;&#x65F6;&#x5C31;&#x5E94;&#x8BE5;&#x8003;&#x8651;&#x597D;&#x3002;</p>
+<h3 id="&#x670D;&#x52A1;&#x5668;&#x786C;&#x4EF6;&#x4F18;&#x5316;"><a name="&#x670D;&#x52A1;&#x5668;&#x786C;&#x4EF6;&#x4F18;&#x5316;" class="anchor-navigation-ex-anchor" href="#&#x670D;&#x52A1;&#x5668;&#x786C;&#x4EF6;&#x4F18;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x670D;&#x52A1;&#x5668;&#x786C;&#x4EF6;&#x4F18;&#x5316;</h3>
+<p>&#x670D;&#x52A1;&#x5668;&#x786C;&#x4EF6;&#x4F18;&#x5316;&#x5173;&#x952E;&#x70B9;&#xFF1A;</p>
+<ul>
+<li>&#x7269;&#x7406;&#x72B6;&#x6001;&#x706F;</li>
+<li>&#x81EA;&#x5E26;&#x7BA1;&#x7406;&#x8BBE;&#x5907;&#xFF1A;&#x8FDC;&#x7A0B;&#x63A7;&#x5236;&#x5361;&#xFF08;FENCE&#x8BBE;&#x5907;&#xFF1A;ipmi ilo idarc. &#x3001;&#x5F00;&#x5173;&#x673A;&#x3001;&#x786C;&#x4EF6;&#x76D1;&#x63A7;&#x3002;</li>
+<li>&#x7B2C;&#x4E09;&#x65B9;&#x7684;&#x76D1;&#x63A7;&#x8F6F;&#x4EF6;&#x3001;&#x8BBE;&#x5907;&#xFF08;snmp&#x3001;agent. &#x5BF9;&#x7269;&#x7406;&#x8BBE;&#x65BD;&#x8FDB;&#x884C;&#x76D1;&#x63A7;&#x3002;</li>
+<li>&#x5B58;&#x50A8;&#x8BBE;&#x5907;&#xFF1A;&#x81EA;&#x5E26;&#x7684;&#x76D1;&#x63A7;&#x5E73;&#x53F0;&#x3002;EMC2&#xFF08;HP &#x6536;&#x8D2D;&#x4E86;. &#x3001; &#x65E5;&#x7ACB;&#xFF08;HDS. &#x3001;IBM &#x4F4E;&#x7AEF; OEM HDS&#x3001;&#x9AD8;&#x7AEF;&#x5B58;&#x50A8;&#x662F;&#x81EA;&#x5DF1;&#x6280;&#x672F;&#xFF0C;&#x534E;&#x4E3A;&#x5B58;&#x50A8;&#x3002;</li>
+</ul>
+<h3 id="&#x7CFB;&#x7EDF;&#x4F18;&#x5316;"><a name="&#x7CFB;&#x7EDF;&#x4F18;&#x5316;" class="anchor-navigation-ex-anchor" href="#&#x7CFB;&#x7EDF;&#x4F18;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7CFB;&#x7EDF;&#x4F18;&#x5316;</h3>
+<p>CPU&#xFF1A;&#x57FA;&#x672C;&#x4E0D;&#x9700;&#x8981;&#x8C03;&#x6574;&#xFF0C;&#x5728;&#x786C;&#x4EF6;&#x9009;&#x62E9;&#x65B9;&#x9762;&#x4E0B;&#x529F;&#x592B;&#x5373;&#x53EF;&#x3002;</p>
+<p>&#x5185;&#x5B58;&#xFF1A;&#x57FA;&#x672C;&#x4E0D;&#x9700;&#x8981;&#x8C03;&#x6574;&#xFF0C;&#x5728;&#x786C;&#x4EF6;&#x9009;&#x62E9;&#x65B9;&#x9762;&#x4E0B;&#x529F;&#x592B;&#x5373;&#x53EF;&#x3002;</p>
+<p>SWAP&#xFF1A;MySQL &#x5C3D;&#x91CF;&#x907F;&#x514D;&#x4F7F;&#x7528; Swap&#x3002;&#x963F;&#x91CC;&#x4E91;&#x7684;&#x670D;&#x52A1;&#x5668;&#x4E2D;&#x9ED8;&#x8BA4; swap &#x4E3A; 0&#x3002;</p>
+<p>IO &#xFF1A;raid&#x3001;no lvm&#x3001;ext4 &#x6216; xfs&#x3001;ssd&#x3001;IO &#x8C03;&#x5EA6;&#x7B56;&#x7565;&#x3002;</p>
+<h4 id="swap-&#x8C03;&#x6574;&#x4E0D;&#x4F7F;&#x7528;-swap-&#x5206;&#x533A;&#xFF1A;"><a name="swap-&#x8C03;&#x6574;&#x4E0D;&#x4F7F;&#x7528;-swap-&#x5206;&#x533A;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#swap-&#x8C03;&#x6574;&#x4E0D;&#x4F7F;&#x7528;-swap-&#x5206;&#x533A;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>Swap &#x8C03;&#x6574;(&#x4E0D;&#x4F7F;&#x7528; swap &#x5206;&#x533A;)&#xFF1A;</h4>
+<p>/proc/sys/vm/swappiness&#x7684;&#x5185;&#x5BB9;&#x6539;&#x6210;0&#xFF08;&#x4E34;&#x65F6;. &#xFF0C;/etc/sysctl. conf&#x4E0A;&#x6DFB;&#x52A0;vm.swappiness=0&#xFF08;&#x6C38;&#x4E45;. </p>
+<p>&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x51B3;&#x5B9A;&#x4E86; Linux &#x662F;&#x503E;&#x5411;&#x4E8E;&#x4F7F;&#x7528; Swap&#xFF0C;&#x8FD8;&#x662F;&#x503E;&#x5411;&#x4E8E;&#x91CA;&#x653E;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF; Cache&#x3002;&#x5728;&#x5185;&#x5B58;&#x7D27;&#x5F20;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6570;&#x503C;&#x8D8A;&#x4F4E;&#x8D8A;&#x503E;&#x5411;&#x4E8E;&#x91CA;&#x653E;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF; Cache&#x3002;</p>
+<p>&#x5F53;&#x7136;&#xFF0C;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x53EA;&#x80FD;&#x51CF;&#x5C11;&#x4F7F;&#x7528; Swap &#x7684;&#x6982;&#x7387;&#xFF0C;&#x5E76;&#x4E0D;&#x80FD;&#x907F;&#x514D; Linux &#x4F7F;&#x7528; Swap&#x3002;</p>
+<p>&#x4FEE;&#x6539; MySQL &#x7684;&#x914D;&#x7F6E;&#x53C2;&#x6570; innodb<em>flush</em> method&#xFF0C;&#x5F00;&#x542F; O_DIRECT &#x6A21;&#x5F0F;&#x3002;</p>
+<p>&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;InnoDB &#x7684; buffer pool &#x4F1A;&#x76F4;&#x63A5;&#x7ED5;&#x8FC7;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF; Cache &#x6765;&#x8BBF;&#x95EE;&#x78C1;&#x76D8;&#xFF0C;&#x4F46;&#x662F; redo log &#x4F9D;&#x65E7;&#x4F1A;&#x4F7F;&#x7528;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF; Cache&#x3002;</p>
+<p>&#x503C;&#x5F97;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;Redo log &#x662F;&#x8986;&#x5199;&#x6A21;&#x5F0F;&#x7684;&#xFF0C;&#x5373;&#x4F7F;&#x4F7F;&#x7528;&#x4E86;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684; Cache&#xFF0C;&#x4E5F;&#x4E0D;&#x4F1A;&#x5360;&#x7528;&#x592A;&#x591A;&#x3002;</p>
+<h4 id="io-&#x8C03;&#x5EA6;&#x7B56;&#x7565;&#xFF1A;"><a name="io-&#x8C03;&#x5EA6;&#x7B56;&#x7565;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#io-&#x8C03;&#x5EA6;&#x7B56;&#x7565;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>IO &#x8C03;&#x5EA6;&#x7B56;&#x7565;&#xFF1A;</h4>
+<pre><code>#echo deadline&gt;/sys/block/sda/queue/scheduler   &#x4E34;&#x65F6;&#x4FEE;&#x6539;&#x4E3A;deadline
+</code></pre><p>&#x6C38;&#x4E45;&#x4FEE;&#x6539;&#xFF1A;</p>
+<pre><code>vi /boot/grub/grub.conf
+</code></pre><p>&#x66F4;&#x6539;&#x5230;&#x5982;&#x4E0B;&#x5185;&#x5BB9;:</p>
+<pre><code>kernel /boot/vmlinuz-2.6.18-8.el5 ro root=LABEL=/ elevator=deadline rhgb quiet
+</code></pre><h4 id="&#x7CFB;&#x7EDF;&#x53C2;&#x6570;&#x8C03;&#x6574;"><a name="&#x7CFB;&#x7EDF;&#x53C2;&#x6570;&#x8C03;&#x6574;" class="anchor-navigation-ex-anchor" href="#&#x7CFB;&#x7EDF;&#x53C2;&#x6570;&#x8C03;&#x6574;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7CFB;&#x7EDF;&#x53C2;&#x6570;&#x8C03;&#x6574;</h4>
+<p>Linux &#x7CFB;&#x7EDF;&#x5185;&#x6838;&#x53C2;&#x6570;&#x4F18;&#x5316;&#xFF1A;</p>
+<pre><code>vim/etc/sysctl.conf
+net.ipv4.ip_local_port_range = 1024 65535&#xFF1A;# &#x7528;&#x6237;&#x7AEF;&#x53E3;&#x8303;&#x56F4;
+net.ipv4.tcp_max_syn_backlog = 4096 
+net.ipv4.tcp_fin_timeout = 30 
+fs.file-max=65535&#xFF1A;# &#x7CFB;&#x7EDF;&#x6700;&#x5927;&#x6587;&#x4EF6;&#x53E5;&#x67C4;&#xFF0C;&#x63A7;&#x5236;&#x7684;&#x662F;&#x80FD;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x6700;&#x5927;&#x6570;&#x91CF;
+</code></pre><p>&#x7528;&#x6237;&#x9650;&#x5236;&#x53C2;&#x6570;&#xFF08;MySQL &#x53EF;&#x4EE5;&#x4E0D;&#x8BBE;&#x7F6E;&#x4EE5;&#x4E0B;&#x914D;&#x7F6E;. &#xFF1A;</p>
+<pre><code>vim/etc/security/limits.conf 
+* soft nproc 65535
+* hard nproc 65535
+* soft nofile 65535
+* hard nofile 65535
+</code></pre><h3 id="&#x5E94;&#x7528;&#x4F18;&#x5316;"><a name="&#x5E94;&#x7528;&#x4F18;&#x5316;" class="anchor-navigation-ex-anchor" href="#&#x5E94;&#x7528;&#x4F18;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E94;&#x7528;&#x4F18;&#x5316;</h3>
+<p>&#x4E1A;&#x52A1;&#x5E94;&#x7528;&#x548C;&#x6570;&#x636E;&#x5E93;&#x5E94;&#x7528;&#x72EC;&#x7ACB;&#x3002;</p>
+<p>&#x9632;&#x706B;&#x5899;&#xFF1A;iptables&#x3001;selinux &#x7B49;&#x5176;&#x4ED6;&#x65E0;&#x7528;&#x670D;&#x52A1;&#xFF08;&#x5173;&#x95ED;. &#xFF1A;</p>
+<pre><code>    chkconfig --level 23456 acpid off
+    chkconfig --level 23456 anacron off
+    chkconfig --level 23456 autofs off
+    chkconfig --level 23456 avahi-daemon off
+    chkconfig --level 23456 bluetooth off
+    chkconfig --level 23456 cups off
+    chkconfig --level 23456 firstboot off
+    chkconfig --level 23456 haldaemon off
+    chkconfig --level 23456 hplip off
+    chkconfig --level 23456 ip6tables off
+    chkconfig --level 23456 iptables  off
+    chkconfig --level 23456 isdn off
+    chkconfig --level 23456 pcscd off
+    chkconfig --level 23456 sendmail  off
+    chkconfig --level 23456 yum-updatesd  off
+</code></pre><p>&#x5B89;&#x88C5;&#x56FE;&#x5F62;&#x754C;&#x9762;&#x7684;&#x670D;&#x52A1;&#x5668;&#x4E0D;&#x8981;&#x542F;&#x52A8;&#x56FE;&#x5F62;&#x754C;&#x9762; runlevel 3&#x3002; </p>
+<p>&#x53E6;&#x5916;&#xFF0C;&#x601D;&#x8003;&#x5C06;&#x6765;&#x6211;&#x4EEC;&#x7684;&#x4E1A;&#x52A1;&#x662F;&#x5426;&#x771F;&#x7684;&#x9700;&#x8981; MySQL&#xFF0C;&#x8FD8;&#x662F;&#x4F7F;&#x7528;&#x5176;&#x4ED6;&#x79CD;&#x7C7B;&#x7684;&#x6570;&#x636E;&#x5E93;&#x3002;&#x7528;&#x6570;&#x636E;&#x5E93;&#x7684;&#x6700;&#x9AD8;&#x5883;&#x754C;&#x5C31;&#x662F;&#x4E0D;&#x7528;&#x6570;&#x636E;&#x5E93;&#x3002;</p>
+<h4 id="&#x6570;&#x636E;&#x5E93;&#x4F18;&#x5316;"><a name="&#x6570;&#x636E;&#x5E93;&#x4F18;&#x5316;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x636E;&#x5E93;&#x4F18;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x636E;&#x5E93;&#x4F18;&#x5316;</h4>
+<p>SQL &#x4F18;&#x5316;&#x65B9;&#x5411;&#xFF1A;</p>
+<ul>
+<li>&#x6267;&#x884C;&#x8BA1;&#x5212;</li>
+<li>&#x7D22;&#x5F15;</li>
+<li>SQL &#x6539;&#x5199;</li>
+</ul>
+<h4 id="&#x67B6;&#x6784;&#x4F18;&#x5316;&#x65B9;&#x5411;&#xFF1A;"><a name="&#x67B6;&#x6784;&#x4F18;&#x5316;&#x65B9;&#x5411;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x67B6;&#x6784;&#x4F18;&#x5316;&#x65B9;&#x5411;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67B6;&#x6784;&#x4F18;&#x5316;&#x65B9;&#x5411;&#xFF1A;</h4>
+<ul>
+<li>&#x9AD8;&#x53EF;&#x7528;&#x67B6;&#x6784;</li>
+<li>&#x9AD8;&#x6027;&#x80FD;&#x67B6;&#x6784;</li>
+<li>&#x5206;&#x5E93;&#x5206;&#x8868;</li>
+</ul>
+<h3 id="&#x6570;&#x636E;&#x5E93;&#x53C2;&#x6570;&#x4F18;&#x5316;"><a name="&#x6570;&#x636E;&#x5E93;&#x53C2;&#x6570;&#x4F18;&#x5316;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x636E;&#x5E93;&#x53C2;&#x6570;&#x4F18;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x636E;&#x5E93;&#x53C2;&#x6570;&#x4F18;&#x5316;</h3>
+<p>&#x2460;&#x8C03;&#x6574;</p>
+<p>&#x5B9E;&#x4F8B;&#x6574;&#x4F53;&#xFF08;&#x9AD8;&#x7EA7;&#x4F18;&#x5316;&#xFF0C;&#x6269;&#x5C55;. &#xFF1A;</p>
+<pre><code>thread_concurrency&#xFF1A;# &#x5E76;&#x53D1;&#x7EBF;&#x7A0B;&#x6570;&#x91CF;&#x4E2A;&#x6570;
+sort_buffer_size&#xFF1A;# &#x6392;&#x5E8F;&#x7F13;&#x5B58;
+read_buffer_size&#xFF1A;# &#x987A;&#x5E8F;&#x8BFB;&#x53D6;&#x7F13;&#x5B58;
+read_rnd_buffer_size&#xFF1A;# &#x968F;&#x673A;&#x8BFB;&#x53D6;&#x7F13;&#x5B58;
+key_buffer_size&#xFF1A;# &#x7D22;&#x5F15;&#x7F13;&#x5B58;
+thread_cache_size&#xFF1A;# (1G&#x2014;&gt;8, 2G&#x2014;&gt;16, 3G&#x2014;&gt;32, &gt;3G&#x2014;&gt;64)
+</code></pre><p>&#x2461;&#x8FDE;&#x63A5;&#x5C42;&#xFF08;&#x57FA;&#x7840;&#x4F18;&#x5316;. </p>
+<p>&#x8BBE;&#x7F6E;&#x5408;&#x7406;&#x7684;&#x8FDE;&#x63A5;&#x5BA2;&#x6237;&#x548C;&#x8FDE;&#x63A5;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<pre><code>max_connections           # &#x6700;&#x5927;&#x8FDE;&#x63A5;&#x6570;&#xFF0C;&#x770B;&#x4EA4;&#x6613;&#x7B14;&#x6570;&#x8BBE;&#x7F6E;    
+max_connect_errors        # &#x6700;&#x5927;&#x9519;&#x8BEF;&#x8FDE;&#x63A5;&#x6570;&#xFF0C;&#x80FD;&#x5927;&#x5219;&#x5927;
+connect_timeout           # &#x8FDE;&#x63A5;&#x8D85;&#x65F6;
+max_user_connections      # &#x6700;&#x5927;&#x7528;&#x6237;&#x8FDE;&#x63A5;&#x6570;
+skip-name-resolve         # &#x8DF3;&#x8FC7;&#x57DF;&#x540D;&#x89E3;&#x6790;
+wait_timeout              # &#x7B49;&#x5F85;&#x8D85;&#x65F6;
+back_log                  # &#x53EF;&#x4EE5;&#x5728;&#x5806;&#x6808;&#x4E2D;&#x7684;&#x8FDE;&#x63A5;&#x6570;&#x91CF;
+</code></pre><p>&#x2462;SQL &#x5C42;&#xFF08;&#x57FA;&#x7840;&#x4F18;&#x5316;. </p>
+<pre><code>query_cache_size&#xFF1A; &#x67E5;&#x8BE2;&#x7F13;&#x5B58;  &gt;&gt;&gt;  OLAP &#x7C7B;&#x578B;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x9700;&#x8981;&#x91CD;&#x70B9;&#x52A0;&#x5927;&#x6B64;&#x5185;&#x5B58;&#x7F13;&#x5B58;&#xFF0C;&#x4F46;&#x662F;&#x4E00;&#x822C;&#x4E0D;&#x4F1A;&#x8D85;&#x8FC7; GB&#x3002;
+</code></pre><p>&#x5BF9;&#x4E8E;&#x7ECF;&#x5E38;&#x88AB;&#x4FEE;&#x6539;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x7F13;&#x5B58;&#x4F1A;&#x9A6C;&#x4E0A;&#x5931;&#x6548;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5185;&#x5B58;&#x6570;&#x636E;&#x5E93;&#xFF08;redis&#x3001;memecache. &#xFF0C;&#x66FF;&#x4EE3;&#x5B83;&#x7684;&#x529F;&#x80FD;&#x3002;</p>
+<p>&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#x5C42;&#x4F18;&#x5316;</p>
+<pre><code>innodb &#x57FA;&#x7840;&#x4F18;&#x5316;&#x53C2;&#x6570;&#xFF1A;
+default-storage-engine
+innodb_buffer_pool_size       # &#x6CA1;&#x6709;&#x56FA;&#x5B9A;&#x5927;&#x5C0F;&#xFF0C;50%&#x6D4B;&#x8BD5;&#x503C;&#xFF0C;&#x770B;&#x770B;&#x60C5;&#x51B5;&#x518D;&#x5FAE;&#x8C03;&#x3002;&#x4F46;&#x662F;&#x5C3D;&#x91CF;&#x8BBE;&#x7F6E;&#x4E0D;&#x8981;&#x8D85;&#x8FC7;&#x7269;&#x7406;&#x5185;&#x5B58;70%
+innodb_file_per_table=(1,0)
+innodb_flush_log_at_trx_commit=(0,1,2) # 1&#x662F;&#x6700;&#x5B89;&#x5168;&#x7684;&#xFF0C;0&#x662F;&#x6027;&#x80FD;&#x6700;&#x9AD8;&#xFF0C;2&#x6298;&#x4E2D;
+binlog_sync
+Innodb_flush_method=(O_DIRECT, fdatasync)
+innodb_log_buffer_size        # 100M&#x4EE5;&#x4E0B;
+innodb_log_file_size          # 100M &#x4EE5;&#x4E0B;
+innodb_log_files_in_group     # 5&#x4E2A;&#x6210;&#x5458;&#x4EE5;&#x4E0B;,&#x4E00;&#x822C;2-3&#x4E2A;&#x591F;&#x7528;&#xFF08;iblogfile0-N. 
+innodb_max_dirty_pages_pct   # &#x8FBE;&#x5230;&#x767E;&#x5206;&#x4E4B;75&#x7684;&#x65F6;&#x5019;&#x5237;&#x5199; &#x5185;&#x5B58;&#x810F;&#x9875;&#x5230;&#x78C1;&#x76D8;&#x3002;
+log_bin
+max_binlog_cache_size         # &#x53EF;&#x4EE5;&#x4E0D;&#x8BBE;&#x7F6E;
+max_binlog_size               # &#x53EF;&#x4EE5;&#x4E0D;&#x8BBE;&#x7F6E;
+innodb_additional_mem_pool_size    #&#x5C0F;&#x4E8E;2G&#x5185;&#x5B58;&#x7684;&#x673A;&#x5668;&#xFF0C;&#x63A8;&#x8350;&#x503C;&#x662F;20M&#x3002;32G&#x5185;&#x5B58;&#x4EE5;&#x4E0A;100M
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="MYSQL显示完整的processlist中info信息.html" class="navigation navigation-prev " aria-label="Previous page: MYSQL显示完整的processlist中info信息">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="数据库原理.html" class="navigation navigation-next " aria-label="Next page: 数据库原理">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"MySQL高性能优化实战总结","level":"1.5.2.5","depth":3,"next":{"title":"数据库原理","level":"1.5.2.6","depth":3,"path":"数据库/Mysql/数据库原理.md","ref":"数据库/Mysql/数据库原理.md","articles":[]},"previous":{"title":"MYSQL显示完整的processlist中info信息","level":"1.5.2.4","depth":3,"path":"数据库/Mysql/MYSQL显示完整的processlist中info信息.md","ref":"数据库/Mysql/MYSQL显示完整的processlist中info信息.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-small","chapter-fold","code","-lunr","-search","search-pro","emphasize","splitter","ancre-navigation","-sharing","sharing-plus","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"emphasize":{},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":false,"facebook":false,"weibo":true,"twitter":false,"pocket":false,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Roboytim","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"KnowledgeLib","language":"zh-hans","links":{"sidebar":{"主页":"https://github.com/mike0564/KnowledgeLib","Github源码":"https://github.com/mike0564/KnowledgeLib"}},"gitbook":"3.2.3","description":"对平时遇到的一些问题、知识进行记录总结"},"file":{"path":"数据库/Mysql/MySQL高性能优化实战总结.md","mtime":"2019-12-03T12:43:00.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-08T13:50:12.968Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

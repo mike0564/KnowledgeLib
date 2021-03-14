@@ -1,0 +1,72 @@
+Action()
+{
+lr_start_transaction("综合前端_对私获取明细账查询"); 
+	soap_request("StepName=SOAP Request",										
+		"URL=http://9.1.6.59:9080/queryweb/services/ESBOfflineQueryService?wsdl",										
+		"SOAPEnvelope="
+		"<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns=\"http://com.adtec.bdp.service.webservice//\" xmlns:xsd=\"http://webservice.service.bdp.adtec.com/xsd\">"
+			"<soapenv:Header>"
+				"<SvcCd>3007030010</SvcCd>"
+				"<SvcScn>02</SvcScn>"
+				"<CnsmrSysId>12</CnsmrSysId>"
+				"<TxnDt>20170809</TxnDt>"
+				"<TxnTm>11:43:40</TxnTm>"
+				"<CnsmrSeqNo>202007300001</CnsmrSeqNo>"
+				"<TxnChnlTp>12</TxnChnlTp>"
+				"<ChnlDtl>17</ChnlDtl>"
+				"<TxnTmlId>01</TxnTmlId>"
+				"<CnsmrSvrId>13</CnsmrSvrId>"
+				"<OrigCnsmrSeqNo>567</OrigCnsmrSeqNo>"
+				"<OrigCnsmrId>100100</OrigCnsmrId>"
+				"<OrigTmlId>1234</OrigTmlId>"
+				"<OrigCnsmrSvrId>123</OrigCnsmrSvrId>"
+				"<UsrLng>US</UsrLng>"
+				"<FileFlg>Y</FileFlg>"
+				"<TxnTlrId>456</TxnTlrId>"
+				"<OrgId>123</OrgId>"
+				"<TlrPwsd>45678</TlrPwsd>"
+				"<TlrLvl>123456</TlrLvl>"
+				"<TlrTp>3456</TlrTp>"
+				"<AprvFlg>3456</AprvFlg>"
+				"<AprvTlrInf>4537</AprvTlrInf>"
+				"<AprvTlrId>12345</AprvTlrId>"
+				"<AprvOrgId>12090</AprvOrgId>"
+				"<AprvTlrLvl>3345</AprvTlrLvl>"
+				"<AprvTlrTp>2343545</AprvTlrTp>"
+				"<AprvTlrInf>32345</AprvTlrInf>"
+				"<AhrFlg>234545</AhrFlg>"
+				"<AhrTlrInf>234315</AhrTlrInf>"
+				"<AhrTlrId>23456</AhrTlrId>"
+				"<AhrOrgId>456</AhrOrgId>"
+				"<AhrTlrPswd>3345</AhrTlrPswd>"
+				"<AhrTlrLvl>2345</AhrTlrLvl>"
+				"<AhrTlrTp>123789</AhrTlrTp>"
+				"<AhrTlrInf>213455</AhrTlrInf>"
+			"</soapenv:Header>"
+			"<soapenv:Body>"
+				"<REC_PAGE_DIR>1</REC_PAGE_DIR>"
+				"<REC_PAGE_NUM>50</REC_PAGE_NUM>"
+				"<QRY_EXP> {\"QRYID\":\"trd_dtl_idn\",\"HBTAB\":\"trd_dtl_idn\",\"HBCF\":\"c\",\"CONDT\":{\"\":{\"dtl_amttm\":{\"GE\":\"50\",\"LE\":\"100\"}},\"AND\":{\"crdno\":{\"EQ\":\"6230270100063281222\"}},\"AND\":{\"sys_apltn\":{\"EQ\":\"CORE\"}}},\"RESP\":[\"trd_dt\",\"trd_tm\",\"actno\",\"maj_acct_typ\",\"actnm\",\"maj_acct_vch_kind\",\"vch_nbr\",\"dtl_amttm\",\"acct_serno\",\"core_swfno\",\"front_swfno\",\"chnl_swfno\",\"trd_chnl_no\",\"trd_chnl_apltn\",\"chnl_scene_cd\",\"trd_mchcd\",\"trd_org_apltn\",\"trd_ecd\",\"trd_apltn\",\"trd_stus\",\"dbcrd_flg\",\"trd_amt\",\"the_trd_aft_bal\",\"trd_tlr_nbr\",\"trd_tlr_apltn\",\"eracct_rvrs_swfno\",\"trd_emly_vch_kind\",\"trd_emly_vch_nbr\",\"kpact_vch_info\",\"actnt_dt\",\"subjt_ctlwd\",\"abstc_cd\",\"abstc_apltn\",\"abstc_abbr\",\"trd_remrk_spcf\",\"ef_dt\",\"cntpt_actno\",\"cntpt_actnm\",\"cntpt_bnkno\",\"cntpt_bnknm\",\"trd_eqp_num\",\"term_mdl\",\"instl_loc\",\"mrch_no\",\"mrch_apltn\",\"mrch_abbr\",\"mrch_typ\",\"mrch_mcc\",\"conts_info\",\"mrch_trd_rcgnt_num\",\"blgz\",\"blgz_apltn\"],\"ORDER\":{\"trd_dt\":\"DESC\",\"trd_tm\":\"DESC\"},\"ROUND\":{\"trd_amt\":2,\"the_trd_aft_bal\":2}}"
+		"</QRY_EXP>"
+			"</soapenv:Body>"
+		"</soapenv:Envelope>",										
+		"SOAPAction=queryIndex",										
+		"ResponseParam=response",										
+		"Snapshot=t1560764838.inf",									    
+		LAST);
+	lr_save_searched_string(lr_eval_string("{response}"),1024,0,"RetCd",1, 6, "return_code"); 
+	lr_output_message(lr_eval_string("{return_code}"));
+
+	if (strcmp(lr_eval_string("{return_code}"),"000000")==0) 
+
+		{
+			 lr_end_transaction("综合前端_对私获取明细账查询",LR_PASS);
+		}
+	else 
+		{
+			 lr_error_message("综合前端_对私获取明细账查询，失败信息:%s",lr_eval_string("{return_code}"));
+			 lr_end_transaction("综合前端_对私获取明细账查询",LR_FAIL);
+		}
+
+	return 0;
+}

@@ -1,0 +1,2999 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Python使用itchat调用微信接口 · KnowledgeLib</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Roboytim">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ancre-navigation/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Python微信库itchat的用法.html" />
+    
+    
+    <link rel="prev" href="Python中matplotlib的颜色及线条控制.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/mike0564/KnowledgeLib" target="_blank" class="custom-link">主页</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://github.com/mike0564/KnowledgeLib" target="_blank" class="custom-link">Github源码</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../工具/">
+            
+                <a href="../../工具/">
+            
+                    
+                    工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../工具/Jmeter/">
+            
+                <a href="../../工具/Jmeter/">
+            
+                    
+                    Jmeter
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../工具/Jmeter/Jmeter入门.html">
+            
+                <a href="../../工具/Jmeter/Jmeter入门.html">
+            
+                    
+                    Jmeter入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../工具/Jmeter/Jmeter查看结果数中的响应数据中文乱码.html">
+            
+                <a href="../../工具/Jmeter/Jmeter查看结果数中的响应数据中文乱码.html">
+            
+                    
+                    Jmeter查看结果数中的响应数据中文乱码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../../工具/Jmeter/Jmeter接口测试与压力测试.html">
+            
+                <a href="../../工具/Jmeter/Jmeter接口测试与压力测试.html">
+            
+                    
+                    Jmeter接口测试与压力测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../../工具/Jmeter/Jmeter压力测试简单教程.html">
+            
+                <a href="../../工具/Jmeter/Jmeter压力测试简单教程.html">
+            
+                    
+                    Jmeter压力测试简单教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="../../工具/Jmeter/Jmeter使用自定义编写代码.html">
+            
+                <a href="../../工具/Jmeter/Jmeter使用自定义编写代码.html">
+            
+                    
+                    Jmeter使用自定义编写代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6" data-path="../../工具/Jmeter/Jmeter参数化.html">
+            
+                <a href="../../工具/Jmeter/Jmeter参数化.html">
+            
+                    
+                    Jmeter参数化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.7" data-path="../../工具/Jmeter/Jmeter进行https协议的压测.html">
+            
+                <a href="../../工具/Jmeter/Jmeter进行https协议的压测.html">
+            
+                    
+                    Jmeter进行https协议的压测
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.8" data-path="../../工具/Jmeter/Jmeter之Non-GUIMode.html">
+            
+                <a href="../../工具/Jmeter/Jmeter之Non-GUIMode.html">
+            
+                    
+                    Jmeter之Non-GUIMode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.9" data-path="../../工具/Jmeter/Jmeter参数变量中包含引号导致异常.html">
+            
+                <a href="../../工具/Jmeter/Jmeter参数变量中包含引号导致异常.html">
+            
+                    
+                    Jmeter参数变量中包含引号导致异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.10" data-path="../../工具/Jmeter/Jmeter和Ant的html报告优化及DashboardReport介绍.html">
+            
+                <a href="../../工具/Jmeter/Jmeter和Ant的html报告优化及DashboardReport介绍.html">
+            
+                    
+                    Jmeter和Ant的html报告优化及DashboardReport介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.11" data-path="../../工具/Jmeter/JMeter+Ant安装配置使用.html">
+            
+                <a href="../../工具/Jmeter/JMeter+Ant安装配置使用.html">
+            
+                    
+                    JMeter+Ant安装配置使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../工具/Loadrunner/">
+            
+                <a href="../../工具/Loadrunner/">
+            
+                    
+                    Loadrunner
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../../工具/Loadrunner/Loadrunner解决HTTP请求中传参的BASE64加密方法.html">
+            
+                <a href="../../工具/Loadrunner/Loadrunner解决HTTP请求中传参的BASE64加密方法.html">
+            
+                    
+                    Loadrunner解决HTTP请求中传参的BASE64加密方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../../工具/Loadrunner/Loadrunner安装后启动慢的解决方法.html">
+            
+                <a href="../../工具/Loadrunner/Loadrunner安装后启动慢的解决方法.html">
+            
+                    
+                    Loadrunner安装后启动慢的解决方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../../工具/Loadrunner/Loadrunner对字符串进行BASE64编码.html">
+            
+                <a href="../../工具/Loadrunner/Loadrunner对字符串进行BASE64编码.html">
+            
+                    
+                    Loadrunner对字符串进行BASE64编码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="../../工具/Loadrunner/Loadrunner使用JDBC执行sql对数据库进行压测.html">
+            
+                <a href="../../工具/Loadrunner/Loadrunner使用JDBC执行sql对数据库进行压测.html">
+            
+                    
+                    Loadrunner使用JDBC执行sql对数据库进行压测
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="../../工具/Loadrunner/Loadrunner录制https协议.html">
+            
+                <a href="../../工具/Loadrunner/Loadrunner录制https协议.html">
+            
+                    
+                    Loadrunner录制https协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" data-path="../../工具/Loadrunner/LoadrunnerVuser进程线程两种运行方式.html">
+            
+                <a href="../../工具/Loadrunner/LoadrunnerVuser进程线程两种运行方式.html">
+            
+                    
+                    LoadrunnerVuser进程线程两种运行方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.7" data-path="../../工具/Loadrunner/Loadrunner报错信息整理.html">
+            
+                <a href="../../工具/Loadrunner/Loadrunner报错信息整理.html">
+            
+                    
+                    Loadrunner报错信息整理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.8" data-path="../../工具/Loadrunner/Loadrunner经典面试题.html">
+            
+                <a href="../../工具/Loadrunner/Loadrunner经典面试题.html">
+            
+                    
+                    Loadrunner经典面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.9" data-path="../../工具/Loadrunner/Loadrunner对IBMMQ进行性能测试.html">
+            
+                <a href="../../工具/Loadrunner/Loadrunner对IBMMQ进行性能测试.html">
+            
+                    
+                    Loadrunner对IBMMQ进行性能测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.10" data-path="../../工具/Loadrunner/Loadrunner使用初探.html">
+            
+                <a href="../../工具/Loadrunner/Loadrunner使用初探.html">
+            
+                    
+                    Loadrunner使用初探
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.11" data-path="../../工具/Loadrunner/Loadrunner中浏览器仿真器的缓存设置.html">
+            
+                <a href="../../工具/Loadrunner/Loadrunner中浏览器仿真器的缓存设置.html">
+            
+                    
+                    Loadrunner中浏览器仿真器的缓存设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.12" data-path="../../工具/Loadrunner/Loadrunner对报表导出下载进行性能测试.html">
+            
+                <a href="../../工具/Loadrunner/Loadrunner对报表导出下载进行性能测试.html">
+            
+                    
+                    Loadrunner对报表导出下载进行性能测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.13" data-path="../../工具/Loadrunner/Loadrunner在Linux下安装负载机Generator.html">
+            
+                <a href="../../工具/Loadrunner/Loadrunner在Linux下安装负载机Generator.html">
+            
+                    
+                    Loadrunner在Linux下安装负载机Generator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.14" data-path="../../工具/Loadrunner/LR测试脚本开发WebService.html">
+            
+                <a href="../../工具/Loadrunner/LR测试脚本开发WebService.html">
+            
+                    
+                    LR测试脚本开发WebService
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../工具/Appium/">
+            
+                <a href="../../工具/Appium/">
+            
+                    
+                    Appium
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../../工具/Appium/Appium之获取appPackage和appActivity.html">
+            
+                <a href="../../工具/Appium/Appium之获取appPackage和appActivity.html">
+            
+                    
+                    Appium之获取appPackage和appActivity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../../工具/Appium/AppiumAPI.html">
+            
+                <a href="../../工具/Appium/AppiumAPI.html">
+            
+                    
+                    AppiumAPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../工具/Git/">
+            
+                <a href="../../工具/Git/">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../../工具/Git/GitBook的基本使用方法.html">
+            
+                <a href="../../工具/Git/GitBook的基本使用方法.html">
+            
+                    
+                    GitBook的基本使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../../工具/Git/Git插入图片.html">
+            
+                <a href="../../工具/Git/Git插入图片.html">
+            
+                    
+                    Git插入图片
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="../../工具/Git/Git常用命令.html">
+            
+                <a href="../../工具/Git/Git常用命令.html">
+            
+                    
+                    Git常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="../../工具/Git/Git常见报错与解决方案.html">
+            
+                <a href="../../工具/Git/Git常见报错与解决方案.html">
+            
+                    
+                    Git常见报错与解决方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.5" data-path="../../工具/Git/Gitbook插入表格.html">
+            
+                <a href="../../工具/Git/Gitbook插入表格.html">
+            
+                    
+                    Gitbook插入表格
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../工具/Prometheus/">
+            
+                <a href="../../工具/Prometheus/">
+            
+                    
+                    Prometheus
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="../../工具/Prometheus/Prometheus服务端部署.html">
+            
+                <a href="../../工具/Prometheus/Prometheus服务端部署.html">
+            
+                    
+                    Prometheus服务端部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="../../工具/Prometheus/Prometheus监控JVM.html">
+            
+                <a href="../../工具/Prometheus/Prometheus监控JVM.html">
+            
+                    
+                    Prometheus监控JVM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.3" data-path="../../工具/Prometheus/Prometheus监控MySQL数据库.html">
+            
+                <a href="../../工具/Prometheus/Prometheus监控MySQL数据库.html">
+            
+                    
+                    Prometheus监控MySQL数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.4" data-path="../../工具/Prometheus/Prometheus监控Oracle数据库.html">
+            
+                <a href="../../工具/Prometheus/Prometheus监控Oracle数据库.html">
+            
+                    
+                    Prometheus监控Oracle数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.5" data-path="../../工具/Prometheus/Prometheus监控Linux主机.html">
+            
+                <a href="../../工具/Prometheus/Prometheus监控Linux主机.html">
+            
+                    
+                    Prometheus监控Linux主机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.6" data-path="../../工具/Prometheus/Prometheus监控Windows主机.html">
+            
+                <a href="../../工具/Prometheus/Prometheus监控Windows主机.html">
+            
+                    
+                    Prometheus监控Windows主机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.7" data-path="../../工具/Prometheus/Prometheus监控容器.html">
+            
+                <a href="../../工具/Prometheus/Prometheus监控容器.html">
+            
+                    
+                    Prometheus监控容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../操作系统/">
+            
+                <a href="../../操作系统/">
+            
+                    
+                    操作系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../操作系统/IOS/">
+            
+                <a href="../../操作系统/IOS/">
+            
+                    
+                    IOS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../操作系统/IOS/IOS模拟器命令xcrun_simctl系列.html">
+            
+                <a href="../../操作系统/IOS/IOS模拟器命令xcrun_simctl系列.html">
+            
+                    
+                    IOS模拟器命令xcrun_simctl系列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../操作系统/Android/">
+            
+                <a href="../../操作系统/Android/">
+            
+                    
+                    Android
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../操作系统/Android/Android性能问题分析神器Systrace.html">
+            
+                <a href="../../操作系统/Android/Android性能问题分析神器Systrace.html">
+            
+                    
+                    Android性能问题分析神器Systrace
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../操作系统/Windows/">
+            
+                <a href="../../操作系统/Windows/">
+            
+                    
+                    Windows
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../../操作系统/Windows/Windows系统下TCP参数优化.html">
+            
+                <a href="../../操作系统/Windows/Windows系统下TCP参数优化.html">
+            
+                    
+                    Windows系统下TCP参数优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../../操作系统/Windows/Windows通过ssh连接远程服务器.html">
+            
+                <a href="../../操作系统/Windows/Windows通过ssh连接远程服务器.html">
+            
+                    
+                    Windows通过ssh连接远程服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../../操作系统/Windows/Windows中bat脚本延时执行.html">
+            
+                <a href="../../操作系统/Windows/Windows中bat脚本延时执行.html">
+            
+                    
+                    Windows中bat脚本延时执行
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../操作系统/Linux/">
+            
+                <a href="../../操作系统/Linux/">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../../操作系统/Linux/Linux使用SSH首次登陆无需确认.html">
+            
+                <a href="../../操作系统/Linux/Linux使用SSH首次登陆无需确认.html">
+            
+                    
+                    Linux使用SSH首次登陆无需确认
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="../../操作系统/Linux/SSH常用命令.html">
+            
+                <a href="../../操作系统/Linux/SSH常用命令.html">
+            
+                    
+                    SSH常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="../../操作系统/Linux/Linux中最常用的一套Sed技巧.html">
+            
+                <a href="../../操作系统/Linux/Linux中最常用的一套Sed技巧.html">
+            
+                    
+                    Linux中最常用的一套Sed技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.4" data-path="../../操作系统/Linux/Linux中sed命令完全攻略.html">
+            
+                <a href="../../操作系统/Linux/Linux中sed命令完全攻略.html">
+            
+                    
+                    Linux中sed命令完全攻略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.5" data-path="../../操作系统/Linux/CPULoad指标理解.html">
+            
+                <a href="../../操作系统/Linux/CPULoad指标理解.html">
+            
+                    
+                    CPULoad指标理解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.6" data-path="../../操作系统/Linux/Linux执行Shell脚本报语法错误.html">
+            
+                <a href="../../操作系统/Linux/Linux执行Shell脚本报语法错误.html">
+            
+                    
+                    Linux执行shell脚本报语法错误
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../操作系统/AIX/">
+            
+                <a href="../../操作系统/AIX/">
+            
+                    
+                    AIX
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../../操作系统/AS400/">
+            
+                <a href="../../操作系统/AS400/">
+            
+                    
+                    AS400
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.6.1" data-path="../../操作系统/AS400/AS400常用命令.html">
+            
+                <a href="../../操作系统/AS400/AS400常用命令.html">
+            
+                    
+                    AS400常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    语言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Python
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="Python3之sublime配置.html">
+            
+                <a href="Python3之sublime配置.html">
+            
+                    
+                    Python3之sublime配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="Python自动监控启动进程.html">
+            
+                <a href="Python自动监控启动进程.html">
+            
+                    
+                    Python自动监控启动进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="Python实现对Linux服务器的监控.html">
+            
+                <a href="Python实现对Linux服务器的监控.html">
+            
+                    
+                    Python实现对Linux服务器的监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="Python读写Excel文件.html">
+            
+                <a href="Python读写Excel文件.html">
+            
+                    
+                    Python读写Excel文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="Python鲜为人知的语法.html">
+            
+                <a href="Python鲜为人知的语法.html">
+            
+                    
+                    Python鲜为人知的语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="Python中matplotlib的颜色及线条控制.html">
+            
+                <a href="Python中matplotlib的颜色及线条控制.html">
+            
+                    
+                    Python中matplotlib的颜色及线条控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.1.7" data-path="Python使用itchat调用微信接口.html">
+            
+                <a href="Python使用itchat调用微信接口.html">
+            
+                    
+                    Python使用itchat调用微信接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="Python微信库itchat的用法.html">
+            
+                <a href="Python微信库itchat的用法.html">
+            
+                    
+                    Python微信库itchat的用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Java/">
+            
+                <a href="../Java/">
+            
+                    
+                    Java
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../Java/Java中hashcode相等两个类一定相等吗.html">
+            
+                <a href="../Java/Java中hashcode相等两个类一定相等吗.html">
+            
+                    
+                    Java中hashcode相等两个类一定相等吗
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../Java/Java之voliate,synchronized,AtomicInteger使用.html">
+            
+                <a href="../Java/Java之voliate,synchronized,AtomicInteger使用.html">
+            
+                    
+                    Java之voliate,synchronized,AtomicInteger使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../Java/Java内存溢出OOM异常完全指南.html">
+            
+                <a href="../Java/Java内存溢出OOM异常完全指南.html">
+            
+                    
+                    Java内存溢出OOM异常完全指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../Java/Java之JVM虚拟机GC.html">
+            
+                <a href="../Java/Java之JVM虚拟机GC.html">
+            
+                    
+                    Java之JVM虚拟机GC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../Java/Java之jvm性能调优工具jcmd.html">
+            
+                <a href="../Java/Java之jvm性能调优工具jcmd.html">
+            
+                    
+                    Java之jvm性能调优工具jcmd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../Java/使用Java编写Tuxedo应用.html">
+            
+                <a href="../Java/使用Java编写Tuxedo应用.html">
+            
+                    
+                    使用Java编写Tuxedo应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.7" data-path="../Java/JVM原理讲解和调优.html">
+            
+                <a href="../Java/JVM原理讲解和调优.html">
+            
+                    
+                    JVM原理讲解和调优
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.8" data-path="../Java/Java调优经验谈.html">
+            
+                <a href="../Java/Java调优经验谈.html">
+            
+                    
+                    Java调优经验谈
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../C/">
+            
+                <a href="../C/">
+            
+                    
+                    C
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../C/C生成身份证号.html">
+            
+                <a href="../C/C生成身份证号.html">
+            
+                    
+                    C生成身份证号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../C/Linux下几款C++程序中的内存泄露检查工具.html">
+            
+                <a href="../C/Linux下几款C++程序中的内存泄露检查工具.html">
+            
+                    
+                    Linux下几款C++程序中的内存泄露检查工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Shell/">
+            
+                <a href="../Shell/">
+            
+                    
+                    Shell
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../Shell/使用SSH远程连接发送命令.html">
+            
+                <a href="../Shell/使用SSH远程连接发送命令.html">
+            
+                    
+                    使用SSH远程连接发送命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../Assembly-on-macOS-master/">
+            
+                <a href="../Assembly-on-macOS-master/">
+            
+                    
+                    汇编语言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" data-path="../Assembly-on-macOS-master/macOS上的汇编入门（一）——引言.html">
+            
+                <a href="../Assembly-on-macOS-master/macOS上的汇编入门（一）——引言.html">
+            
+                    
+                    macOS上的汇编入门（一）——引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2" data-path="../Assembly-on-macOS-master/macOS上的汇编入门（二）——数学基础.html">
+            
+                <a href="../Assembly-on-macOS-master/macOS上的汇编入门（二）——数学基础.html">
+            
+                    
+                    macOS上的汇编入门（二）——数学基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.3" data-path="../Assembly-on-macOS-master/macOS上的汇编入门（三）——硬件基础.html">
+            
+                <a href="../Assembly-on-macOS-master/macOS上的汇编入门（三）——硬件基础.html">
+            
+                    
+                    macOS上的汇编入门（三）——硬件基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.4" data-path="../Assembly-on-macOS-master/macOS上的汇编入门（四）——操作系统基础.html">
+            
+                <a href="../Assembly-on-macOS-master/macOS上的汇编入门（四）——操作系统基础.html">
+            
+                    
+                    macOS上的汇编入门（四）——操作系统基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.5" data-path="../Assembly-on-macOS-master/macOS上的汇编入门（五）——第一个汇编程序.html">
+            
+                <a href="../Assembly-on-macOS-master/macOS上的汇编入门（五）——第一个汇编程序.html">
+            
+                    
+                    macOS上的汇编入门（五）——第一个汇编程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.6" data-path="../Assembly-on-macOS-master/macOS上的汇编入门（六）——汇编语言初识.html">
+            
+                <a href="../Assembly-on-macOS-master/macOS上的汇编入门（六）——汇编语言初识.html">
+            
+                    
+                    macOS上的汇编入门（六）——汇编语言初识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.7" data-path="../Assembly-on-macOS-master/macOS上的汇编入门（七）——字面量与局部变量.html">
+            
+                <a href="../Assembly-on-macOS-master/macOS上的汇编入门（七）——字面量与局部变量.html">
+            
+                    
+                    macOS上的汇编入门（七）——字面量与局部变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.8" data-path="../Assembly-on-macOS-master/macOS上的汇编入门（八）——寻址方式与全局变量.html">
+            
+                <a href="../Assembly-on-macOS-master/macOS上的汇编入门（八）——寻址方式与全局变量.html">
+            
+                    
+                    macOS上的汇编入门（八）——寻址方式与全局变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.9" data-path="../Assembly-on-macOS-master/macOS上的汇编入门（九）——跳转与函数.html">
+            
+                <a href="../Assembly-on-macOS-master/macOS上的汇编入门（九）——跳转与函数.html">
+            
+                    
+                    macOS上的汇编入门（九）——跳转与函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.10" data-path="../Assembly-on-macOS-master/macOS上的汇编入门（十）——再探函数.html">
+            
+                <a href="../Assembly-on-macOS-master/macOS上的汇编入门（十）——再探函数.html">
+            
+                    
+                    macOS上的汇编入门（十）——再探函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.11" data-path="../Assembly-on-macOS-master/macOS上的汇编入门（十一）——系统调用.html">
+            
+                <a href="../Assembly-on-macOS-master/macOS上的汇编入门（十一）——系统调用.html">
+            
+                    
+                    macOS上的汇编入门（十一）——系统调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.12" data-path="../Assembly-on-macOS-master/macOS上的汇编入门（十二）——调试.html">
+            
+                <a href="../Assembly-on-macOS-master/macOS上的汇编入门（十二）——调试.html">
+            
+                    
+                    macOS上的汇编入门（十二）——调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.13" data-path="../Assembly-on-macOS-master/macOS上的汇编入门（十三）——从编译到执行.html">
+            
+                <a href="../Assembly-on-macOS-master/macOS上的汇编入门（十三）——从编译到执行.html">
+            
+                    
+                    macOS上的汇编入门（十三）——从编译到执行
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../数据库/">
+            
+                <a href="../../数据库/">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../数据库/Oracle/">
+            
+                <a href="../../数据库/Oracle/">
+            
+                    
+                    Oracle
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../../数据库/Oracle/如何读懂AWR.html">
+            
+                <a href="../../数据库/Oracle/如何读懂AWR.html">
+            
+                    
+                    如何读懂AWR
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../数据库/Mysql/">
+            
+                <a href="../../数据库/Mysql/">
+            
+                    
+                    Mysql
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../../数据库/Mysql/Mysql之MacOS安装mysqlclient.html">
+            
+                <a href="../../数据库/Mysql/Mysql之MacOS安装mysqlclient.html">
+            
+                    
+                    Mysql之MacOS安装mysqlclient
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../../数据库/Mysql/Mysql删除库中所有表的数据.html">
+            
+                <a href="../../数据库/Mysql/Mysql删除库中所有表的数据.html">
+            
+                    
+                    Mysql删除库中所有表的数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.3" data-path="../../数据库/Mysql/数据库分库分表策略和分库分表后数据的查询.html">
+            
+                <a href="../../数据库/Mysql/数据库分库分表策略和分库分表后数据的查询.html">
+            
+                    
+                    数据库分库分表策略和分库分表后数据的查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.4" data-path="../../数据库/Mysql/MYSQL显示完整的processlist中info信息.html">
+            
+                <a href="../../数据库/Mysql/MYSQL显示完整的processlist中info信息.html">
+            
+                    
+                    MYSQL显示完整的processlist中info信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.5" data-path="../../数据库/Mysql/MySQL高性能优化实战总结.html">
+            
+                <a href="../../数据库/Mysql/MySQL高性能优化实战总结.html">
+            
+                    
+                    MySQL高性能优化实战总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.6" data-path="../../数据库/Mysql/数据库原理.html">
+            
+                <a href="../../数据库/Mysql/数据库原理.html">
+            
+                    
+                    数据库原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.7" data-path="../../数据库/Mysql/Mysql数据库死锁监控.html">
+            
+                <a href="../../数据库/Mysql/Mysql数据库死锁监控.html">
+            
+                    
+                    Mysql数据库死锁监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.8" data-path="../../数据库/Mysql/Mysql锁表问题解决.html">
+            
+                <a href="../../数据库/Mysql/Mysql锁表问题解决.html">
+            
+                    
+                    Mysql锁表问题解决
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.9" data-path="../../数据库/Mysql/MySql慢查询优化.html">
+            
+                <a href="../../数据库/Mysql/MySql慢查询优化.html">
+            
+                    
+                    MySql慢查询优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../数据库/DB2/">
+            
+                <a href="../../数据库/DB2/">
+            
+                    
+                    DB2
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../../数据库/DB2/DB2高危操作LOAD命令风险详解.html">
+            
+                <a href="../../数据库/DB2/DB2高危操作LOAD命令风险详解.html">
+            
+                    
+                    DB2高危操作LOAD命令风险详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../数据库/Informix/">
+            
+                <a href="../../数据库/Informix/">
+            
+                    
+                    Informix
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../应用/">
+            
+                <a href="../../应用/">
+            
+                    
+                    应用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../应用/Nginx/">
+            
+                <a href="../../应用/Nginx/">
+            
+                    
+                    Nginx
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../../应用/Nginx/Nginx配置参数中文说明.html">
+            
+                <a href="../../应用/Nginx/Nginx配置参数中文说明.html">
+            
+                    
+                    Nginx配置参数中文说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../应用/分布式/">
+            
+                <a href="../../应用/分布式/">
+            
+                    
+                    分布式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../../应用/分布式/分布式架构知识体系.html">
+            
+                <a href="../../应用/分布式/分布式架构知识体系.html">
+            
+                    
+                    分布式架构知识体系
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../安全/">
+            
+                <a href="../../安全/">
+            
+                    
+                    安全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../安全/CTF/">
+            
+                <a href="../../安全/CTF/">
+            
+                    
+                    CTF
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="../../安全/CTF/CTF之隐写术破解.html">
+            
+                <a href="../../安全/CTF/CTF之隐写术破解.html">
+            
+                    
+                    CTF之隐写术破解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.2" data-path="../../安全/CTF/BMP图片分析.html">
+            
+                <a href="../../安全/CTF/BMP图片分析.html">
+            
+                    
+                    BMP图片分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.3" data-path="../../安全/CTF/Radare2使用全解.html">
+            
+                <a href="../../安全/CTF/Radare2使用全解.html">
+            
+                    
+                    Radare2使用全解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4" data-path="../../安全/CTF/CTF题集/">
+            
+                <a href="../../安全/CTF/CTF题集/">
+            
+                    
+                    CTF题集
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.4.1" data-path="../../安全/CTF/CTF题集/流量分析之文件简单提取.html">
+            
+                <a href="../../安全/CTF/CTF题集/流量分析之文件简单提取.html">
+            
+                    
+                    流量分析之文件简单提取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4.2" data-path="../../安全/CTF/CTF题集/取证神器之使用volatility分析window内存.html">
+            
+                <a href="../../安全/CTF/CTF题集/取证神器之使用volatility分析window内存.html">
+            
+                    
+                    取证神器之使用volatility分析window内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4.3" data-path="../../安全/CTF/CTF题集/图片隐写术pigs.html">
+            
+                <a href="../../安全/CTF/CTF题集/图片隐写术pigs.html">
+            
+                    
+                    图片隐写术pigs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4.4" data-path="../../安全/CTF/CTF题集/webshell流量分析.html">
+            
+                <a href="../../安全/CTF/CTF题集/webshell流量分析.html">
+            
+                    
+                    webshell流量分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4.5" data-path="../../安全/CTF/CTF题集/逆向工程之密码分析.html">
+            
+                <a href="../../安全/CTF/CTF题集/逆向工程之密码分析.html">
+            
+                    
+                    逆向工程之密码分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4.6" data-path="../../安全/CTF/CTF题集/密码学之摩斯电码.html">
+            
+                <a href="../../安全/CTF/CTF题集/密码学之摩斯电码.html">
+            
+                    
+                    密码学之摩斯电码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4.7" data-path="../../安全/CTF/CTF题集/逆向工程之阿拉丁神灯.html">
+            
+                <a href="../../安全/CTF/CTF题集/逆向工程之阿拉丁神灯.html">
+            
+                    
+                    逆向工程之阿拉丁神灯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4.8" data-path="../../安全/CTF/CTF题集/逆向工程easyflag.html">
+            
+                <a href="../../安全/CTF/CTF题集/逆向工程easyflag.html">
+            
+                    
+                    逆向工程easyflag
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4.9" data-path="../../安全/CTF/CTF题集/密码学之md5.html">
+            
+                <a href="../../安全/CTF/CTF题集/密码学之md5.html">
+            
+                    
+                    密码学之md5
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4.10" data-path="../../安全/CTF/CTF题集/图片隐写术之教练我想打CTF.html">
+            
+                <a href="../../安全/CTF/CTF题集/图片隐写术之教练我想打CTF.html">
+            
+                    
+                    图片隐写术之教练我想打CTF
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../测试/">
+            
+                <a href="../../测试/">
+            
+                    
+                    测试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../测试/非功能测试/">
+            
+                <a href="../../测试/非功能测试/">
+            
+                    
+                    非功能测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Python使用itchat调用微信接口</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#python&#x4F7F;&#x7528;itchat&#x8C03;&#x7528;&#x5FAE;&#x4FE1;&#x63A5;&#x53E3;"><b></b>Python&#x4F7F;&#x7528;itchat&#x8C03;&#x7528;&#x5FAE;&#x4FE1;&#x63A5;&#x53E3;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5B89;&#x88C5;"><b></b>&#x5B89;&#x88C5;</a></li><li><span class="title-icon "></span><a href="#&#x767B;&#x5F55;"><b></b>&#x767B;&#x5F55;</a></li><li><span class="title-icon "></span><a href="#&#x83B7;&#x53D6;&#x597D;&#x53CB;"><b></b>&#x83B7;&#x53D6;&#x597D;&#x53CB;</a></li><li><span class="title-icon "></span><a href="#&#x56DE;&#x590D;&#x6D88;&#x606F;"><b></b>&#x56DE;&#x590D;&#x6D88;&#x606F;</a></li><ul><li><span class="title-icon "></span><a href="#send"><b></b>send</a></li><li><span class="title-icon "></span><a href="#sendmsg"><b></b>send_msg</a></li><li><span class="title-icon "></span><a href="#sendfile"><b></b>send_file</a></li><li><span class="title-icon "></span><a href="#sendimage"><b></b>send_image</a></li><li><span class="title-icon "></span><a href="#sendvideo"><b></b>send_video</a></li></ul><li><span class="title-icon "></span><a href="#&#x6CE8;&#x518C;&#x6D88;&#x606F;&#x65B9;&#x6CD5;"><b></b>&#x6CE8;&#x518C;&#x6D88;&#x606F;&#x65B9;&#x6CD5;</a></li><ul><li><span class="title-icon "></span><a href="#&#x6CE8;&#x518C;&#x65B9;&#x6CD5;"><b></b>&#x6CE8;&#x518C;&#x65B9;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#&#x6D88;&#x606F;&#x5185;&#x5BB9;"><b></b>&#x6D88;&#x606F;&#x5185;&#x5BB9;</a></li><li><span class="title-icon "></span><a href="#&#x516C;&#x4F17;&#x53F7;"><b></b>&#x516C;&#x4F17;&#x53F7;</a></li><li><span class="title-icon "></span><a href="#&#x7FA4;&#x804A;"><b></b>&#x7FA4;&#x804A;</a></li></ul><li><span class="title-icon "></span><a href="#&#x65B9;&#x6CD5;&#x6C47;&#x603B;"><b></b>&#x65B9;&#x6CD5;&#x6C47;&#x603B;</a></li><li><span class="title-icon "></span><a href="#&#x5B9E;&#x4F8B;"><b></b>&#x5B9E;&#x4F8B;</a></li></ul></ul></div><a href="#python&#x4F7F;&#x7528;itchat&#x8C03;&#x7528;&#x5FAE;&#x4FE1;&#x63A5;&#x53E3;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="python&#x4F7F;&#x7528;itchat&#x8C03;&#x7528;&#x5FAE;&#x4FE1;&#x63A5;&#x53E3;"><a name="python&#x4F7F;&#x7528;itchat&#x8C03;&#x7528;&#x5FAE;&#x4FE1;&#x63A5;&#x53E3;" class="anchor-navigation-ex-anchor" href="#python&#x4F7F;&#x7528;itchat&#x8C03;&#x7528;&#x5FAE;&#x4FE1;&#x63A5;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a>Python&#x4F7F;&#x7528;itchat&#x8C03;&#x7528;&#x5FAE;&#x4FE1;&#x63A5;&#x53E3;</h1>
+<p>itchat&#x662F;&#x4E00;&#x4E2A;&#x5F00;&#x6E90;&#x7684;&#x5FAE;&#x4FE1;&#x4E2A;&#x4EBA;&#x53F7;&#x63A5;&#x53E3;&#xFF0C;&#x4F7F;&#x7528;python&#x8C03;&#x7528;&#x5FAE;&#x4FE1;&#x4ECE;&#x672A;&#x5982;&#x6B64;&#x7B80;&#x5355;&#x3002;&#x4F7F;&#x7528;&#x4E0D;&#x5230;&#x4E09;&#x5341;&#x884C;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x4F60;&#x5C31;&#x53EF;&#x4EE5;&#x5B8C;&#x6210;&#x4E00;&#x4E2A;&#x80FD;&#x591F;&#x5904;&#x7406;&#x6240;&#x6709;&#x4FE1;&#x606F;&#x7684;&#x5FAE;&#x4FE1;&#x673A;&#x5668;&#x4EBA;&#x3002;</p>
+<h2 id="&#x5B89;&#x88C5;"><a name="&#x5B89;&#x88C5;" class="anchor-navigation-ex-anchor" href="#&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B89;&#x88C5;</h2>
+<pre><code>sudo pip install itchat
+</code></pre><h2 id="&#x767B;&#x5F55;"><a name="&#x767B;&#x5F55;" class="anchor-navigation-ex-anchor" href="#&#x767B;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x767B;&#x5F55;</h2>
+<p><code>itchat.auto_login()</code></p>
+<p>&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x5C06;&#x4F1A;&#x901A;&#x8FC7;&#x5FAE;&#x4FE1;&#x626B;&#x63CF;&#x4E8C;&#x7EF4;&#x7801;&#x767B;&#x5F55;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x79CD;&#x767B;&#x5F55;&#x7684;&#x65B9;&#x5F0F;&#x786E;&#x5B9E;&#x77ED;&#x65F6;&#x95F4;&#x7684;&#x767B;&#x5F55;&#xFF0C;&#x5E76;&#x4E0D;&#x4F1A;&#x4FDD;&#x7559;&#x767B;&#x5F55;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x4E0B;&#x6B21;&#x767B;&#x5F55;&#x65F6;&#x8FD8;&#x662F;&#x9700;&#x8981;&#x626B;&#x63CF;&#x4E8C;&#x7EF4;&#x7801;&#xFF0C;&#x5982;&#x679C;&#x52A0;&#x4E0A;hotReload==True,&#x90A3;&#x4E48;&#x5C31;&#x4F1A;&#x4FDD;&#x7559;&#x767B;&#x5F55;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x81F3;&#x5C11;&#x5728;&#x540E;&#x9762;&#x7684;&#x51E0;&#x6B21;&#x767B;&#x5F55;&#x8FC7;&#x7A0B;&#x4E2D;&#x4E0D;&#x4F1A;&#x518D;&#x6B21;&#x626B;&#x63CF;&#x4E8C;&#x7EF4;&#x7801;&#xFF0C;&#x8BE5;&#x53C2;&#x6570;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x9759;&#x6001;&#x6587;&#x4EF6;itchat.pkl&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x767B;&#x5F55;&#x72B6;&#x6001;&#x3002;</p>
+<p>&#x9000;&#x51FA;&#x53CA;&#x767B;&#x5F55;&#x5B8C;&#x6210;&#x540E;&#x8C03;&#x7528;&#x7684;&#x7279;&#x5B9A;&#x7684;&#x65B9;&#x6CD5;</p>
+<p>&#x8FD9;&#x91CC;&#x4E3B;&#x8981;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x7070;&#x8C03;&#x51FD;&#x6570;&#x7684;&#x65B9;&#x6CD5;,&#x767B;&#x5F55;&#x5B8C;&#x6210;&#x540E;&#x7684;&#x65B9;&#x6CD5;&#x9700;&#x8981;&#x8D4B;&#x503C;&#x5728; loginCallback &#x4E2D;&#x9000;&#x51FA;&#x540E;&#x7684;&#x65B9;&#x6CD5;,&#x9700;&#x8981;&#x8D4B;&#x503C;&#x5728; exitCallback&#x4E2D;.&#x82E5;&#x4E0D;&#x8BBE;&#x7F6E; loginCallback &#x7684;&#x503C;, &#x5C06;&#x4F1A;&#x81EA;&#x52A8;&#x5220;&#x9664;&#x4E8C;&#x7EF4;&#x7801;&#x56FE;&#x7247;&#x5E76;&#x6E05;&#x7A7A;&#x547D;&#x4EE4;&#x884C;&#x663E;&#x793A;.</p>
+<pre><code>import itchat, time
+def lc():
+    print(&quot;Finash Login!&quot;)
+def ec():
+    print(&quot;exit&quot;)
+itchat.auto_login(loginCallback=lc, exitCallback=ec)
+time.sleep()
+itchat.logout()    #&#x5F3A;&#x5236;&#x9000;&#x51FA;&#x767B;&#x5F55;
+</code></pre><h2 id="&#x83B7;&#x53D6;&#x597D;&#x53CB;"><a name="&#x83B7;&#x53D6;&#x597D;&#x53CB;" class="anchor-navigation-ex-anchor" href="#&#x83B7;&#x53D6;&#x597D;&#x53CB;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x83B7;&#x53D6;&#x597D;&#x53CB;</h2>
+<pre><code>import itchat
+itchat.login()
+#&#x722C;&#x53D6;&#x81EA;&#x5DF1;&#x597D;&#x53CB;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#xFF0C; &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;json&#x6587;&#x4EF6;
+friends = itchat.get_friends(update=True)[0:]
+</code></pre><h2 id="&#x56DE;&#x590D;&#x6D88;&#x606F;"><a name="&#x56DE;&#x590D;&#x6D88;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x56DE;&#x590D;&#x6D88;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x56DE;&#x590D;&#x6D88;&#x606F;</h2>
+<h3 id="send"><a name="send" class="anchor-navigation-ex-anchor" href="#send"><i class="fa fa-link" aria-hidden="true"></i></a>send</h3>
+<p><code>send(msg=&quot;Text Message&quot;, toUserName=None)</code></p>
+<h4 id="&#x53C2;&#x6570;&#xFF1A;"><a name="&#x53C2;&#x6570;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;&#xFF1A;</h4>
+<ul>
+<li>msg : &#x6587;&#x672C;&#x6D88;&#x606F;&#x5185;&#x5BB9;</li>
+<li>@fil@path_to_file : &#x53D1;&#x9001;&#x6587;&#x4EF6;</li>
+<li>@img@path_to_img : &#x53D1;&#x9001;&#x56FE;&#x7247;</li>
+<li>@vid@path_to_video : &#x53D1;&#x9001;&#x89C6;&#x9891;</li>
+<li>toUserName : &#x53D1;&#x9001;&#x5BF9;&#x8C61;, &#x5982;&#x679C;&#x7559;&#x7A7A;, &#x5C06;&#x53D1;&#x9001;&#x7ED9;&#x81EA;&#x5DF1;.</li>
+</ul>
+<h4 id="&#x8FD4;&#x56DE;&#x503C;"><a name="&#x8FD4;&#x56DE;&#x503C;" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h4>
+<p>True or False</p>
+<h4 id="&#x5B9E;&#x4F8B;&#x4EE3;&#x7801;"><a name="&#x5B9E;&#x4F8B;&#x4EE3;&#x7801;" class="anchor-navigation-ex-anchor" href="#&#x5B9E;&#x4F8B;&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B9E;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code># coding-utf-8
+import itchat
+itchat.auto_login()
+itchat.send(&quot;Hello World!&quot;)
+ithcat.send(&quot;@fil@%s&quot; % &apos;/tmp/test.text&apos;)
+ithcat.send(&quot;@img@%s&quot; % &apos;/tmp/test.png&apos;)
+ithcat.send(&quot;@vid@%s&quot; % &apos;/tmp/test.mkv&apos;)
+</code></pre><h3 id="sendmsg"><a name="sendmsg" class="anchor-navigation-ex-anchor" href="#sendmsg"><i class="fa fa-link" aria-hidden="true"></i></a>send_msg</h3>
+<p><code>send_msg(msg=&apos;Text Message&apos;, toUserName=None)</code></p>
+<h4 id="&#x53C2;&#x6570;&#xFF1A;_1"><a name="&#x53C2;&#x6570;&#xFF1A;_1" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;&#xFF1A;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;&#xFF1A;</h4>
+<ul>
+<li>&#x5176;&#x4E2D;&#x7684;&#x7684;msg&#x662F;&#x8981;&#x53D1;&#x9001;&#x7684;&#x6587;&#x672C;</li>
+<li>toUserName&#x662F;&#x53D1;&#x9001;&#x5BF9;&#x8C61;, &#x5982;&#x679C;&#x7559;&#x7A7A;, &#x5C06;&#x53D1;&#x9001;&#x7ED9;&#x81EA;&#x5DF1;</li>
+</ul>
+<h4 id="&#x8FD4;&#x56DE;&#x503C;_1"><a name="&#x8FD4;&#x56DE;&#x503C;_1" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h4>
+<p>True or False</p>
+<h4 id="&#x5B9E;&#x4F8B;&#x4EE3;&#x7801;_1"><a name="&#x5B9E;&#x4F8B;&#x4EE3;&#x7801;_1" class="anchor-navigation-ex-anchor" href="#&#x5B9E;&#x4F8B;&#x4EE3;&#x7801;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B9E;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code>import itchat
+itchat.auto_login()
+itchat.send_msg(&quot;hello world.&quot;)
+</code></pre><h3 id="sendfile"><a name="sendfile" class="anchor-navigation-ex-anchor" href="#sendfile"><i class="fa fa-link" aria-hidden="true"></i></a>send_file</h3>
+<p><code>send_file(fileDir, toUserName=None)</code></p>
+<h4 id="&#x53C2;&#x6570;&#xFF1A;_2"><a name="&#x53C2;&#x6570;&#xFF1A;_2" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;&#xFF1A;_2"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;&#xFF1A;</h4>
+<ul>
+<li>fileDir&#x662F;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;, &#x5F53;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#x65F6;, &#x5C06;&#x6253;&#x5370;&#x65E0;&#x6B64;&#x6587;&#x4EF6;&#x7684;&#x63D0;&#x9192;&#x3002;</li>
+<li>toUserName&#x662F;&#x53D1;&#x9001;&#x5BF9;&#x8C61;, &#x5982;&#x679C;&#x7559;&#x7A7A;, &#x5C06;&#x53D1;&#x9001;&#x7ED9;&#x81EA;&#x5DF1;</li>
+</ul>
+<h4 id="&#x8FD4;&#x56DE;&#x503C;_2"><a name="&#x8FD4;&#x56DE;&#x503C;_2" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_2"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h4>
+<p>True or False</p>
+<h4 id="&#x5B9E;&#x4F8B;&#x4EE3;&#x7801;_2"><a name="&#x5B9E;&#x4F8B;&#x4EE3;&#x7801;_2" class="anchor-navigation-ex-anchor" href="#&#x5B9E;&#x4F8B;&#x4EE3;&#x7801;_2"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B9E;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code>import itchat
+itchat.auto_login()
+itchat.send_file(&quot;/tmp/test.txt&quot;)
+</code></pre><h3 id="sendimage"><a name="sendimage" class="anchor-navigation-ex-anchor" href="#sendimage"><i class="fa fa-link" aria-hidden="true"></i></a>send_image</h3>
+<p><code>send_image(fileDir, toUserName=None)</code></p>
+<h4 id="&#x53C2;&#x6570;&#xFF1A;_3"><a name="&#x53C2;&#x6570;&#xFF1A;_3" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;&#xFF1A;_3"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;&#xFF1A;</h4>
+<ul>
+<li>fileDir&#x662F;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;, &#x5F53;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#x65F6;, &#x5C06;&#x6253;&#x5370;&#x65E0;&#x6B64;&#x6587;&#x4EF6;&#x7684;&#x63D0;&#x9192;&#x3002;</li>
+<li>toUserName&#x662F;&#x53D1;&#x9001;&#x5BF9;&#x8C61;, &#x5982;&#x679C;&#x7559;&#x7A7A;, &#x5C06;&#x53D1;&#x9001;&#x7ED9;&#x81EA;&#x5DF1;</li>
+</ul>
+<h4 id="&#x8FD4;&#x56DE;&#x503C;_3"><a name="&#x8FD4;&#x56DE;&#x503C;_3" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_3"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h4>
+<p>True or False</p>
+<h4 id="&#x5B9E;&#x4F8B;&#x4EE3;&#x7801;_3"><a name="&#x5B9E;&#x4F8B;&#x4EE3;&#x7801;_3" class="anchor-navigation-ex-anchor" href="#&#x5B9E;&#x4F8B;&#x4EE3;&#x7801;_3"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B9E;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code>import itchat
+itchat.auto_login()
+itchat.send_img(&quot;/tmp/test.txt&quot;)
+</code></pre><h3 id="sendvideo"><a name="sendvideo" class="anchor-navigation-ex-anchor" href="#sendvideo"><i class="fa fa-link" aria-hidden="true"></i></a>send_video</h3>
+<p><code>send_video(fileDir, toUserName=None)</code></p>
+<h4 id="&#x53C2;&#x6570;&#xFF1A;_4"><a name="&#x53C2;&#x6570;&#xFF1A;_4" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x6570;&#xFF1A;_4"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x6570;&#xFF1A;</h4>
+<ul>
+<li>fileDir&#x662F;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;, &#x5F53;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#x65F6;, &#x5C06;&#x6253;&#x5370;&#x65E0;&#x6B64;&#x6587;&#x4EF6;&#x7684;&#x63D0;&#x9192;&#x3002;</li>
+<li>toUserName&#x662F;&#x53D1;&#x9001;&#x5BF9;&#x8C61;, &#x5982;&#x679C;&#x7559;&#x7A7A;, &#x5C06;&#x53D1;&#x9001;&#x7ED9;&#x81EA;&#x5DF1;</li>
+</ul>
+<h4 id="&#x8FD4;&#x56DE;&#x503C;_4"><a name="&#x8FD4;&#x56DE;&#x503C;_4" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x503C;_4"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x503C;</h4>
+<p>True or False</p>
+<h4 id="&#x5B9E;&#x4F8B;&#x4EE3;&#x7801;_4"><a name="&#x5B9E;&#x4F8B;&#x4EE3;&#x7801;_4" class="anchor-navigation-ex-anchor" href="#&#x5B9E;&#x4F8B;&#x4EE3;&#x7801;_4"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B9E;&#x4F8B;&#x4EE3;&#x7801;</h4>
+<pre><code>import itchat
+itchat.auto_login()
+itchat.send_video(&quot;/tmp/test.txt&quot;)
+</code></pre><h2 id="&#x6CE8;&#x518C;&#x6D88;&#x606F;&#x65B9;&#x6CD5;"><a name="&#x6CE8;&#x518C;&#x6D88;&#x606F;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x6CE8;&#x518C;&#x6D88;&#x606F;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6CE8;&#x518C;&#x6D88;&#x606F;&#x65B9;&#x6CD5;</h2>
+<p>itchat &#x5C06;&#x6839;&#x636E;&#x63A5;&#x53D7;&#x5230;&#x7684;&#x6D88;&#x606F;&#x7C7B;&#x578B;&#x5BFB;&#x627E;&#x5BF9;&#x5E94;&#x7684;&#x5DF2;&#x6CE8;&#x518C;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x6D88;&#x606F;&#x7C7B;&#x578B;&#x6CA1;&#x6709;&#x5BF9;&#x5E94;&#x7684;&#x6CE8;&#x518C;&#x65B9;&#x6CD5;, &#x8BE5;&#x6D88;&#x606F;&#x5C06;&#x4F1A;&#x88AB;&#x820D;&#x5F03;&#x3002;&#x5728;&#x8FD0;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#x4E5F;&#x53EF;&#x4EE5;&#x52A8;&#x6001;&#x6CE8;&#x518C;&#x65B9;&#x6CD5;, &#x6CE8;&#x518C;&#x65B9;&#x5F0F;&#x4E0E;&#x7ED3;&#x679C;&#x4E0D;&#x53D8;&#x3002;</p>
+<h3 id="&#x6CE8;&#x518C;&#x65B9;&#x6CD5;"><a name="&#x6CE8;&#x518C;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x6CE8;&#x518C;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6CE8;&#x518C;&#x65B9;&#x6CD5;</h3>
+<h4 id="&#x4E0D;&#x5E26;&#x5177;&#x4F53;&#x5BF9;&#x8C61;&#x6CE8;&#x518C;"><a name="&#x4E0D;&#x5E26;&#x5177;&#x4F53;&#x5BF9;&#x8C61;&#x6CE8;&#x518C;" class="anchor-navigation-ex-anchor" href="#&#x4E0D;&#x5E26;&#x5177;&#x4F53;&#x5BF9;&#x8C61;&#x6CE8;&#x518C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E0D;&#x5E26;&#x5177;&#x4F53;&#x5BF9;&#x8C61;&#x6CE8;&#x518C;</h4>
+<p>&#x5C06;&#x6CE8;&#x518C;&#x4E3A;&#x666E;&#x901A;&#x6D88;&#x606F;&#x7684;&#x56DE;&#x590D;&#x65B9;&#x6CD5;&#x3002;</p>
+<pre><code>import itchat
+from itchat.content import *
+@itchat.msg_register(TEXT)   #&#x8FD9;&#x91CC;&#x7684;TEXT&#x8868;&#x793A;&#x5982;&#x679C;&#x6709;&#x4EBA;&#x53D1;&#x9001;&#x6587;&#x672C;&#x6D88;&#x606F;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x4F1A;&#x8C03;&#x7528;&#x4E0B;&#x9762;&#x7684;&#x65B9;&#x6CD5;
+def simple_reply(msg):
+    #&#x8FD9;&#x4E2A;&#x662F;&#x5411;&#x53D1;&#x9001;&#x8005;&#x53D1;&#x9001;&#x6D88;&#x606F;
+    itchat.send_msg(&apos;&#x5DF2;&#x7ECF;&#x6536;&#x5230;&#x4E86;&#x6587;&#x672C;&#x6D88;&#x606F;&#xFF0C;&#x6D88;&#x606F;&#x5185;&#x5BB9;&#x4E3A;%s&apos;%msg[&apos;Text&apos;],toUserName=msg[&apos;FromUserName&apos;])
+    return &quot;T reveived: %s&quot; % msg[&quot;Text&quot;]     #&#x8FD4;&#x56DE;&#x7684;&#x7ED9;&#x5BF9;&#x65B9;&#x7684;&#x6D88;&#x606F;&#xFF0C;msg[&quot;Text&quot;]&#x8868;&#x793A;&#x6D88;&#x606F;&#x7684;&#x5185;&#x5BB9;
+</code></pre><h4 id="&#x5E26;&#x5BF9;&#x8C61;&#x53C2;&#x6570;&#x6CE8;&#x518C;"><a name="&#x5E26;&#x5BF9;&#x8C61;&#x53C2;&#x6570;&#x6CE8;&#x518C;" class="anchor-navigation-ex-anchor" href="#&#x5E26;&#x5BF9;&#x8C61;&#x53C2;&#x6570;&#x6CE8;&#x518C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E26;&#x5BF9;&#x8C61;&#x53C2;&#x6570;&#x6CE8;&#x518C;</h4>
+<p>&#x5BF9;&#x5E94;&#x6D88;&#x606F;&#x5BF9;&#x8C61;&#x5C06;&#x8C03;&#x7528;&#x8BE5;&#x65B9;&#x6CD5;&#xFF0C;&#x5176;&#x4E2D;isFriendChat&#x8868;&#x793A;&#x597D;&#x53CB;&#x4E4B;&#x95F4;&#xFF0C;isGroupChat&#x8868;&#x793A;&#x7FA4;&#x804A;&#xFF0C;isMapChat&#x8868;&#x793A;&#x516C;&#x4F17;&#x53F7;</p>
+<pre><code>import itchat
+from itchat.content import *
+@itchat.msg_register(TEXT, isFriendChat=True, isGroupChat=True,isMpChat=True)
+def text_reply(msg):
+    msg.user.send(&quot;%s : %s&quot; % (mst.type, msg.text))
+</code></pre><h4 id="&#x6D88;&#x606F;&#x7C7B;&#x578B;"><a name="&#x6D88;&#x606F;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#&#x6D88;&#x606F;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6D88;&#x606F;&#x7C7B;&#x578B;</h4>
+<p>&#x5411;&#x6CE8;&#x518C;&#x65B9;&#x6CD5;&#x4F20;&#x5165;&#x7684; msg &#x5305;&#x542B;&#x5FAE;&#x4FE1;&#x8FD4;&#x56DE;&#x7684;&#x5B57;&#x5178;&#x7684;&#x6240;&#x6709;&#x5185;&#x5BB9;.itchat &#x589E;&#x52A0; Text, Type(&#x4E5F;&#x5C31;&#x662F;&#x53C2;&#x6570;) &#x952E;&#x503C;, &#x65B9;&#x4FBF;&#x64CD;&#x4F5C;.</p>
+<p>itcaht.content &#x4E2D;&#x5305;&#x542B;&#x6240;&#x6709;&#x7684;&#x6D88;&#x606F;&#x7C7B;&#x578B;&#x53C2;&#x6570;, &#x5982;&#x4E0B;&#x8868;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th>&#x7C7B;&#x578B;</th>
+<th>Text &#x952E;&#x503C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TEXT</td>
+<td>&#x6587;&#x672C;</td>
+<td>&#x6587;&#x672C;&#x5185;&#x5BB9;(&#x6587;&#x5B57;&#x6D88;&#x606F;)</td>
+</tr>
+<tr>
+<td>MAP</td>
+<td>&#x5730;&#x56FE;</td>
+<td>&#x4F4D;&#x7F6E;&#x6587;&#x672C;(&#x4F4D;&#x7F6E;&#x5206;&#x4EAB;)</td>
+</tr>
+<tr>
+<td>CARD</td>
+<td>&#x540D;&#x7247;</td>
+<td>&#x63A8;&#x8350;&#x4EBA;&#x5B57;&#x5178;(&#x63A8;&#x8350;&#x4EBA;&#x7684;&#x540D;&#x7247;)</td>
+</tr>
+<tr>
+<td>SHARING</td>
+<td>&#x5206;&#x4EAB;</td>
+<td>&#x5206;&#x4EAB;&#x540D;&#x79F0;(&#x5206;&#x4EAB;&#x7684;&#x97F3;&#x4E50;&#x6216;&#x8005;&#x6587;&#x7AE0;&#x7B49;)</td>
+</tr>
+<tr>
+<td>PICTURE</td>
+<td>&#x4E0B;&#x8F7D;&#x65B9;&#x6CD5;</td>
+<td>&#x56FE;&#x7247;/&#x8868;&#x60C5;</td>
+</tr>
+<tr>
+<td>RECORDING</td>
+<td>&#x8BED;&#x97F3;</td>
+<td>&#x4E0B;&#x8F7D;&#x65B9;&#x6CD5;</td>
+</tr>
+<tr>
+<td>ATTACHMENT</td>
+<td>&#x9644;&#x4EF6;</td>
+<td>&#x4E0B;&#x8F7D;&#x65B9;&#x6CD5;</td>
+</tr>
+<tr>
+<td>VIDEO</td>
+<td>&#x5C0F;&#x89C6;&#x9891;</td>
+<td>&#x4E0B;&#x8F7D;&#x65B9;&#x6CD5;</td>
+</tr>
+<tr>
+<td>FRIENDS</td>
+<td>&#x597D;&#x53CB;&#x9080;&#x8BF7;</td>
+<td>&#x6DFB;&#x52A0;&#x597D;&#x53CB;&#x6240;&#x9700;&#x53C2;&#x6570;</td>
+</tr>
+<tr>
+<td>SYSTEM</td>
+<td>&#x7CFB;&#x7EDF;&#x6D88;&#x606F;</td>
+<td>&#x66F4;&#x65B0;&#x5185;&#x5BB9;&#x7684;&#x7528;&#x6237;&#x6216;&#x7FA4;&#x804A;&#x7684;UserName&#x7EC4;&#x6210;&#x7684;&#x5217;&#x8868;</td>
+</tr>
+<tr>
+<td>NOTE</td>
+<td>&#x901A;&#x77E5;</td>
+<td>&#x901A;&#x77E5;&#x6587;&#x672C;(&#x6D88;&#x606F;&#x64A4;&#x56DE;&#x7B49;)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x9644;&#x4EF6;&#x7684;&#x4E0B;&#x8F7D;&#x4E0E;&#x53D1;&#x9001;"><a name="&#x9644;&#x4EF6;&#x7684;&#x4E0B;&#x8F7D;&#x4E0E;&#x53D1;&#x9001;" class="anchor-navigation-ex-anchor" href="#&#x9644;&#x4EF6;&#x7684;&#x4E0B;&#x8F7D;&#x4E0E;&#x53D1;&#x9001;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9644;&#x4EF6;&#x7684;&#x4E0B;&#x8F7D;&#x4E0E;&#x53D1;&#x9001;</h4>
+<p>itchat &#x7684;&#x9644;&#x4EF6;&#x4E0B;&#x8F7D;&#x65B9;&#x6CD5;&#x5B58;&#x50A8;&#x5728; msg &#x7684; Text &#x952E;&#x4E2D;.</p>
+<p>&#x53D1;&#x9001;&#x7684;&#x6587;&#x4EF6;&#x540D;(&#x56FE;&#x7247;&#x7ED9;&#x51FA;&#x7684;&#x9ED8;&#x8BA4;&#x6587;&#x4EF6;&#x540D;), &#x90FD;&#x5B58;&#x50A8;&#x5728; msg &#x7684; FileName &#x952E;&#x4E2D;.</p>
+<p>&#x4E0B;&#x8F7D;&#x65B9;&#x6CD5;, &#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x53EF;&#x7528;&#x7684;&#x4F4D;&#x7F6E;&#x53C2;&#x6570;(&#x5305;&#x62EC;&#x6587;&#x4EF6;&#x540D;), &#x5E76;&#x5C06;&#x6587;&#x4EF6;&#x54CD;&#x5E94;&#x7684;&#x5B58;&#x50A8;.</p>
+<p><code>&#x6CE8;&#x610F;&#xFF1A;&#x4E0B;&#x8F7D;&#x7684;&#x6587;&#x4EF6;&#x5B58;&#x50A8;&#x5728;&#x6307;&#x5B9A;&#x7684;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x76F4;&#x63A5;&#x5C06;&#x8DEF;&#x5F84;&#x4E0E;FileName&#x8FDE;&#x63A5;&#x5373;&#x53EF;&#xFF0C;&#x5982;msg[&quot;Text&quot;](&apos;/tmp/weichat&apos;+msg[&apos;FileName&apos;])</code></p>
+<pre><code>@itchat.msg_register([PICTURE, RECORDING, ATTACHMENT, VIDEO])
+def download_files(msg):
+    #msg.download(msg[&apos;FileName&apos;])   #&#x8FD9;&#x4E2A;&#x540C;&#x6837;&#x662F;&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;&#x7684;&#x65B9;&#x5F0F;
+    msg[&apos;Text&apos;](msg[&apos;FileName&apos;])      #&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;
+    #&#x5C06;&#x4E0B;&#x8F7D;&#x7684;&#x6587;&#x4EF6;&#x53D1;&#x9001;&#x7ED9;&#x53D1;&#x9001;&#x8005;
+    itchat.send(&apos;@%s@%s&apos; % (&apos;img&apos; if msg[&apos;Type&apos;] == &apos;Picture&apos; else &apos;fil&apos;, msg[&quot;FileName&quot;]), msg[&quot;FromUserName&quot;])
+</code></pre><h4 id="&#x7FA4;&#x6D88;&#x606F;"><a name="&#x7FA4;&#x6D88;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x7FA4;&#x6D88;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7FA4;&#x6D88;&#x606F;</h4>
+<p>&#x589E;&#x52A0;&#x4E86;&#x4E09;&#x4E2A;&#x952E;&#x503C;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>isAt &#x5224;&#x65AD;&#x662F;&#x5426; @ &#x672C;&#x53F7;</li>
+<li>ActualNickName : &#x5B9E;&#x9645; NickName(&#x6635;&#x79F0;)</li>
+<li>Content : &#x5B9E;&#x9645; Content</li>
+</ul>
+<h4 id="&#x6D4B;&#x8BD5;&#x7A0B;&#x5E8F;"><a name="&#x6D4B;&#x8BD5;&#x7A0B;&#x5E8F;" class="anchor-navigation-ex-anchor" href="#&#x6D4B;&#x8BD5;&#x7A0B;&#x5E8F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6D4B;&#x8BD5;&#x7A0B;&#x5E8F;</h4>
+<pre><code>import itcaht
+from itchat.content import TEXT
+
+@itchat.msg_register(TEXT, isGroupChat=True)
+def text_reply(msg):
+    if(msg.isAt):    #&#x5224;&#x65AD;&#x662F;&#x5426;&#x6709;&#x4EBA;@&#x81EA;&#x5DF1;
+    #&#x5982;&#x679C;&#x6709;&#x4EBA;@&#x81EA;&#x5DF1;&#xFF0C;&#x5C31;&#x53D1;&#x4E00;&#x4E2A;&#x6D88;&#x606F;&#x544A;&#x8BC9;&#x5BF9;&#x65B9;&#x6211;&#x5DF2;&#x7ECF;&#x6536;&#x5230;&#x4E86;&#x4FE1;&#x606F;
+    itchat.send_msg(&quot;&#x6211;&#x5DF2;&#x7ECF;&#x6536;&#x5230;&#x4E86;&#x6765;&#x81EA;{0}&#x7684;&#x6D88;&#x606F;&#xFF0C;&#x5B9E;&#x9645;&#x5185;&#x5BB9;&#x4E3A;{1}&quot;.format(msg[&apos;ActualNickName&apos;],msg[&apos;Text&apos;]),toUserName=msg[&apos;FromUserName&apos;])
+
+itchat.auto_login()
+itchat.run()
+</code></pre><h4 id="&#x6CE8;&#x518C;&#x6D88;&#x606F;&#x7684;&#x4F18;&#x5148;&#x7EA7;"><a name="&#x6CE8;&#x518C;&#x6D88;&#x606F;&#x7684;&#x4F18;&#x5148;&#x7EA7;" class="anchor-navigation-ex-anchor" href="#&#x6CE8;&#x518C;&#x6D88;&#x606F;&#x7684;&#x4F18;&#x5148;&#x7EA7;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6CE8;&#x518C;&#x6D88;&#x606F;&#x7684;&#x4F18;&#x5148;&#x7EA7;</h4>
+<p>&#x603B;&#x7684;&#x6765;&#x8BF4;&#x5C31;&#x662F;&#x540E;&#x9762;&#x6CE8;&#x518C;&#x540C;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x6D88;&#x606F;&#x4F1A;&#x8986;&#x76D6;&#x4E4B;&#x524D;&#x6CE8;&#x518C;&#x7684;&#x6D88;&#x606F;&#xFF0C;&#x8BE6;&#x60C5;&#x89C1;&#x6587;&#x6863;<a href="https://itchat.readthedocs.io/zh/latest/" target="_blank">https://itchat.readthedocs.io/zh/latest/</a></p>
+<h3 id="&#x6D88;&#x606F;&#x5185;&#x5BB9;"><a name="&#x6D88;&#x606F;&#x5185;&#x5BB9;" class="anchor-navigation-ex-anchor" href="#&#x6D88;&#x606F;&#x5185;&#x5BB9;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6D88;&#x606F;&#x5185;&#x5BB9;</h3>
+<p><code>&#x6CE8;&#x610F;&#xFF1A;&#x6240;&#x6709;&#x7684;&#x6D88;&#x606F;&#x5185;&#x5BB9;&#x90FD;&#x662F;&#x53EF;&#x4EE5;&#x7528;&#x952E;&#x503C;&#x5BF9;&#x6765;&#x8BBF;&#x95EE;&#x7684;&#xFF0C;&#x5982;msg[&quot;FromUserName]&#x5C31;&#x662F;&#x67E5;&#x770B;&#x53D1;&#x9001;&#x8005;&#xFF0C;itchat.search_friends(userName=msg[&apos;FromUserName&apos;])[&apos;NickName&apos;]&#x67E5;&#x770B;&#x7684;&#x662F;&#x5F53;&#x53D1;&#x9001;&#x8005;&#x6635;&#x79F0;</code></p>
+<h4 id="&#x4E00;&#x822C;&#x6D88;&#x606F;"><a name="&#x4E00;&#x822C;&#x6D88;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x4E00;&#x822C;&#x6D88;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E00;&#x822C;&#x6D88;&#x606F;</h4>
+<p>&#x4E00;&#x822C;&#x7684;&#x6D88;&#x606F;&#x90FD;&#x9075;&#x5FAA;&#x4EE5;&#x4E0B;&#x7684;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre><code>{
+    &quot;FromUserName&quot;: &quot;&quot;,
+    &quot;ToUserName&quot;: &quot;&quot;,
+    &quot;Content&quot;: &quot;&quot;,
+    &quot;StatusNotifyUserName&quot;: &quot;&quot;,
+    &quot;ImgWidth&quot;: 0,
+    &quot;PlayLength&quot;: 0,
+    &quot;RecommendInfo&quot;: {},
+    &quot;StatusNotifyCode&quot;: 0,
+    &quot;NewMsgId&quot;: &quot;&quot;,
+    &quot;Status&quot;: 0,
+    &quot;VoiceLength&quot;: 0,
+    &quot;ForwardFlag&quot;: 0,
+    &quot;AppMsgType&quot;: 0,
+    &quot;Ticket&quot;: &quot;&quot;,
+    &quot;AppInfo&quot;: {},
+    &quot;Url&quot;: &quot;&quot;,
+    &quot;ImgStatus&quot;: 0,
+    &quot;MsgType&quot;: 0,
+    &quot;ImgHeight&quot;: 0,
+    &quot;MediaId&quot;: &quot;&quot;,
+    &quot;MsgId&quot;: &quot;&quot;,
+    &quot;FileName&quot;: &quot;&quot;,
+    &quot;HasProductId&quot;: 0,
+    &quot;FileSize&quot;: &quot;&quot;,
+    &quot;CreateTime&quot;: 0,
+    &quot;SubMsgType&quot;: 0
+}
+</code></pre><h4 id="&#x521D;&#x59CB;&#x5316;&#x6D88;&#x606F;"><a name="&#x521D;&#x59CB;&#x5316;&#x6D88;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x521D;&#x59CB;&#x5316;&#x6D88;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521D;&#x59CB;&#x5316;&#x6D88;&#x606F;</h4>
+<pre><code> MsgType: 51
+    FromUserName: &#x81EA;&#x5DF1;ID
+    ToUserName: &#x81EA;&#x5DF1;ID
+    StatusNotifyUserName: &#x6700;&#x8FD1;&#x8054;&#x7CFB;&#x7684;&#x8054;&#x7CFB;&#x4EBA;ID
+    Content:
+        &lt;msg&gt;
+            &lt;op id=&apos;4&apos;&gt;
+                &lt;username&gt;
+                    # &#x6700;&#x8FD1;&#x8054;&#x7CFB;&#x7684;&#x8054;&#x7CFB;&#x4EBA;
+                    filehelper,xxx@chatroom,wxid_xxx,xxx,...
+                &lt;/username&gt;
+                &lt;unreadchatlist&gt;
+                    &lt;chat&gt;
+                        &lt;username&gt;
+                        # &#x670B;&#x53CB;&#x5708;
+                            MomentsUnreadMsgStatus
+                        &lt;/username&gt;
+                        &lt;lastreadtime&gt;
+                            1454502365
+                        &lt;/lastreadtime&gt;
+                    &lt;/chat&gt;
+                &lt;/unreadchatlist&gt;
+                &lt;unreadfunctionlist&gt;
+                # &#x672A;&#x8BFB;&#x7684;&#x529F;&#x80FD;&#x8D26;&#x53F7;&#x6D88;&#x606F;&#xFF0C;&#x7FA4;&#x53D1;&#x52A9;&#x624B;&#xFF0C;&#x6F02;&#x6D41;&#x74F6;&#x7B49;
+                &lt;/unreadfunctionlist&gt;
+            &lt;/op&gt;
+        &lt;/msg&gt;
+</code></pre><h4 id="&#x6587;&#x672C;&#x6D88;&#x606F;"><a name="&#x6587;&#x672C;&#x6D88;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x6587;&#x672C;&#x6D88;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6587;&#x672C;&#x6D88;&#x606F;</h4>
+<pre><code>MsgType: 1
+    FromUserName: &#x53D1;&#x9001;&#x65B9;ID
+    ToUserName: &#x63A5;&#x6536;&#x65B9;ID
+    Content: &#x6D88;&#x606F;&#x5185;&#x5BB9;
+</code></pre><h4 id="&#x56FE;&#x7247;&#x6D88;&#x606F;"><a name="&#x56FE;&#x7247;&#x6D88;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x56FE;&#x7247;&#x6D88;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x56FE;&#x7247;&#x6D88;&#x606F;</h4>
+<p>itchat &#x589E;&#x52A0;&#x4E86; Text &#x952E;, &#x952E;&#x503C;&#x4E3A; &#x4E0B;&#x8F7D;&#x8BE5;&#x56FE;&#x7247;&#x7684;&#x65B9;&#x6CD5;.</p>
+<pre><code>MsgType: 3
+    FromUserName: &#x53D1;&#x9001;&#x65B9;ID
+    ToUserName: &#x63A5;&#x6536;&#x65B9;ID
+    MsgId: &#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x56FE;&#x7247;&#xFF0C;&#x7528;&#x4E8E;&#x8868;&#x793A;&#x6BCF;&#x4E00;&#x6761;&#x6D88;&#x606F;
+    Content:
+        &lt;msg&gt;
+            &lt;img length=&quot;6503&quot; hdlength=&quot;0&quot; /&gt;
+            &lt;commenturl&gt;&lt;/commenturl&gt;
+        &lt;/msg&gt;
+</code></pre><p><em>&#x62D3;&#x5C55;&#xFF1A;&#x5982;&#x679C;&#x60F3;&#x8981;&#x5F97;&#x5230;Content&#x4E2D;&#x7684;&#x5177;&#x4F53;&#x5185;&#x5BB9;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5339;&#x914D;&#x51FA;&#x6765;</em></p>
+<h4 id="&#x89C6;&#x9891;&#x6D88;&#x606F;"><a name="&#x89C6;&#x9891;&#x6D88;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x89C6;&#x9891;&#x6D88;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x89C6;&#x9891;&#x6D88;&#x606F;</h4>
+<pre><code>*itchat &#x589E;&#x52A0;&#x4E86; Text &#x952E;, &#x952E;&#x503C;&#x4E3A; &#x4E0B;&#x8F7D;&#x8BE5;&#x89C6;&#x9891;&#x7684;&#x65B9;&#x6CD5;.*
+
+    MsgType: 62
+    FromUserName: &#x53D1;&#x9001;&#x65B9;ID
+    ToUserName: &#x63A5;&#x6536;&#x65B9;ID
+    MsgId: &#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x5C0F;&#x89C6;&#x9891;
+    Content:
+        &lt;msg&gt;
+            &lt;img length=&quot;6503&quot; hdlength=&quot;0&quot; /&gt;
+            &lt;commenturl&gt;&lt;/commenturl&gt;
+        &lt;/msg&gt;
+</code></pre><h4 id="&#x5730;&#x7406;&#x4F4D;&#x7F6E;&#x6D88;&#x606F;"><a name="&#x5730;&#x7406;&#x4F4D;&#x7F6E;&#x6D88;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x5730;&#x7406;&#x4F4D;&#x7F6E;&#x6D88;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5730;&#x7406;&#x4F4D;&#x7F6E;&#x6D88;&#x606F;</h4>
+<p>itchat &#x589E;&#x52A0;&#x4E86; Text &#x952E;, &#x952E;&#x503C;&#x4E3A; &#x8BE5;&#x5730;&#x70B9;&#x7684;&#x6587;&#x672C;&#x5F62;&#x5F0F;.</p>
+<pre><code>MsgType: 1
+    FromUserName: &#x53D1;&#x9001;&#x65B9;ID
+    ToUserName: &#x63A5;&#x6536;&#x65B9;ID
+    Content: http://weixin.qq.com/cgi-bin/redirectforward?args=xxx
+
+    OriContent:&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;msg&gt;
+    &lt;location x=&quot;34.195278&quot; y=&quot;117.177803&quot; scale=&quot;16&quot; label=&quot;&#x6C5F;&#x82CF;&#x7701;&#x5F90;&#x5DDE;&#x5E02;&#x94DC;&#x5C71;&#x533A;&#x65B0;&#x533A;&#x6D77;&#x6CB3;&#x8DEF;&quot; maptype=&quot;0&quot; poiname=&quot;&#x6C5F;&#x82CF;&#x5E08;&#x8303;&#x5927;&#x5B66;&#x5927;&#x5B66;&#x751F;&#x516C;&#x5BD3;&#x56ED;&#x533A;&quot; /&gt;
+&lt;/msg&gt;
+</code></pre><h4 id="&#x540D;&#x7247;&#x6D88;&#x606F;"><a name="&#x540D;&#x7247;&#x6D88;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x540D;&#x7247;&#x6D88;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x540D;&#x7247;&#x6D88;&#x606F;</h4>
+<p>itchat &#x589E;&#x52A0;&#x4E86;Text &#x952E;, &#x952E;&#x503C;&#x4E3A; &#x8BE5;&#x8C03;&#x7528; add_friend &#x9700;&#x8981;&#x7684;&#x5C5E;&#x6027;.</p>
+<pre><code> MsgType: 42
+    FromUserName: &#x53D1;&#x9001;&#x65B9;ID
+    ToUserName: &#x63A5;&#x6536;&#x65B9;ID
+    Content:
+        &lt;?xml version=&quot;1.0&quot;?&gt;
+        &lt;msg bigheadimgurl=&quot;&quot; smallheadimgurl=&quot;&quot; username=&quot;&quot; nickname=&quot;&quot;  shortpy=&quot;&quot; alias=&quot;&quot; imagestatus=&quot;3&quot; scene=&quot;17&quot; province=&quot;&quot; city=&quot;&quot; sign=&quot;&quot; sex=&quot;1&quot; certflag=&quot;0&quot; certinfo=&quot;&quot; brandIconUrl=&quot;&quot; brandHomeUrl=&quot;&quot; brandSubscriptConfigUrl=&quot;&quot; brandFlags=&quot;0&quot; regionCode=&quot;&quot; /&gt;
+
+    RecommendInfo:
+        {
+            &quot;UserName&quot;: &quot;xxx&quot;, # ID&#xFF0C;&#x8FD9;&#x91CC;&#x7684;&#x662F;&#x6635;&#x79F0;
+            &quot;Province&quot;: &quot;xxx&quot;,   
+            &quot;City&quot;: &quot;xxx&quot;,    
+            &quot;Scene&quot;: 17, 
+            &quot;QQNum&quot;: 0, 
+            &quot;Content&quot;: &quot;&quot;, 
+            &quot;Alias&quot;: &quot;xxx&quot;, # &#x5FAE;&#x4FE1;&#x53F7;
+            &quot;OpCode&quot;: 0, 
+            &quot;Signature&quot;: &quot;&quot;, 
+            &quot;Ticket&quot;: &quot;&quot;, 
+            &quot;Sex&quot;: 0, # 1:&#x7537;, 2:&#x5973;
+            &quot;NickName&quot;: &quot;xxx&quot;, # &#x6635;&#x79F0;
+            &quot;AttrStatus&quot;: 4293221, 
+            &quot;VerifyFlag&quot;: 0
+        }
+</code></pre><p>&#x4E0B;&#x9762;&#x662F;&#x6DFB;&#x52A0;&#x597D;&#x53CB;&#x7684;&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;</p>
+<pre><code>@itchat.msg_register(itchat.content.CARD,isFriendChat=True)
+def simply(msg):
+    print msg[&apos;Text&apos;]
+    print msg[&apos;Content&apos;]
+    itchat.add_friend(userName=msg[&apos;Text&apos;][&apos;UserName&apos;])  #&#x6DFB;&#x52A0;&#x63A8;&#x8350;&#x7684;&#x597D;&#x53CB;
+    print msg[&apos;RecommendInfo&apos;]
+    print msg[&apos;RecommendInfo&apos;][&apos;UserName&apos;]
+</code></pre><h4 id="&#x8BED;&#x97F3;&#x6D88;&#x606F;"><a name="&#x8BED;&#x97F3;&#x6D88;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x8BED;&#x97F3;&#x6D88;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BED;&#x97F3;&#x6D88;&#x606F;</h4>
+<p>itchat&#x589E;&#x52A0;&#x4E86;Text&#x952E;,&#x952E;&#x503C;&#x4E3A;&#x4E0B;&#x8F7D;&#x8BE5;&#x8BED;&#x97F3;&#x6587;&#x4EF6;&#x7684;&#x65B9;&#x6CD5;,&#x4E0B;&#x8F7D;&#x4E0B;&#x6765;&#x7684;&#x662F;MP3&#x7684;&#x683C;&#x5F0F;</p>
+<pre><code>MsgType: 34
+    FromUserName: &#x53D1;&#x9001;&#x65B9;ID
+    ToUserName: &#x63A5;&#x6536;&#x65B9;ID
+    MsgId: &#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x8BED;&#x97F3;
+    Content:
+        &lt;msg&gt;
+            &lt;voicemsg endflag=&quot;1&quot; cancelflag=&quot;0&quot; forwardflag=&quot;0&quot; voiceformat=&quot;4&quot; voicelength=&quot;1580&quot; length=&quot;2026&quot; bufid=&quot;216825389722501519&quot; clientmsgid=&quot;49efec63a9774a65a932a4e5fcd4e923filehelper174_1454602489&quot; fromusername=&quot;&quot; /&gt;
+        &lt;/msg&gt;
+</code></pre><p>&#x4E0B;&#x8F7D;&#x65B9;&#x6CD5;&#xFF1A;msg<a href="msg[%27FileName%27]">&apos;Text&apos;</a></p>
+<h4 id="&#x52A8;&#x753B;&#x8868;&#x60C5;"><a name="&#x52A8;&#x753B;&#x8868;&#x60C5;" class="anchor-navigation-ex-anchor" href="#&#x52A8;&#x753B;&#x8868;&#x60C5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x52A8;&#x753B;&#x8868;&#x60C5;</h4>
+<p>itchat&#x6DFB;&#x52A0;&#x4E86;Text&#x952E;&#xFF0C;&#x952E;&#x503C;&#x4E3A;&#x4E0B;&#x8F7D;&#x8BE5;&#x56FE;&#x7247;&#x8868;&#x60C5;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x672C;&#x4EBA;&#x4EB2;&#x6D4B;&#x5BF9;&#x4E8E;&#x4E00;&#x4E9B;&#x5FAE;&#x4FE1;&#x5546;&#x5E97;&#x63D0;&#x4F9B;&#x7684;&#x8868;&#x60C5;&#x662F;&#x4E0D;&#x80FD;&#x4E0B;&#x8F7D;&#x6210;&#x529F;&#x7684;,&#x8FD9;&#x91CC;&#x7684;&#x81EA;&#x5E26;&#x7684;&#x8868;&#x60C5;emoji&#x662F;&#x5C5E;&#x4E8E;TEXT&#x7C7B;&#x522B;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x5982;&#x679C;&#x5C06;&#x5176;&#x6CE8;&#x518C;&#x4E3A;PICTURE&#x6D88;&#x606F;&#x7C7B;&#x578B;&#x7684;&#x8BDD;&#x662F;&#x4E0D;&#x53EF;&#x4EE5;&#x76D1;&#x6D4B;&#x5230;&#x7684;</p>
+<pre><code>  MsgType: 47
+    FromUserName: &#x53D1;&#x9001;&#x65B9;ID
+    ToUserName: &#x63A5;&#x6536;&#x65B9;ID
+    Content:
+        &lt;msg&gt;
+            &lt;emoji fromusername = &quot;&quot; tousername = &quot;&quot; type=&quot;2&quot; idbuffer=&quot;media:0_0&quot; md5=&quot;e68363487d8f0519c4e1047de403b2e7&quot; len = &quot;86235&quot; productid=&quot;com.tencent.xin.emoticon.bilibili&quot; androidmd5=&quot;e68363487d8f0519c4e1047de403b2e7&quot; androidlen=&quot;86235&quot; s60v3md5 = &quot;e68363487d8f0519c4e1047de403b2e7&quot; s60v3len=&quot;86235&quot; s60v5md5 = &quot;e68363487d8f0519c4e1047de403b2e7&quot; s60v5len=&quot;86235&quot; cdnurl = &quot;http://emoji.qpic.cn/wx_emoji/eFygWtxcoMF8M0oCCsksMA0gplXAFQNpiaqsmOicbXl1OC4Tyx18SGsQ/&quot; designerid = &quot;&quot; thumburl = &quot;http://mmbiz.qpic.cn/mmemoticon/dx4Y70y9XctRJf6tKsy7FwWosxd4DAtItSfhKS0Czr56A70p8U5O8g/0&quot; encrypturl = &quot;http://emoji.qpic.cn/wx_emoji/UyYVK8GMlq5VnJ56a4GkKHAiaC266Y0me0KtW6JN2FAZcXiaFKccRevA/&quot; aeskey= &quot;a911cc2ec96ddb781b5ca85d24143642&quot; &gt;&lt;/emoji&gt; 
+            &lt;gameext type=&quot;0&quot; content=&quot;0&quot; &gt;&lt;/gameext&gt;
+        &lt;/msg&gt;
+</code></pre><h4 id="&#x666E;&#x901A;&#x94FE;&#x63A5;&#x6216;&#x5E94;&#x7528;&#x5206;&#x4EAB;&#x6D88;&#x606F;"><a name="&#x666E;&#x901A;&#x94FE;&#x63A5;&#x6216;&#x5E94;&#x7528;&#x5206;&#x4EAB;&#x6D88;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x666E;&#x901A;&#x94FE;&#x63A5;&#x6216;&#x5E94;&#x7528;&#x5206;&#x4EAB;&#x6D88;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x666E;&#x901A;&#x94FE;&#x63A5;&#x6216;&#x5E94;&#x7528;&#x5206;&#x4EAB;&#x6D88;&#x606F;</h4>
+<p>&#x4E3B;&#x8981;&#x9488;&#x5BF9;&#x7684;&#x662F;&#x5206;&#x4EAB;&#x7684;&#x6587;&#x7AE0;&#x7B49;&#x7B49;</p>
+<pre><code>    MsgType: 49
+    AppMsgType: 5
+    FromUserName: &#x53D1;&#x9001;&#x65B9;ID
+    ToUserName: &#x63A5;&#x6536;&#x65B9;ID
+    Url: &#x94FE;&#x63A5;&#x5730;&#x5740;
+    FileName: &#x94FE;&#x63A5;&#x6807;&#x9898;
+    Content:
+        &lt;msg&gt;
+            &lt;appmsg appid=&quot;&quot;  sdkver=&quot;0&quot;&gt;
+                &lt;title&gt;&lt;/title&gt;
+                &lt;des&gt;&lt;/des&gt;
+                &lt;type&gt;5&lt;/type&gt;
+                &lt;content&gt;&lt;/content&gt;
+                &lt;url&gt;&lt;/url&gt;
+                &lt;thumburl&gt;&lt;/thumburl&gt;
+                ...
+            &lt;/appmsg&gt;
+            &lt;appinfo&gt;
+                &lt;version&gt;&lt;/version&gt;
+                &lt;appname&gt;&lt;/appname&gt;
+            &lt;/appinfo&gt;
+        &lt;/msg&gt;
+</code></pre><h4 id="&#x97F3;&#x4E50;&#x94FE;&#x63A5;&#x6D88;&#x606F;"><a name="&#x97F3;&#x4E50;&#x94FE;&#x63A5;&#x6D88;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x97F3;&#x4E50;&#x94FE;&#x63A5;&#x6D88;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x97F3;&#x4E50;&#x94FE;&#x63A5;&#x6D88;&#x606F;</h4>
+<p>&#x4E3B;&#x8981;&#x9488;&#x5BF9;&#x7684;&#x662F;&#x97F3;&#x4E50;</p>
+<pre><code>MsgType: 49
+    AppMsgType: 3
+    FromUserName: &#x53D1;&#x9001;&#x65B9;ID
+    ToUserName: &#x63A5;&#x6536;&#x65B9;ID
+    Url: &#x94FE;&#x63A5;&#x5730;&#x5740;
+    FileName: &#x97F3;&#x4E50;&#x540D;
+
+    AppInfo: # &#x5206;&#x4EAB;&#x94FE;&#x63A5;&#x7684;&#x5E94;&#x7528;
+        {
+            Type: 0, 
+            AppID: wx485a97c844086dc9
+        }
+
+    Content:
+        &lt;msg&gt;
+            &lt;appmsg appid=&quot;wx485a97c844086dc9&quot;  sdkver=&quot;0&quot;&gt;
+                &lt;title&gt;&lt;/title&gt;
+                &lt;des&gt;&lt;/des&gt;
+                &lt;action&gt;&lt;/action&gt;
+                &lt;type&gt;3&lt;/type&gt;
+                &lt;showtype&gt;0&lt;/showtype&gt;
+                &lt;mediatagname&gt;&lt;/mediatagname&gt;
+                &lt;messageext&gt;&lt;/messageext&gt;
+                &lt;messageaction&gt;&lt;/messageaction&gt;
+                &lt;content&gt;&lt;/content&gt;
+                &lt;contentattr&gt;0&lt;/contentattr&gt;
+                &lt;url&gt;&lt;/url&gt;
+                &lt;lowurl&gt;&lt;/lowurl&gt;
+                &lt;dataurl&gt;
+                    http://ws.stream.qqmusic.qq.com/C100003i9hMt1bgui0.m4a?vkey=6867EF99F3684&amp;amp;guid=ffffffffc104ea2964a111cf3ff3edaf&amp;amp;fromtag=46
+                &lt;/dataurl&gt;
+                &lt;lowdataurl&gt;
+                    http://ws.stream.qqmusic.qq.com/C100003i9hMt1bgui0.m4a?vkey=6867EF99F3684&amp;amp;guid=ffffffffc104ea2964a111cf3ff3edaf&amp;amp;fromtag=46
+                &lt;/lowdataurl&gt;
+                &lt;appattach&gt;
+                    &lt;totallen&gt;0&lt;/totallen&gt;
+                    &lt;attachid&gt;&lt;/attachid&gt;
+                    &lt;emoticonmd5&gt;&lt;/emoticonmd5&gt;
+                    &lt;fileext&gt;&lt;/fileext&gt;
+                &lt;/appattach&gt;
+                &lt;extinfo&gt;&lt;/extinfo&gt;
+                &lt;sourceusername&gt;&lt;/sourceusername&gt;
+                &lt;sourcedisplayname&gt;&lt;/sourcedisplayname&gt;
+                &lt;commenturl&gt;&lt;/commenturl&gt;
+                &lt;thumburl&gt;
+                    http://imgcache.qq.com/music/photo/album/63/180_albumpic_143163_0.jpg
+                &lt;/thumburl&gt;
+                &lt;md5&gt;&lt;/md5&gt;
+            &lt;/appmsg&gt;
+            &lt;fromusername&gt;&lt;/fromusername&gt;
+            &lt;scene&gt;0&lt;/scene&gt;
+            &lt;appinfo&gt;
+                &lt;version&gt;29&lt;/version&gt;
+                &lt;appname&gt;&#x6447;&#x4E00;&#x6447;&#x641C;&#x6B4C;&lt;/appname&gt;
+            &lt;/appinfo&gt;
+            &lt;commenturl&gt;&lt;/commenturl&gt;
+        &lt;/msg&gt;
+</code></pre><h4 id="&#x7FA4;&#x6D88;&#x606F;_1"><a name="&#x7FA4;&#x6D88;&#x606F;_1" class="anchor-navigation-ex-anchor" href="#&#x7FA4;&#x6D88;&#x606F;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7FA4;&#x6D88;&#x606F;</h4>
+<p>itchat &#x589E;&#x52A0;&#x4E86;&#x4E09;&#x4E2A;&#x7FA4;&#x804A;&#x76F8;&#x5173;&#x7684;&#x952E;&#x503C;:</p>
+<ul>
+<li>isAt : &#x5224;&#x65AD;&#x662F;&#x5426; @ &#x672C;&#x53F7;</li>
+<li>ActualNickName : &#x5B9E;&#x9645; NickName</li>
+<li>Content : &#x5B9E;&#x9645; Content<pre><code>MsgType: 1
+FromUserName: @@xxx
+ToUserName: @xxx
+Content:
+  @xxx:&lt;br/&gt;xxx
+</code></pre><h4 id="&#x7EA2;&#x5305;&#x6D88;&#x606F;"><a name="&#x7EA2;&#x5305;&#x6D88;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x7EA2;&#x5305;&#x6D88;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7EA2;&#x5305;&#x6D88;&#x606F;</h4>
+<pre><code>MsgType: 49
+  AppMsgType: 2001
+  FromUserName: &#x53D1;&#x9001;&#x65B9;ID
+  ToUserName: &#x63A5;&#x6536;&#x65B9;ID
+  Content: &#x672A;&#x77E5;
+</code></pre><h4 id="&#x7CFB;&#x7EDF;&#x6D88;&#x606F;"><a name="&#x7CFB;&#x7EDF;&#x6D88;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x7CFB;&#x7EDF;&#x6D88;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7CFB;&#x7EDF;&#x6D88;&#x606F;</h4>
+<pre><code>MsgType: 10000
+  FromUserName: &#x53D1;&#x9001;&#x65B9;ID
+  ToUserName: &#x81EA;&#x5DF1;ID
+  Content:
+      &quot;&#x4F60;&#x5DF2;&#x6DFB;&#x52A0;&#x4E86; xxx &#xFF0C;&#x73B0;&#x5728;&#x53EF;&#x4EE5;&#x5F00;&#x59CB;&#x804A;&#x5929;&#x4E86;&#x3002;&quot;
+      &quot;&#x5982;&#x679C;&#x964C;&#x751F;&#x4EBA;&#x4E3B;&#x52A8;&#x6DFB;&#x52A0;&#x4F60;&#x4E3A;&#x670B;&#x53CB;&#xFF0C;&#x8BF7;&#x8C28;&#x614E;&#x6838;&#x5B9E;&#x5BF9;&#x65B9;&#x8EAB;&#x4EFD;&#x3002;&quot;
+      &quot;&#x6536;&#x5230;&#x7EA2;&#x5305;&#xFF0C;&#x8BF7;&#x5728;&#x624B;&#x673A;&#x4E0A;&#x67E5;&#x770B;&quot;
+</code></pre><h4 id="&#x8D26;&#x53F7;&#x7C7B;&#x578B;"><a name="&#x8D26;&#x53F7;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#&#x8D26;&#x53F7;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8D26;&#x53F7;&#x7C7B;&#x578B;</h4>
+</li>
+</ul>
+<p>tchat &#x4E3A;&#x4E09;&#x79CD;&#x8D26;&#x53F7;&#x90FD;&#x63D0;&#x4F9B;&#x4E86; &#x6574;&#x4F53;&#x83B7;&#x53D6;&#x65B9;&#x6CD5;&#x4E0E;&#x641C;&#x7D22;&#x65B9;&#x6CD5;.</p>
+<h4 id="&#x597D;&#x53CB;"><a name="&#x597D;&#x53CB;" class="anchor-navigation-ex-anchor" href="#&#x597D;&#x53CB;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x597D;&#x53CB;</h4>
+<h5 id="getfriends"><a name="getfriends" class="anchor-navigation-ex-anchor" href="#getfriends"><i class="fa fa-link" aria-hidden="true"></i></a>get_friends</h5>
+<p>itchat.get_friends() &#x8FD4;&#x56DE;&#x5B8C;&#x6574;&#x7684;&#x597D;&#x53CB;&#x5217;&#x8868;</p>
+<p>&#x6BCF;&#x4E2A;&#x597D;&#x53CB;&#x4E3A;&#x4E00;&#x4E2A;&#x5B57;&#x5178;, &#x5176;&#x4E2D;&#x7B2C;&#x4E00;&#x9879;&#x4E3A;&#x672C;&#x4EBA;&#x7684;&#x8D26;&#x53F7;&#x4FE1;&#x606F;;</p>
+<p>&#x4F20;&#x5165; update=True, &#x5C06;&#x66F4;&#x65B0;&#x597D;&#x53CB;&#x5217;&#x8868;&#x5E76;&#x8FD4;&#x56DE;, get_friends(update=True)</p>
+<h5 id="searchfriends"><a name="searchfriends" class="anchor-navigation-ex-anchor" href="#searchfriends"><i class="fa fa-link" aria-hidden="true"></i></a>search_friends</h5>
+<p>itchat.search_friends() &#x597D;&#x53CB;&#x641C;&#x7D22;</p>
+<ul>
+<li>&#x4EC5;&#x83B7;&#x53D6;&#x81EA;&#x5DF1;&#x7684;&#x7528;&#x6237;&#x4FE1;&#x606F;<pre><code># &#x83B7;&#x53D6;&#x81EA;&#x5DF1;&#x7684;&#x7528;&#x6237;&#x4FE1;&#x606F;&#xFF0C;&#x8FD4;&#x56DE;&#x81EA;&#x5DF1;&#x7684;&#x5C5E;&#x6027;&#x5B57;&#x5178;
+itchat.search_friends()
+</code></pre></li>
+<li><p>&#x83B7;&#x53D6;&#x7279;&#x5B9A; UserName &#x7684;&#x7528;&#x6237;&#x4FE1;&#x606F;</p>
+<pre><code># &#x83B7;&#x53D6;&#x7279;&#x5B9A;UserName&#x7684;&#x7528;&#x6237;&#x4FE1;&#x606F;
+itchat.search_friends(userName=&apos;@abcdefg1234567&apos;)
+</code></pre></li>
+<li><p>&#x83B7;&#x53D6;&#x53D1;&#x9001;&#x4FE1;&#x606F;&#x7684;&#x597D;&#x53CB;&#x7684;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;</p>
+<pre><code>## &#x83B7;&#x53D6;&#x53D1;&#x9001;&#x4FE1;&#x606F;&#x7684;&#x597D;&#x53CB;&#x7684;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;
+@itchat.msg_register(itchat.content.TEXT,isFriendChat=True)
+def reply(msg):
+  print msg[&apos;FromUserName&apos;]
+  print itchat.search_friends(userName=msg[&apos;FromUserName&apos;])   #&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;
+  print itchat.search_friends(userName=msg[&apos;FromUserName&apos;])[&apos;NickName&apos;]   #&#x83B7;&#x53D6;&#x6635;&#x79F0;
+</code></pre></li>
+<li>&#x83B7;&#x53D6;&#x5907;&#x6CE8;,&#x5FAE;&#x4FE1;&#x53F7;, &#x6635;&#x79F0;&#x4E2D;&#x7684;&#x4EFB;&#x4F55;&#x4E00;&#x9879;&#x7B49;&#x4E8E;name&#x952E;&#x503C;&#x7684;&#x7528;&#x6237;. (&#x53EF;&#x4EE5;&#x4E0E;&#x4E0B;&#x4E00;&#x9879;&#x914D;&#x7F6E;&#x4F7F;&#x7528;.)</li>
+</ul>
+<p>&#x6BD4;&#x5982;&#x5728;&#x6211;&#x7684;&#x5FAE;&#x4FE1;&#x4E2D;&#x6709;&#x4E00;&#x4E2A;&#x5907;&#x6CE8;&#x4E3A;autolife&#x7684;&#x4EBA;&#xFF0C;&#x6211;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x641C;&#x7D22;&#x51FA;&#x8BE6;&#x7EC6;&#x7684;&#x4FE1;&#x606F;</p>
+<pre><code># &#x83B7;&#x53D6;&#x4EFB;&#x4F55;&#x4E00;&#x9879;&#x7B49;&#x4E8E;name&#x952E;&#x503C;&#x7684;&#x7528;&#x6237;
+itchat.search_friends(name=&apos;autolife&apos;)
+&#x83B7;&#x53D6;&#x5907;&#x6CE8;,&#x5FAE;&#x4FE1;&#x53F7;, &#x6635;&#x79F0;&#x5206;&#x522B;&#x7B49;&#x4E8E;&#x76F8;&#x5E94;&#x952E;&#x503C;&#x7684;&#x7528;&#x6237;. (&#x53EF;&#x4EE5;&#x4E0E;&#x4E0A;&#x4E00;&#x9879;&#x914D;&#x7F6E;&#x4F7F;&#x7528;.)
+
+# &#x83B7;&#x53D6;&#x5206;&#x522B;&#x5BF9;&#x5E94;&#x76F8;&#x5E94;&#x952E;&#x503C;&#x7684;&#x7528;&#x6237;
+itchat.search_friends(wechatAccount=&apos;littlecodersh&apos;)
+# &#x4E09;&#x3001;&#x56DB;&#x9879;&#x529F;&#x80FD;&#x53EF;&#x4EE5;&#x4E00;&#x540C;&#x4F7F;&#x7528;
+itchat.search_friends(name=&apos;LittleCoder&#x673A;&#x5668;&#x4EBA;&apos;, wechatAccount=&apos;littlecodersh&apos;)
+</code></pre><h5 id="updatefriend"><a name="updatefriend" class="anchor-navigation-ex-anchor" href="#updatefriend"><i class="fa fa-link" aria-hidden="true"></i></a>update_friend</h5>
+<p>&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x597D;&#x53CB;&#x66F4;&#x65B0;</p>
+<p>&#x7279;&#x5B9A;&#x7528;&#x6237;: &#x4F20;&#x5165;&#x7528;&#x6237;UserName, &#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x7528;&#x6237;&#x7684;&#x6700;&#x65B0;&#x4FE1;&#x606F;.</p>
+<p>&#x7528;&#x6237;&#x5217;&#x8868;: &#x4F20;&#x5165; UserName &#x7EC4;&#x6210;&#x7684;&#x5217;&#x8868;, &#x8FD4;&#x56DE;&#x7528;&#x6237;&#x6700;&#x65B0;&#x4FE1;&#x606F;&#x7EC4;&#x6210;&#x7684;&#x5217;&#x8868;</p>
+<pre><code>memberList = itchat.update_friend(&apos;@abcdefg1234567&apos;)
+</code></pre><h3 id="&#x516C;&#x4F17;&#x53F7;"><a name="&#x516C;&#x4F17;&#x53F7;" class="anchor-navigation-ex-anchor" href="#&#x516C;&#x4F17;&#x53F7;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x516C;&#x4F17;&#x53F7;</h3>
+<h4 id="getmps"><a name="getmps" class="anchor-navigation-ex-anchor" href="#getmps"><i class="fa fa-link" aria-hidden="true"></i></a>get_mps</h4>
+<p>&#x5C06;&#x8FD4;&#x56DE;&#x5B8C;&#x6574;&#x7684;&#x5DE5;&#x4F5C;&#x53F7;&#x5217;&#x8868;</p>
+<p>&#x6BCF;&#x4E2A;&#x516C;&#x4F17;&#x53F7;&#x4E3A;&#x4E00;&#x4E2A;&#x5B57;&#x5178;,</p>
+<p>&#x4F20;&#x5165; update=True &#x5C06;&#x66F4;&#x65B0;&#x516C;&#x4F17;&#x53F7;&#x5217;&#x8868;, &#x5E76;&#x8FD4;&#x56DE;.</p>
+<h4 id="searchmps"><a name="searchmps" class="anchor-navigation-ex-anchor" href="#searchmps"><i class="fa fa-link" aria-hidden="true"></i></a>search_mps</h4>
+<p>&#x83B7;&#x53D6;&#x7279;&#x5B9A;UserName&#x7684;&#x516C;&#x4F17;&#x53F7;</p>
+<pre><code># &#x83B7;&#x53D6;&#x7279;&#x5B9A;UserName&#x7684;&#x516C;&#x4F17;&#x53F7;&#xFF0C;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;&#x4E00;&#x4E2A;&#x5B57;&#x5178;
+itchat.search_mps(userName=&apos;@abcdefg1234567&apos;)
+</code></pre><p>&#x83B7;&#x53D6;&#x540D;&#x5B57;&#x4E2D;&#x8FD8;&#x6709;&#x7279;&#x5B9A;&#x5B57;&#x7B26;&#x7684;&#x516C;&#x4F17;&#x53F7;.</p>
+<pre><code># &#x83B7;&#x53D6;&#x540D;&#x5B57;&#x4E2D;&#x542B;&#x6709;&#x7279;&#x5B9A;&#x5B57;&#x7B26;&#x7684;&#x516C;&#x4F17;&#x53F7;&#xFF0C;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;&#x4E00;&#x4E2A;&#x5B57;&#x5178;&#x7684;&#x5217;&#x8868;
+itchat.search_mps(name=&apos;LittleCoder&apos;)
+</code></pre><p>&#x5F53;&#x4E24;&#x9879;&#x90FD;&#x6709;&#x65F6;, &#x5C06;&#x4EC5;&#x8FD4;&#x56DE;&#x7279;&#x5B9A;UserName&#x7684;&#x516C;&#x4F17;&#x53F7;.</p>
+<h3 id="&#x7FA4;&#x804A;"><a name="&#x7FA4;&#x804A;" class="anchor-navigation-ex-anchor" href="#&#x7FA4;&#x804A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7FA4;&#x804A;</h3>
+<p>get_chatrooms : &#x8FD4;&#x56DE;&#x5B8C;&#x6574;&#x7684;&#x7FA4;&#x804A;&#x5217;&#x8868;.</p>
+<p>search_chatrooms : &#x7FA4;&#x804A;&#x641C;&#x7D22;.</p>
+<p>update_chatroom : &#x83B7;&#x53D6;&#x7FA4;&#x804A;&#x7528;&#x6237;&#x5217;&#x8868;&#x6216;&#x66F4;&#x65B0;&#x8BE5;&#x7FA4;&#x804A;.</p>
+<p>&#x7FA4;&#x804A;&#x5728;&#x9996;&#x6B21;&#x83B7;&#x53D6;&#x4E2D;&#x4E0D;&#x4F1A;&#x83B7;&#x53D6;&#x7FA4;&#x804A;&#x7684;&#x7528;&#x6237;&#x5217;&#x8868;, &#x6240;&#x4EE5;&#x9700;&#x8981;&#x8C03;&#x7528;&#x8BE5;&#x547D;&#x4EE4;&#x624D;&#x80FD;&#x83B7;&#x53D6;&#x7FA4;&#x804A;&#x6210;&#x5458;.</p>
+<p>&#x4F20;&#x5165;&#x7FA4;&#x804A;&#x7684; UserName , &#x8FD4;&#x56DE;&#x7279;&#x5B9A;&#x7FA4;&#x804A;&#x7684;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;.</p>
+<p>&#x4F20;&#x5165;UserName&#x7EC4;&#x6210;&#x7684;&#x5217;&#x8868;, &#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x7528;&#x6237;&#x7684;&#x6700;&#x65B0;&#x4FE1;&#x606F;&#x7EC4;&#x6210;&#x7684;&#x5217;&#x8868;.</p>
+<pre><code>memberList = itchat.update_chatroom(&apos;@@abcdefg1234567&apos;, detailedMember=True)
+</code></pre><h4 id="&#x521B;&#x5EFA;&#x7FA4;&#x804A;&#x589E;&#x52A0;&#x5220;&#x9664;&#x7FA4;&#x804A;&#x7528;&#x6237;"><a name="&#x521B;&#x5EFA;&#x7FA4;&#x804A;&#x589E;&#x52A0;&#x5220;&#x9664;&#x7FA4;&#x804A;&#x7528;&#x6237;" class="anchor-navigation-ex-anchor" href="#&#x521B;&#x5EFA;&#x7FA4;&#x804A;&#x589E;&#x52A0;&#x5220;&#x9664;&#x7FA4;&#x804A;&#x7528;&#x6237;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;&#x7FA4;&#x804A;,&#x589E;&#x52A0;/&#x5220;&#x9664;&#x7FA4;&#x804A;&#x7528;&#x6237;:</h4>
+<p>&#x7531;&#x4E8E;&#x4E4B;&#x524D;&#x901A;&#x8FC7;&#x7FA4;&#x804A;&#x68C0;&#x6D4B;&#x662F;&#x5426;&#x88AB;&#x597D;&#x53CB;&#x62C9;&#x9ED1;&#x7684;&#x7A0B;&#x5E8F;, &#x76EE;&#x524D;&#x8FD9;&#x4E09;&#x4E2A;&#x65B9;&#x6CD5;&#x90FD;&#x88AB;&#x4E25;&#x683C;&#x9650;&#x5236;&#x4E86;&#x4F7F;&#x7528;&#x9891;&#x7387;.</p>
+<p>&#x5220;&#x9664;&#x7FA4;&#x804A;&#x9700;&#x8981;&#x672C;&#x8D26;&#x53F7;&#x4E3A;&#x7BA1;&#x7406;&#x5458;, &#x5426;&#x5219;&#x65E0;&#x6548;.</p>
+<p>&#x5C06;&#x7528;&#x6237;&#x52A0;&#x5165;&#x7FA4;&#x804A;&#x6709;&#x76F4;&#x63A5;&#x52A0;&#x5165;&#x4E0E;&#x53D1;&#x9001;&#x9080;&#x8BF7;, &#x901A;&#x8FC7; useInvitation &#x8BBE;&#x7F6E;.</p>
+<p>&#x8D85;&#x8FC7; 40 &#x4EBA;&#x7684;&#x7FA4;&#x804A;&#x65E0;&#x6CD5;&#x4F7F;&#x7528;&#x76F4;&#x63A5;&#x52A0;&#x5165;&#x7684;&#x52A0;&#x5165;&#x65B9;&#x5F0F;.</p>
+<pre><code>memberList = itchat.get_frients()[1:]
+# &#x521B;&#x5EFA;&#x7FA4;&#x804A;, topic &#x952E;&#x503C;&#x4E3A;&#x7FA4;&#x804A;&#x540D;&#x79F0;.
+
+chatroomUserName = itchat.create_chatroom(memberList, &quot;test chatroom&quot;)
+
+# &#x5220;&#x9664;&#x7FA4;&#x804A;&#x5185;&#x7684;&#x7528;&#x6237;
+
+itchat.delete_member_from_chatroom(chatroomUserName, memberList[0])
+
+# &#x589E;&#x52A0;&#x7528;&#x6237;&#x8FDB;&#x5165;&#x7FA4;&#x804A;.
+
+itchat.add_member_into_chatroom(chatroomUserName, memberList[0], useInvitation=False)
+</code></pre><h2 id="&#x65B9;&#x6CD5;&#x6C47;&#x603B;"><a name="&#x65B9;&#x6CD5;&#x6C47;&#x603B;" class="anchor-navigation-ex-anchor" href="#&#x65B9;&#x6CD5;&#x6C47;&#x603B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B9;&#x6CD5;&#x6C47;&#x603B;</h2>
+<pre><code>itchat.add_friend                  
+itchat.new_instance                
+itchat.add_member_into_chatroom    
+itchat.originInstance              
+itchat.auto_login                  
+itchat.returnvalues                
+itchat.check_login                 
+itchat.run                         
+itchat.components                  
+itchat.search_chatrooms            
+itchat.config                      
+itchat.search_friends              
+itchat.configured_reply            
+itchat.search_mps                  
+itchat.content                     
+itchat.send                        
+itchat.core                        
+itchat.send_file                   
+itchat.Core                        
+itchat.send_image                  
+itchat.create_chatroom             
+itchat.send_msg                    
+itchat.delete_member_from_chatroom 
+itchat.send_raw_msg                
+itchat.dump_login_status           
+itchat.send_video                  
+itchat.get_chatrooms               
+itchat.set_alias                   
+itchat.get_contact                 
+itchat.set_chatroom_name           
+itchat.get_friends                 
+itchat.set_logging                 
+itchat.get_head_img                
+itchat.set_pinned                  
+itchat.get_mps                     
+itchat.show_mobile_login           
+itchat.get_msg                     
+itchat.start_receiving             
+itchat.get_QR                      
+itchat.storage                     
+itchat.get_QRuuid                  
+itchat.update_chatroom             
+itchat.instanceList                
+itchat.update_friend               
+itchat.load_login_status           
+itchat.upload_file                 
+itchat.log                         
+itchat.utils                       
+itchat.login                       
+itchat.VERSION                     
+itchat.logout                      
+itchat.web_init                    
+itchat.msg_register
+</code></pre><h2 id="&#x5B9E;&#x4F8B;"><a name="&#x5B9E;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x5B9E;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B9E;&#x4F8B;</h2>
+<p>&#x4E0B;&#x9762;&#x662F;&#x5199;&#x7684;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#xFF0C;&#x8BE5;&#x7A0B;&#x5E8F;&#x7684;&#x4E3B;&#x8981;&#x529F;&#x80FD;&#x662F;&#x76D1;&#x63A7;&#x64A4;&#x56DE;&#x6D88;&#x606F;&#xFF0C;&#x5E76;&#x4E14;&#x5982;&#x679C;&#x6709;&#x6D88;&#x606F;&#x64A4;&#x56DE;&#x5C31;&#x4F1A;&#x64A4;&#x56DE;&#x7684;&#x6D88;&#x606F;&#x53D1;&#x9001;&#x7ED9;&#x4F60;&#xFF0C;&#x4EE5;&#x540E;&#x518D;&#x4E5F;&#x4E0D;&#x7528;&#x62C5;&#x5FC3;&#x770B;&#x4E0D;&#x5230;&#x597D;&#x53CB;&#x7684;&#x64A4;&#x56DE;&#x7684;&#x6D88;&#x606F;&#x4E86;&#xFF0C;&#x7531;&#x4E8E;&#x6CE8;&#x91CA;&#x5199;&#x7684;&#x5F88;&#x8BE6;&#x7EC6;&#xFF0C;&#x56E0;&#x6B64;&#x8FD9;&#x91CC;&#x5C31;&#x4E0D;&#x5728;&#x8BE6;&#x7EC6;&#x7684;&#x8BB2;&#x89E3;&#x4E86;&#xFF0C;&#x76F4;&#x63A5;&#x8D34;&#x4EE3;&#x7801;</p>
+<p>&#x4EE3;&#x7801;</p>
+<pre><code># coding:utf-8
+import itchat
+from itchat.content import TEXT
+from itchat.content import *
+import sys
+import time
+import re
+
+reload(sys)
+sys.setdefaultencoding(&apos;utf8&apos;)
+import os
+msg_information = {}
+face_bug=None  #&#x9488;&#x5BF9;&#x8868;&#x60C5;&#x5305;&#x7684;&#x5185;&#x5BB9;
+@itchat.msg_register([TEXT, PICTURE, FRIENDS, CARD, MAP, SHARING, RECORDING, ATTACHMENT, VIDEO],isFriendChat=True, isGroupChat=True, isMpChat=True)
+def handle_receive_msg(msg):
+    global face_bug
+    msg_time_rec = time.strftime(&quot;%Y-%m-%d %H:%M:%S&quot;, time.localtime())   #&#x63A5;&#x53D7;&#x6D88;&#x606F;&#x7684;&#x65F6;&#x95F4;
+    msg_from = itchat.search_friends(userName=msg[&apos;FromUserName&apos;])[&apos;NickName&apos;]   #&#x5728;&#x597D;&#x53CB;&#x5217;&#x8868;&#x4E2D;&#x67E5;&#x8BE2;&#x53D1;&#x9001;&#x4FE1;&#x606F;&#x7684;&#x597D;&#x53CB;&#x6635;&#x79F0;
+    msg_time = msg[&apos;CreateTime&apos;]    #&#x4FE1;&#x606F;&#x53D1;&#x9001;&#x7684;&#x65F6;&#x95F4;
+    msg_id = msg[&apos;MsgId&apos;]    #&#x6BCF;&#x6761;&#x4FE1;&#x606F;&#x7684;id
+    msg_content = None      #&#x50A8;&#x5B58;&#x4FE1;&#x606F;&#x7684;&#x5185;&#x5BB9;
+    msg_share_url = None    #&#x50A8;&#x5B58;&#x5206;&#x4EAB;&#x7684;&#x94FE;&#x63A5;&#xFF0C;&#x6BD4;&#x5982;&#x5206;&#x4EAB;&#x7684;&#x6587;&#x7AE0;&#x548C;&#x97F3;&#x4E50;
+    print msg[&apos;Type&apos;]
+    print msg[&apos;MsgId&apos;]
+    if msg[&apos;Type&apos;] == &apos;Text&apos; or msg[&apos;Type&apos;] == &apos;Friends&apos;:     #&#x5982;&#x679C;&#x53D1;&#x9001;&#x7684;&#x6D88;&#x606F;&#x662F;&#x6587;&#x672C;&#x6216;&#x8005;&#x597D;&#x53CB;&#x63A8;&#x8350;
+        msg_content = msg[&apos;Text&apos;]
+        print msg_content
+    #&#x5982;&#x679C;&#x53D1;&#x9001;&#x7684;&#x6D88;&#x606F;&#x662F;&#x9644;&#x4EF6;&#x3001;&#x89C6;&#x5C4F;&#x3001;&#x56FE;&#x7247;&#x3001;&#x8BED;&#x97F3;
+    elif msg[&apos;Type&apos;] == &quot;Attachment&quot; or msg[&apos;Type&apos;] == &quot;Video&quot; \
+            or msg[&apos;Type&apos;] == &apos;Picture&apos; \
+            or msg[&apos;Type&apos;] == &apos;Recording&apos;:
+        msg_content = msg[&apos;FileName&apos;]    #&#x5185;&#x5BB9;&#x5C31;&#x662F;&#x4ED6;&#x4EEC;&#x7684;&#x6587;&#x4EF6;&#x540D;
+        msg[&apos;Text&apos;](str(msg_content))    #&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;
+        # print msg_content
+    elif msg[&apos;Type&apos;] == &apos;Card&apos;:    #&#x5982;&#x679C;&#x6D88;&#x606F;&#x662F;&#x63A8;&#x8350;&#x7684;&#x540D;&#x7247;
+        msg_content = msg[&apos;RecommendInfo&apos;][&apos;NickName&apos;] + &apos;&#x7684;&#x540D;&#x7247;&apos;    #&#x5185;&#x5BB9;&#x5C31;&#x662F;&#x63A8;&#x8350;&#x4EBA;&#x7684;&#x6635;&#x79F0;&#x548C;&#x6027;&#x522B;
+        if msg[&apos;RecommendInfo&apos;][&apos;Sex&apos;] == 1:
+            msg_content += &apos;&#x6027;&#x522B;&#x4E3A;&#x7537;&apos;
+        else:
+            msg_content += &apos;&#x6027;&#x522B;&#x4E3A;&#x5973;&apos;
+
+        print msg_content
+    elif msg[&apos;Type&apos;] == &apos;Map&apos;:    #&#x5982;&#x679C;&#x6D88;&#x606F;&#x4E3A;&#x5206;&#x4EAB;&#x7684;&#x4F4D;&#x7F6E;&#x4FE1;&#x606F;
+        x, y, location = re.search(
+            &quot;&lt;location x=\&quot;(.*?)\&quot; y=\&quot;(.*?)\&quot;.*label=\&quot;(.*?)\&quot;.*&quot;, msg[&apos;OriContent&apos;]).group(1, 2, 3)
+        if location is None:
+            msg_content = r&quot;&#x7EAC;&#x5EA6;-&gt;&quot; + x.__str__() + &quot; &#x7ECF;&#x5EA6;-&gt;&quot; + y.__str__()     #&#x5185;&#x5BB9;&#x4E3A;&#x8BE6;&#x7EC6;&#x7684;&#x5730;&#x5740;
+        else:
+            msg_content = r&quot;&quot; + location
+    elif msg[&apos;Type&apos;] == &apos;Sharing&apos;:     #&#x5982;&#x679C;&#x6D88;&#x606F;&#x4E3A;&#x5206;&#x4EAB;&#x7684;&#x97F3;&#x4E50;&#x6216;&#x8005;&#x6587;&#x7AE0;&#xFF0C;&#x8BE6;&#x7EC6;&#x7684;&#x5185;&#x5BB9;&#x4E3A;&#x6587;&#x7AE0;&#x7684;&#x6807;&#x9898;&#x6216;&#x8005;&#x662F;&#x5206;&#x4EAB;&#x7684;&#x540D;&#x5B57;
+        msg_content = msg[&apos;Text&apos;]
+        msg_share_url = msg[&apos;Url&apos;]       #&#x8BB0;&#x5F55;&#x5206;&#x4EAB;&#x7684;url
+        print msg_share_url
+    face_bug=msg_content
+#&#x5C06;&#x4FE1;&#x606F;&#x5B58;&#x50A8;&#x5728;&#x5B57;&#x5178;&#x4E2D;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;msg_id&#x5BF9;&#x5E94;&#x4E00;&#x6761;&#x4FE1;&#x606F;
+    msg_information.update(
+        {
+            msg_id: {
+                &quot;msg_from&quot;: msg_from, &quot;msg_time&quot;: msg_time, &quot;msg_time_rec&quot;: msg_time_rec,
+                &quot;msg_type&quot;: msg[&quot;Type&quot;],
+                &quot;msg_content&quot;: msg_content, &quot;msg_share_url&quot;: msg_share_url
+            }
+        }
+    )
+#&#x8FD9;&#x4E2A;&#x662F;&#x7528;&#x4E8E;&#x76D1;&#x542C;&#x662F;&#x5426;&#x6709;&#x6D88;&#x606F;&#x64A4;&#x56DE;
+@itchat.msg_register(NOTE, isFriendChat=True, isGroupChat=True, isMpChat=True)
+def information(msg):
+    #&#x8FD9;&#x91CC;&#x5982;&#x679C;&#x8FD9;&#x91CC;&#x7684;msg[&apos;Content&apos;]&#x4E2D;&#x5305;&#x542B;&#x6D88;&#x606F;&#x64A4;&#x56DE;&#x548C;id&#xFF0C;&#x5C31;&#x6267;&#x884C;&#x4E0B;&#x9762;&#x7684;&#x8BED;&#x53E5;
+    if &apos;&#x64A4;&#x56DE;&#x4E86;&#x4E00;&#x6761;&#x6D88;&#x606F;&apos; in msg[&apos;Content&apos;]:
+        old_msg_id = re.search(&quot;\&lt;msgid\&gt;(.*?)\&lt;\/msgid\&gt;&quot;, msg[&apos;Content&apos;]).group(1)   #&#x5728;&#x8FD4;&#x56DE;&#x7684;content&#x67E5;&#x627E;&#x64A4;&#x56DE;&#x7684;&#x6D88;&#x606F;&#x7684;id
+        old_msg = msg_information.get(old_msg_id)    #&#x5F97;&#x5230;&#x6D88;&#x606F;
+        print old_msg
+        if len(old_msg_id)&lt;11:  #&#x5982;&#x679C;&#x53D1;&#x9001;&#x7684;&#x662F;&#x8868;&#x60C5;&#x5305;
+            itchat.send_file(face_bug,toUserName=&apos;filehelper&apos;)
+        else:  #&#x53D1;&#x9001;&#x64A4;&#x56DE;&#x7684;&#x63D0;&#x793A;&#x7ED9;&#x6587;&#x4EF6;&#x52A9;&#x624B;
+            msg_body = &quot;&#x544A;&#x8BC9;&#x4F60;&#x4E00;&#x4E2A;&#x79D8;&#x5BC6;~&quot; + &quot;\n&quot; \
+                       + old_msg.get(&apos;msg_from&apos;) + &quot; &#x64A4;&#x56DE;&#x4E86; &quot; + old_msg.get(&quot;msg_type&quot;) + &quot; &#x6D88;&#x606F;&quot; + &quot;\n&quot; \
+                       + old_msg.get(&apos;msg_time_rec&apos;) + &quot;\n&quot; \
+                       + &quot;&#x64A4;&#x56DE;&#x4E86;&#x4EC0;&#x4E48; &#x21E3;&quot; + &quot;\n&quot; \
+                       + r&quot;&quot; + old_msg.get(&apos;msg_content&apos;)
+            #&#x5982;&#x679C;&#x662F;&#x5206;&#x4EAB;&#x7684;&#x6587;&#x4EF6;&#x88AB;&#x64A4;&#x56DE;&#x4E86;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x5C06;&#x5206;&#x4EAB;&#x7684;url&#x52A0;&#x5728;msg_body&#x4E2D;&#x53D1;&#x9001;&#x7ED9;&#x6587;&#x4EF6;&#x52A9;&#x624B;
+            if old_msg[&apos;msg_type&apos;] == &quot;Sharing&quot;:
+                msg_body += &quot;\n&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#x94FE;&#x63A5;&#x27A3; &quot; + old_msg.get(&apos;msg_share_url&apos;)
+            # &#x5C06;&#x64A4;&#x56DE;&#x6D88;&#x606F;&#x53D1;&#x9001;&#x5230;&#x6587;&#x4EF6;&#x52A9;&#x624B;
+            itchat.send_msg(msg_body, toUserName=&apos;filehelper&apos;)
+            # &#x6709;&#x6587;&#x4EF6;&#x7684;&#x8BDD;&#x4E5F;&#x8981;&#x5C06;&#x6587;&#x4EF6;&#x53D1;&#x9001;&#x56DE;&#x53BB;
+            if old_msg[&quot;msg_type&quot;] == &quot;Picture&quot; \
+                    or old_msg[&quot;msg_type&quot;] == &quot;Recording&quot; \
+                    or old_msg[&quot;msg_type&quot;] == &quot;Video&quot; \
+                    or old_msg[&quot;msg_type&quot;] == &quot;Attachment&quot;:
+                file = &apos;@fil@%s&apos; % (old_msg[&apos;msg_content&apos;])
+                itchat.send(msg=file, toUserName=&apos;filehelper&apos;)
+                os.remove(old_msg[&apos;msg_content&apos;])
+            # &#x5220;&#x9664;&#x5B57;&#x5178;&#x65E7;&#x6D88;&#x606F;
+            msg_information.pop(old_msg_id)
+itchat.auto_login(hotReload=True)
+itchat.run()
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Python中matplotlib的颜色及线条控制.html" class="navigation navigation-prev " aria-label="Previous page: Python中matplotlib的颜色及线条控制">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Python微信库itchat的用法.html" class="navigation navigation-next " aria-label="Next page: Python微信库itchat的用法">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Python使用itchat调用微信接口","level":"1.4.1.7","depth":3,"next":{"title":"Python微信库itchat的用法","level":"1.4.1.8","depth":3,"path":"语言/Python/Python微信库itchat的用法.md","ref":"语言/Python/Python微信库itchat的用法.md","articles":[]},"previous":{"title":"Python中matplotlib的颜色及线条控制","level":"1.4.1.6","depth":3,"path":"语言/Python/Python中matplotlib的颜色及线条控制.md","ref":"语言/Python/Python中matplotlib的颜色及线条控制.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-small","chapter-fold","code","-lunr","-search","search-pro","emphasize","splitter","ancre-navigation","-sharing","sharing-plus","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"emphasize":{},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":false,"facebook":false,"weibo":true,"twitter":false,"pocket":false,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Roboytim","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"KnowledgeLib","language":"zh-hans","links":{"sidebar":{"主页":"https://github.com/mike0564/KnowledgeLib","Github源码":"https://github.com/mike0564/KnowledgeLib"}},"gitbook":"3.2.3","description":"对平时遇到的一些问题、知识进行记录总结"},"file":{"path":"语言/Python/Python使用itchat调用微信接口.md","mtime":"2019-12-04T12:25:14.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-08T13:50:12.968Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
