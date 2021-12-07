@@ -1,4 +1,4 @@
-# JMeter+Ant安装配置使用
+# Jmeter+Ant安装配置使用
 
 ## 一、环境准备：
 
