@@ -27,7 +27,7 @@
 ## 安装配置Git
 
 ### 安装git
-```
+```shell
 brew install git
 yum install git
 sudo apt-get install git
@@ -35,14 +35,14 @@ sudo apt-get install git
 ```
 ### 配置
 
-```
+```shell
 git config --global user.name 'XXX'
 git config --global user.email 'XXX'
 ```
 
 ### 创建本地库
 
-```
+```shell
 mkidir learngit //自定义文件夹
 cd learngit
 touch test.md //创建test.md文件
@@ -51,7 +51,7 @@ pwd //显示当前目录
 
 ### 常用CRT
 
-```
+```shell
 git init //初始化代码仓库
 git add learngit.txt //把所有要提交的文件修改放到暂存区
 git commit -m 'add a file'  //把暂存区的所有内容提交到当前分支
@@ -78,7 +78,7 @@ git rm <file>   //删除文件，若文件已提交到版本库，不用担心�
 
 建立本地Git仓库和GitHub仓库之间的传输的秘钥
 
-```
+```shell
 ssh-keygen -t rsa -C 'your email'  //创建SSH Key
 git remote add origin git@github.com:username/repostery.git //关联本地仓库，远程库的名字为origin
 git push -u origin master  //第一次把当前分支master推送到远程，-u参数不但推送，而且将本地的分支和远程的分支关联起来
@@ -88,7 +88,7 @@ git clone git@github.com:username/repostery.git  //从远程库克隆一个到�
 
 ### 分支
 
-```
+```shell
 git checkout -b dev                                   //创建并切换分支
 \#相当于git branch dev 和git checkout dev
 git branch                                                //查看当前分支，当前分支前有个*号
@@ -114,7 +114,7 @@ git branch --set-upstream branch-name origin/branch-name   //建立本地分支
 
 ### 其他---标签
 
-```
+```shell
 git tag v1.0        //给当前分支最新的commit打标签
 git tag -a v0.1 -m 'version 0.1 released' 3628164       //-a指定标签名，-m指定说明文字
 git tag -s <tagname> -m 'blabla'        //可以用PGP签名标签

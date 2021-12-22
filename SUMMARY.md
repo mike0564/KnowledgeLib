@@ -73,6 +73,7 @@
         * [CPULoad指标理解](操作系统/Linux/CPULoad指标理解.md)
         * [Linux执行shell脚本报语法错误](操作系统/Linux/Linux执行Shell脚本报语法错误.md)
         * [Linux故障排查](操作系统/Linux/Linux故障排查.md)
+        * [深入理解Linux的IO系统](操作系统/Linux/深入理解Linux的IO系统.md)
     * [AIX](操作系统/AIX/README.md)
     * [AS400](操作系统/AS400/README.md)
         * [AS400常用命令](操作系统/AS400/AS400常用命令.md)
