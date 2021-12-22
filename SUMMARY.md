@@ -140,6 +140,8 @@
     * [DB2](数据库/DB2/README.md)
         * [DB2高危操作LOAD命令风险详解](数据库/DB2/DB2高危操作LOAD命令风险详解.md)
     * [Informix](数据库/Informix/README.md)
+    * [Redis](数据库/Redis/README.md)
+        * [Redis监控以及指标](数据库/Redis/Redis监控以及指标.md)
 * [应用](应用/README.md)
     * [Nginx](应用/Nginx/README.md)
         * [Nginx配置参数中文说明](应用/Nginx/Nginx配置参数中文说明.md)
