@@ -48,6 +48,7 @@
         * [Gitbook插入表格](工具/Git/Gitbook插入表格.md)
         * [Gitbook安装](工具/Git/Gitbook安装.md)
         * [Github入门](工具/Git/Github入门.md)
+        * [Git忽略文件gitignore的使用](工具/Git/Git忽略文件gitignore的使用.md)
     * [Prometheus](工具/Prometheus/README.md)
         * [Prometheus服务端部署](工具/Prometheus/Prometheus服务端部署.md)
         * [Prometheus监控JVM](工具/Prometheus/Prometheus监控JVM.md)
