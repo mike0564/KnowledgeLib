@@ -58,6 +58,8 @@
         * [Prometheus监控容器](工具/Prometheus/Prometheus监控容器.md)
     * [Other](工具/Other/README.md)
         * [常见内网穿透工具](工具/Other/常见内网穿透工具.md)
+    * [Docker](工具/Docker/README.md)
+        * [Docker常用命令](工具/Docker/Docker常用命令.md)
 * [操作系统](操作系统/README.md)
     * [IOS](操作系统/IOS/README.md)
         * [IOS模拟器命令xcrun_simctl系列](操作系统/IOS/IOS模拟器命令xcrun_simctl系列.md)
@@ -172,4 +174,6 @@
             * [图片隐写术之教练我想打CTF](安全/CTF/CTF题集/图片隐写术之教练我想打CTF.md)
 * [测试](测试/README.md)
     * [非功能测试](测试/非功能测试/README.md)
+* [运维](运维/README.md)
+    * [运维问题排查](运维/运维问题排查.md)
 

@@ -1,0 +1,3082 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Docker常用命令 · KnowledgeLib</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Roboytim">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ancre-navigation/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../../操作系统/" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/mike0564/KnowledgeLib" target="_blank" class="custom-link">主页</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://github.com/mike0564/KnowledgeLib" target="_blank" class="custom-link">Github源码</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Postman/">
+            
+                <a href="../Postman/">
+            
+                    
+                    Postman
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../Postman/Postman调试加密接口.html">
+            
+                <a href="../Postman/Postman调试加密接口.html">
+            
+                    
+                    Postman调试加密接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Net/">
+            
+                <a href="../Net/">
+            
+                    
+                    Net
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../Net/网络测试工具iperf、netperf和qperf.html">
+            
+                <a href="../Net/网络测试工具iperf、netperf和qperf.html">
+            
+                    
+                    网络测试工具iperf、netperf和qperf
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../Net/tcpdump命令详解.html">
+            
+                <a href="../Net/tcpdump命令详解.html">
+            
+                    
+                    tcpdump命令详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Jmeter/">
+            
+                <a href="../Jmeter/">
+            
+                    
+                    Jmeter
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../Jmeter/Jmeter入门.html">
+            
+                <a href="../Jmeter/Jmeter入门.html">
+            
+                    
+                    Jmeter入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../Jmeter/Jmeter查看结果数中的响应数据中文乱码.html">
+            
+                <a href="../Jmeter/Jmeter查看结果数中的响应数据中文乱码.html">
+            
+                    
+                    Jmeter查看结果数中的响应数据中文乱码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="../Jmeter/Jmeter接口测试与压力测试.html">
+            
+                <a href="../Jmeter/Jmeter接口测试与压力测试.html">
+            
+                    
+                    Jmeter接口测试与压力测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="../Jmeter/Jmeter压力测试简单教程.html">
+            
+                <a href="../Jmeter/Jmeter压力测试简单教程.html">
+            
+                    
+                    Jmeter压力测试简单教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.5" data-path="../Jmeter/Jmeter使用自定义编写代码.html">
+            
+                <a href="../Jmeter/Jmeter使用自定义编写代码.html">
+            
+                    
+                    Jmeter使用自定义编写代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.6" data-path="../Jmeter/Jmeter参数化.html">
+            
+                <a href="../Jmeter/Jmeter参数化.html">
+            
+                    
+                    Jmeter参数化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.7" data-path="../Jmeter/Jmeter进行https协议的压测.html">
+            
+                <a href="../Jmeter/Jmeter进行https协议的压测.html">
+            
+                    
+                    Jmeter进行https协议的压测
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.8" data-path="../Jmeter/Jmeter之Non-GUIMode.html">
+            
+                <a href="../Jmeter/Jmeter之Non-GUIMode.html">
+            
+                    
+                    Jmeter之Non-GUIMode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.9" data-path="../Jmeter/Jmeter参数变量中包含引号导致异常.html">
+            
+                <a href="../Jmeter/Jmeter参数变量中包含引号导致异常.html">
+            
+                    
+                    Jmeter参数变量中包含引号导致异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.10" data-path="../Jmeter/Jmeter和Ant的html报告优化及DashboardReport介绍.html">
+            
+                <a href="../Jmeter/Jmeter和Ant的html报告优化及DashboardReport介绍.html">
+            
+                    
+                    Jmeter和Ant的html报告优化及DashboardReport介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.11" data-path="../Jmeter/Jmeter+Ant安装配置使用.html">
+            
+                <a href="../Jmeter/Jmeter+Ant安装配置使用.html">
+            
+                    
+                    JMeter+Ant安装配置使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.12" data-path="../Jmeter/Jmeter跨线程传递变量.html">
+            
+                <a href="../Jmeter/Jmeter跨线程传递变量.html">
+            
+                    
+                    JMeter跨线程传递变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.13" data-path="../Jmeter/Jmeter之TCP取样器.html">
+            
+                <a href="../Jmeter/Jmeter之TCP取样器.html">
+            
+                    
+                    JMeter之TCP取样器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../Loadrunner/">
+            
+                <a href="../Loadrunner/">
+            
+                    
+                    Loadrunner
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../Loadrunner/Loadrunner解决HTTP请求中传参的BASE64加密方法.html">
+            
+                <a href="../Loadrunner/Loadrunner解决HTTP请求中传参的BASE64加密方法.html">
+            
+                    
+                    Loadrunner解决HTTP请求中传参的BASE64加密方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../Loadrunner/Loadrunner安装后启动慢的解决方法.html">
+            
+                <a href="../Loadrunner/Loadrunner安装后启动慢的解决方法.html">
+            
+                    
+                    Loadrunner安装后启动慢的解决方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="../Loadrunner/Loadrunner对字符串进行BASE64编码.html">
+            
+                <a href="../Loadrunner/Loadrunner对字符串进行BASE64编码.html">
+            
+                    
+                    Loadrunner对字符串进行BASE64编码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="../Loadrunner/Loadrunner使用JDBC执行sql对数据库进行压测.html">
+            
+                <a href="../Loadrunner/Loadrunner使用JDBC执行sql对数据库进行压测.html">
+            
+                    
+                    Loadrunner使用JDBC执行sql对数据库进行压测
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.5" data-path="../Loadrunner/Loadrunner录制https协议.html">
+            
+                <a href="../Loadrunner/Loadrunner录制https协议.html">
+            
+                    
+                    Loadrunner录制https协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.6" data-path="../Loadrunner/LoadrunnerVuser进程线程两种运行方式.html">
+            
+                <a href="../Loadrunner/LoadrunnerVuser进程线程两种运行方式.html">
+            
+                    
+                    LoadrunnerVuser进程线程两种运行方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.7" data-path="../Loadrunner/Loadrunner报错信息整理.html">
+            
+                <a href="../Loadrunner/Loadrunner报错信息整理.html">
+            
+                    
+                    Loadrunner报错信息整理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.8" data-path="../Loadrunner/Loadrunner经典面试题.html">
+            
+                <a href="../Loadrunner/Loadrunner经典面试题.html">
+            
+                    
+                    Loadrunner经典面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.9" data-path="../Loadrunner/Loadrunner对IBMMQ进行性能测试.html">
+            
+                <a href="../Loadrunner/Loadrunner对IBMMQ进行性能测试.html">
+            
+                    
+                    Loadrunner对IBMMQ进行性能测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.10" data-path="../Loadrunner/Loadrunner使用初探.html">
+            
+                <a href="../Loadrunner/Loadrunner使用初探.html">
+            
+                    
+                    Loadrunner使用初探
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.11" data-path="../Loadrunner/Loadrunner中浏览器仿真器的缓存设置.html">
+            
+                <a href="../Loadrunner/Loadrunner中浏览器仿真器的缓存设置.html">
+            
+                    
+                    Loadrunner中浏览器仿真器的缓存设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.12" data-path="../Loadrunner/Loadrunner对报表导出下载进行性能测试.html">
+            
+                <a href="../Loadrunner/Loadrunner对报表导出下载进行性能测试.html">
+            
+                    
+                    Loadrunner对报表导出下载进行性能测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.13" data-path="../Loadrunner/Loadrunner在Linux下安装负载机Generator.html">
+            
+                <a href="../Loadrunner/Loadrunner在Linux下安装负载机Generator.html">
+            
+                    
+                    Loadrunner在Linux下安装负载机Generator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.14" data-path="../Loadrunner/LR测试脚本开发WebService.html">
+            
+                <a href="../Loadrunner/LR测试脚本开发WebService.html">
+            
+                    
+                    LR测试脚本开发WebService
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../Appium/">
+            
+                <a href="../Appium/">
+            
+                    
+                    Appium
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="../Appium/Appium之获取appPackage和appActivity.html">
+            
+                <a href="../Appium/Appium之获取appPackage和appActivity.html">
+            
+                    
+                    Appium之获取appPackage和appActivity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="../Appium/AppiumAPI.html">
+            
+                <a href="../Appium/AppiumAPI.html">
+            
+                    
+                    AppiumAPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../Git/">
+            
+                <a href="../Git/">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.6.1" data-path="../Git/Git插入图片.html">
+            
+                <a href="../Git/Git插入图片.html">
+            
+                    
+                    Git插入图片
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.2" data-path="../Git/Git常用命令.html">
+            
+                <a href="../Git/Git常用命令.html">
+            
+                    
+                    Git常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.3" data-path="../Git/Git常见报错与解决方案.html">
+            
+                <a href="../Git/Git常见报错与解决方案.html">
+            
+                    
+                    Git常见报错与解决方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.4" data-path="../Git/Git保姆级教程.html">
+            
+                <a href="../Git/Git保姆级教程.html">
+            
+                    
+                    Git保姆级教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.5" data-path="../Git/GitBook的基本使用方法.html">
+            
+                <a href="../Git/GitBook的基本使用方法.html">
+            
+                    
+                    GitBook的基本使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.6" data-path="../Git/Gitbook插入表格.html">
+            
+                <a href="../Git/Gitbook插入表格.html">
+            
+                    
+                    Gitbook插入表格
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../Prometheus/">
+            
+                <a href="../Prometheus/">
+            
+                    
+                    Prometheus
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.7.1" data-path="../Prometheus/Prometheus服务端部署.html">
+            
+                <a href="../Prometheus/Prometheus服务端部署.html">
+            
+                    
+                    Prometheus服务端部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.2" data-path="../Prometheus/Prometheus监控JVM.html">
+            
+                <a href="../Prometheus/Prometheus监控JVM.html">
+            
+                    
+                    Prometheus监控JVM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.3" data-path="../Prometheus/Prometheus监控MySQL数据库.html">
+            
+                <a href="../Prometheus/Prometheus监控MySQL数据库.html">
+            
+                    
+                    Prometheus监控MySQL数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.4" data-path="../Prometheus/Prometheus监控Oracle数据库.html">
+            
+                <a href="../Prometheus/Prometheus监控Oracle数据库.html">
+            
+                    
+                    Prometheus监控Oracle数据库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.5" data-path="../Prometheus/Prometheus监控Linux主机.html">
+            
+                <a href="../Prometheus/Prometheus监控Linux主机.html">
+            
+                    
+                    Prometheus监控Linux主机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.6" data-path="../Prometheus/Prometheus监控Windows主机.html">
+            
+                <a href="../Prometheus/Prometheus监控Windows主机.html">
+            
+                    
+                    Prometheus监控Windows主机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.7" data-path="../Prometheus/Prometheus监控容器.html">
+            
+                <a href="../Prometheus/Prometheus监控容器.html">
+            
+                    
+                    Prometheus监控容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../Other/">
+            
+                <a href="../Other/">
+            
+                    
+                    Other
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.8.1" data-path="../Other/常见内网穿透工具.html">
+            
+                <a href="../Other/常见内网穿透工具.html">
+            
+                    
+                    常见内网穿透工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Docker
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.9.1" data-path="Docker常用命令.html">
+            
+                <a href="Docker常用命令.html">
+            
+                    
+                    Docker常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../操作系统/">
+            
+                <a href="../../操作系统/">
+            
+                    
+                    操作系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../操作系统/IOS/">
+            
+                <a href="../../操作系统/IOS/">
+            
+                    
+                    IOS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../操作系统/IOS/IOS模拟器命令xcrun_simctl系列.html">
+            
+                <a href="../../操作系统/IOS/IOS模拟器命令xcrun_simctl系列.html">
+            
+                    
+                    IOS模拟器命令xcrun_simctl系列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../操作系统/Android/">
+            
+                <a href="../../操作系统/Android/">
+            
+                    
+                    Android
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../操作系统/Android/Android性能问题分析神器Systrace.html">
+            
+                <a href="../../操作系统/Android/Android性能问题分析神器Systrace.html">
+            
+                    
+                    Android性能问题分析神器Systrace
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../操作系统/Windows/">
+            
+                <a href="../../操作系统/Windows/">
+            
+                    
+                    Windows
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../../操作系统/Windows/Windows系统下TCP参数优化.html">
+            
+                <a href="../../操作系统/Windows/Windows系统下TCP参数优化.html">
+            
+                    
+                    Windows系统下TCP参数优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../../操作系统/Windows/Windows通过ssh连接远程服务器.html">
+            
+                <a href="../../操作系统/Windows/Windows通过ssh连接远程服务器.html">
+            
+                    
+                    Windows通过ssh连接远程服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../../操作系统/Windows/Windows中bat脚本延时执行.html">
+            
+                <a href="../../操作系统/Windows/Windows中bat脚本延时执行.html">
+            
+                    
+                    Windows中bat脚本延时执行
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../操作系统/Linux/">
+            
+                <a href="../../操作系统/Linux/">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../../操作系统/Linux/Linux使用SSH首次登陆无需确认.html">
+            
+                <a href="../../操作系统/Linux/Linux使用SSH首次登陆无需确认.html">
+            
+                    
+                    Linux使用SSH首次登陆无需确认
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="../../操作系统/Linux/SSH常用命令.html">
+            
+                <a href="../../操作系统/Linux/SSH常用命令.html">
+            
+                    
+                    SSH常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="../../操作系统/Linux/Linux中最常用的一套Sed技巧.html">
+            
+                <a href="../../操作系统/Linux/Linux中最常用的一套Sed技巧.html">
+            
+                    
+                    Linux中最常用的一套Sed技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.4" data-path="../../操作系统/Linux/Linux中sed命令完全攻略.html">
+            
+                <a href="../../操作系统/Linux/Linux中sed命令完全攻略.html">
+            
+                    
+                    Linux中sed命令完全攻略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.5" data-path="../../操作系统/Linux/CPULoad指标理解.html">
+            
+                <a href="../../操作系统/Linux/CPULoad指标理解.html">
+            
+                    
+                    CPULoad指标理解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.6" data-path="../../操作系统/Linux/Linux执行Shell脚本报语法错误.html">
+            
+                <a href="../../操作系统/Linux/Linux执行Shell脚本报语法错误.html">
+            
+                    
+                    Linux执行shell脚本报语法错误
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.7" data-path="../../操作系统/Linux/Linux故障排查.html">
+            
+                <a href="../../操作系统/Linux/Linux故障排查.html">
+            
+                    
+                    Linux故障排查
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.8" data-path="../../操作系统/Linux/深入理解Linux的IO系统.html">
+            
+                <a href="../../操作系统/Linux/深入理解Linux的IO系统.html">
+            
+                    
+                    深入理解Linux的IO系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../操作系统/AIX/">
+            
+                <a href="../../操作系统/AIX/">
+            
+                    
+                    AIX
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../../操作系统/AS400/">
+            
+                <a href="../../操作系统/AS400/">
+            
+                    
+                    AS400
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.6.1" data-path="../../操作系统/AS400/AS400常用命令.html">
+            
+                <a href="../../操作系统/AS400/AS400常用命令.html">
+            
+                    
+                    AS400常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../语言/">
+            
+                <a href="../../语言/">
+            
+                    
+                    语言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../语言/Go/">
+            
+                <a href="../../语言/Go/">
+            
+                    
+                    Go
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../../语言/Go/Go语言实现简单的Socket通讯.html">
+            
+                <a href="../../语言/Go/Go语言实现简单的Socket通讯.html">
+            
+                    
+                    Go语言实现简单的Socket通讯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../../语言/Go/Go语言简介-01.html">
+            
+                <a href="../../语言/Go/Go语言简介-01.html">
+            
+                    
+                    Go语言简介-01
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../语言/Python/">
+            
+                <a href="../../语言/Python/">
+            
+                    
+                    Python
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../../语言/Python/Python3之sublime配置.html">
+            
+                <a href="../../语言/Python/Python3之sublime配置.html">
+            
+                    
+                    Python3之sublime配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../../语言/Python/Python自动监控启动进程.html">
+            
+                <a href="../../语言/Python/Python自动监控启动进程.html">
+            
+                    
+                    Python自动监控启动进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../../语言/Python/Python实现对Linux服务器的监控.html">
+            
+                <a href="../../语言/Python/Python实现对Linux服务器的监控.html">
+            
+                    
+                    Python实现对Linux服务器的监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../../语言/Python/Python读写Excel文件.html">
+            
+                <a href="../../语言/Python/Python读写Excel文件.html">
+            
+                    
+                    Python读写Excel文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../../语言/Python/Python鲜为人知的语法.html">
+            
+                <a href="../../语言/Python/Python鲜为人知的语法.html">
+            
+                    
+                    Python鲜为人知的语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../../语言/Python/Python中matplotlib的颜色及线条控制.html">
+            
+                <a href="../../语言/Python/Python中matplotlib的颜色及线条控制.html">
+            
+                    
+                    Python中matplotlib的颜色及线条控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.7" data-path="../../语言/Python/Python使用itchat调用微信接口.html">
+            
+                <a href="../../语言/Python/Python使用itchat调用微信接口.html">
+            
+                    
+                    Python使用itchat调用微信接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.8" data-path="../../语言/Python/Python微信库itchat的用法.html">
+            
+                <a href="../../语言/Python/Python微信库itchat的用法.html">
+            
+                    
+                    Python微信库itchat的用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../语言/Java/">
+            
+                <a href="../../语言/Java/">
+            
+                    
+                    Java
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../../语言/Java/Java中hashcode相等两个类一定相等吗.html">
+            
+                <a href="../../语言/Java/Java中hashcode相等两个类一定相等吗.html">
+            
+                    
+                    Java中hashcode相等两个类一定相等吗
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../../语言/Java/Java之voliate,synchronized,AtomicInteger使用.html">
+            
+                <a href="../../语言/Java/Java之voliate,synchronized,AtomicInteger使用.html">
+            
+                    
+                    Java之voliate,synchronized,AtomicInteger使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="../../语言/Java/Java内存溢出OOM异常完全指南.html">
+            
+                <a href="../../语言/Java/Java内存溢出OOM异常完全指南.html">
+            
+                    
+                    Java内存溢出OOM异常完全指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4" data-path="../../语言/Java/Java之JVM虚拟机GC.html">
+            
+                <a href="../../语言/Java/Java之JVM虚拟机GC.html">
+            
+                    
+                    Java之JVM虚拟机GC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.5" data-path="../../语言/Java/Java之jvm性能调优工具jcmd.html">
+            
+                <a href="../../语言/Java/Java之jvm性能调优工具jcmd.html">
+            
+                    
+                    Java之jvm性能调优工具jcmd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.6" data-path="../../语言/Java/使用Java编写Tuxedo应用.html">
+            
+                <a href="../../语言/Java/使用Java编写Tuxedo应用.html">
+            
+                    
+                    使用Java编写Tuxedo应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.7" data-path="../../语言/Java/JVM原理讲解和调优.html">
+            
+                <a href="../../语言/Java/JVM原理讲解和调优.html">
+            
+                    
+                    JVM原理讲解和调优
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.8" data-path="../../语言/Java/Java调优经验谈.html">
+            
+                <a href="../../语言/Java/Java调优经验谈.html">
+            
+                    
+                    Java调优经验谈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.9" data-path="../../语言/Java/new Object到底占用几个字节.html">
+            
+                <a href="../../语言/Java/new Object到底占用几个字节.html">
+            
+                    
+                    new Object到底占用几个字节
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.10" data-path="../../语言/Java/UseG1GC垃圾回收技术解析.html">
+            
+                <a href="../../语言/Java/UseG1GC垃圾回收技术解析.html">
+            
+                    
+                    UseG1GC垃圾回收技术解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../语言/C/">
+            
+                <a href="../../语言/C/">
+            
+                    
+                    C
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../../语言/C/C生成身份证号.html">
+            
+                <a href="../../语言/C/C生成身份证号.html">
+            
+                    
+                    C生成身份证号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../../语言/C/Linux下几款C++程序中的内存泄露检查工具.html">
+            
+                <a href="../../语言/C/Linux下几款C++程序中的内存泄露检查工具.html">
+            
+                    
+                    Linux下几款C++程序中的内存泄露检查工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../语言/Shell/">
+            
+                <a href="../../语言/Shell/">
+            
+                    
+                    Shell
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" data-path="../../语言/Shell/使用SSH远程连接发送命令.html">
+            
+                <a href="../../语言/Shell/使用SSH远程连接发送命令.html">
+            
+                    
+                    使用SSH远程连接发送命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../../语言/Assembly-on-macOS-master/">
+            
+                <a href="../../语言/Assembly-on-macOS-master/">
+            
+                    
+                    汇编语言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.6.1" data-path="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（一）——引言.html">
+            
+                <a href="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（一）——引言.html">
+            
+                    
+                    macOS上的汇编入门（一）——引言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.2" data-path="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（二）——数学基础.html">
+            
+                <a href="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（二）——数学基础.html">
+            
+                    
+                    macOS上的汇编入门（二）——数学基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.3" data-path="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（三）——硬件基础.html">
+            
+                <a href="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（三）——硬件基础.html">
+            
+                    
+                    macOS上的汇编入门（三）——硬件基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.4" data-path="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（四）——操作系统基础.html">
+            
+                <a href="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（四）——操作系统基础.html">
+            
+                    
+                    macOS上的汇编入门（四）——操作系统基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.5" data-path="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（五）——第一个汇编程序.html">
+            
+                <a href="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（五）——第一个汇编程序.html">
+            
+                    
+                    macOS上的汇编入门（五）——第一个汇编程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.6" data-path="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（六）——汇编语言初识.html">
+            
+                <a href="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（六）——汇编语言初识.html">
+            
+                    
+                    macOS上的汇编入门（六）——汇编语言初识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.7" data-path="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（七）——字面量与局部变量.html">
+            
+                <a href="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（七）——字面量与局部变量.html">
+            
+                    
+                    macOS上的汇编入门（七）——字面量与局部变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.8" data-path="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（八）——寻址方式与全局变量.html">
+            
+                <a href="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（八）——寻址方式与全局变量.html">
+            
+                    
+                    macOS上的汇编入门（八）——寻址方式与全局变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.9" data-path="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（九）——跳转与函数.html">
+            
+                <a href="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（九）——跳转与函数.html">
+            
+                    
+                    macOS上的汇编入门（九）——跳转与函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.10" data-path="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（十）——再探函数.html">
+            
+                <a href="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（十）——再探函数.html">
+            
+                    
+                    macOS上的汇编入门（十）——再探函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.11" data-path="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（十一）——系统调用.html">
+            
+                <a href="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（十一）——系统调用.html">
+            
+                    
+                    macOS上的汇编入门（十一）——系统调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.12" data-path="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（十二）——调试.html">
+            
+                <a href="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（十二）——调试.html">
+            
+                    
+                    macOS上的汇编入门（十二）——调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.13" data-path="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（十三）——从编译到执行.html">
+            
+                <a href="../../语言/Assembly-on-macOS-master/macOS上的汇编入门（十三）——从编译到执行.html">
+            
+                    
+                    macOS上的汇编入门（十三）——从编译到执行
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../数据库/">
+            
+                <a href="../../数据库/">
+            
+                    
+                    数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../数据库/SQL/">
+            
+                <a href="../../数据库/SQL/">
+            
+                    
+                    SQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../../数据库/SQL/常见的SQL样例.html">
+            
+                <a href="../../数据库/SQL/常见的SQL样例.html">
+            
+                    
+                    常见的SQL样例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../../数据库/SQL/SQL索引详解.html">
+            
+                <a href="../../数据库/SQL/SQL索引详解.html">
+            
+                    
+                    SQL索引详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../数据库/Oracle/">
+            
+                <a href="../../数据库/Oracle/">
+            
+                    
+                    Oracle
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../../数据库/Oracle/如何读懂AWR.html">
+            
+                <a href="../../数据库/Oracle/如何读懂AWR.html">
+            
+                    
+                    如何读懂AWR
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../数据库/Mysql/">
+            
+                <a href="../../数据库/Mysql/">
+            
+                    
+                    Mysql
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../../数据库/Mysql/Mysql之MacOS安装mysqlclient.html">
+            
+                <a href="../../数据库/Mysql/Mysql之MacOS安装mysqlclient.html">
+            
+                    
+                    Mysql之MacOS安装mysqlclient
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="../../数据库/Mysql/Mysql删除库中所有表的数据.html">
+            
+                <a href="../../数据库/Mysql/Mysql删除库中所有表的数据.html">
+            
+                    
+                    Mysql删除库中所有表的数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.3" data-path="../../数据库/Mysql/数据库分库分表策略和分库分表后数据的查询.html">
+            
+                <a href="../../数据库/Mysql/数据库分库分表策略和分库分表后数据的查询.html">
+            
+                    
+                    数据库分库分表策略和分库分表后数据的查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.4" data-path="../../数据库/Mysql/MYSQL显示完整的processlist中info信息.html">
+            
+                <a href="../../数据库/Mysql/MYSQL显示完整的processlist中info信息.html">
+            
+                    
+                    MYSQL显示完整的processlist中info信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.5" data-path="../../数据库/Mysql/MySQL高性能优化实战总结.html">
+            
+                <a href="../../数据库/Mysql/MySQL高性能优化实战总结.html">
+            
+                    
+                    MySQL高性能优化实战总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.6" data-path="../../数据库/Mysql/数据库原理.html">
+            
+                <a href="../../数据库/Mysql/数据库原理.html">
+            
+                    
+                    数据库原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.7" data-path="../../数据库/Mysql/Mysql数据库死锁监控.html">
+            
+                <a href="../../数据库/Mysql/Mysql数据库死锁监控.html">
+            
+                    
+                    Mysql数据库死锁监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.8" data-path="../../数据库/Mysql/Mysql锁表问题解决.html">
+            
+                <a href="../../数据库/Mysql/Mysql锁表问题解决.html">
+            
+                    
+                    Mysql锁表问题解决
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.9" data-path="../../数据库/Mysql/MySql慢查询优化.html">
+            
+                <a href="../../数据库/Mysql/MySql慢查询优化.html">
+            
+                    
+                    MySql慢查询优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.10" data-path="../../数据库/Mysql/Mysql与Hbase对比.html">
+            
+                <a href="../../数据库/Mysql/Mysql与Hbase对比.html">
+            
+                    
+                    Mysql与Hbase对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.11" data-path="../../数据库/Mysql/Mysql实现读写分离.html">
+            
+                <a href="../../数据库/Mysql/Mysql实现读写分离.html">
+            
+                    
+                    Mysql实现读写分离
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../数据库/DB2/">
+            
+                <a href="../../数据库/DB2/">
+            
+                    
+                    DB2
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.4.1" data-path="../../数据库/DB2/DB2高危操作LOAD命令风险详解.html">
+            
+                <a href="../../数据库/DB2/DB2高危操作LOAD命令风险详解.html">
+            
+                    
+                    DB2高危操作LOAD命令风险详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../../数据库/Informix/">
+            
+                <a href="../../数据库/Informix/">
+            
+                    
+                    Informix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../../数据库/Redis/">
+            
+                <a href="../../数据库/Redis/">
+            
+                    
+                    Redis
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.6.1" data-path="../../数据库/Redis/Redis监控以及指标.html">
+            
+                <a href="../../数据库/Redis/Redis监控以及指标.html">
+            
+                    
+                    Redis监控以及指标
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../应用/">
+            
+                <a href="../../应用/">
+            
+                    
+                    应用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../应用/Nginx/">
+            
+                <a href="../../应用/Nginx/">
+            
+                    
+                    Nginx
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../../应用/Nginx/Nginx配置参数中文说明.html">
+            
+                <a href="../../应用/Nginx/Nginx配置参数中文说明.html">
+            
+                    
+                    Nginx配置参数中文说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../应用/Kafka/">
+            
+                <a href="../../应用/Kafka/">
+            
+                    
+                    Kafka
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../../应用/Kafka/Kafka的存储架构.html">
+            
+                <a href="../../应用/Kafka/Kafka的存储架构.html">
+            
+                    
+                    Kafka的存储架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../应用/分布式/">
+            
+                <a href="../../应用/分布式/">
+            
+                    
+                    分布式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="../../应用/分布式/分布式架构知识体系.html">
+            
+                <a href="../../应用/分布式/分布式架构知识体系.html">
+            
+                    
+                    分布式架构知识体系
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../应用/其他/">
+            
+                <a href="../../应用/其他/">
+            
+                    
+                    其他
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.4.1" data-path="../../应用/其他/Cookie、Session、Token 背后的故事.html">
+            
+                <a href="../../应用/其他/Cookie、Session、Token 背后的故事.html">
+            
+                    
+                    Cookie、Session、Token 背后的故事
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../安全/">
+            
+                <a href="../../安全/">
+            
+                    
+                    安全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../安全/CTF/">
+            
+                <a href="../../安全/CTF/">
+            
+                    
+                    CTF
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" data-path="../../安全/CTF/CTF之隐写术破解.html">
+            
+                <a href="../../安全/CTF/CTF之隐写术破解.html">
+            
+                    
+                    CTF之隐写术破解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.2" data-path="../../安全/CTF/BMP图片分析.html">
+            
+                <a href="../../安全/CTF/BMP图片分析.html">
+            
+                    
+                    BMP图片分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.3" data-path="../../安全/CTF/Radare2使用全解.html">
+            
+                <a href="../../安全/CTF/Radare2使用全解.html">
+            
+                    
+                    Radare2使用全解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4" data-path="../../安全/CTF/CTF题集/">
+            
+                <a href="../../安全/CTF/CTF题集/">
+            
+                    
+                    CTF题集
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.4.1" data-path="../../安全/CTF/CTF题集/流量分析之文件简单提取.html">
+            
+                <a href="../../安全/CTF/CTF题集/流量分析之文件简单提取.html">
+            
+                    
+                    流量分析之文件简单提取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4.2" data-path="../../安全/CTF/CTF题集/取证神器之使用volatility分析window内存.html">
+            
+                <a href="../../安全/CTF/CTF题集/取证神器之使用volatility分析window内存.html">
+            
+                    
+                    取证神器之使用volatility分析window内存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4.3" data-path="../../安全/CTF/CTF题集/图片隐写术pigs.html">
+            
+                <a href="../../安全/CTF/CTF题集/图片隐写术pigs.html">
+            
+                    
+                    图片隐写术pigs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4.4" data-path="../../安全/CTF/CTF题集/webshell流量分析.html">
+            
+                <a href="../../安全/CTF/CTF题集/webshell流量分析.html">
+            
+                    
+                    webshell流量分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4.5" data-path="../../安全/CTF/CTF题集/逆向工程之密码分析.html">
+            
+                <a href="../../安全/CTF/CTF题集/逆向工程之密码分析.html">
+            
+                    
+                    逆向工程之密码分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4.6" data-path="../../安全/CTF/CTF题集/密码学之摩斯电码.html">
+            
+                <a href="../../安全/CTF/CTF题集/密码学之摩斯电码.html">
+            
+                    
+                    密码学之摩斯电码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4.7" data-path="../../安全/CTF/CTF题集/逆向工程之阿拉丁神灯.html">
+            
+                <a href="../../安全/CTF/CTF题集/逆向工程之阿拉丁神灯.html">
+            
+                    
+                    逆向工程之阿拉丁神灯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4.8" data-path="../../安全/CTF/CTF题集/逆向工程easyflag.html">
+            
+                <a href="../../安全/CTF/CTF题集/逆向工程easyflag.html">
+            
+                    
+                    逆向工程easyflag
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4.9" data-path="../../安全/CTF/CTF题集/密码学之md5.html">
+            
+                <a href="../../安全/CTF/CTF题集/密码学之md5.html">
+            
+                    
+                    密码学之md5
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.1.4.10" data-path="../../安全/CTF/CTF题集/图片隐写术之教练我想打CTF.html">
+            
+                <a href="../../安全/CTF/CTF题集/图片隐写术之教练我想打CTF.html">
+            
+                    
+                    图片隐写术之教练我想打CTF
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../测试/">
+            
+                <a href="../../测试/">
+            
+                    
+                    测试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../测试/非功能测试/">
+            
+                <a href="../../测试/非功能测试/">
+            
+                    
+                    非功能测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../运维/">
+            
+                <a href="../../运维/">
+            
+                    
+                    运维
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../运维/运维问题排查.html">
+            
+                <a href="../../运维/运维问题排查.html">
+            
+                    
+                    运维问题排查
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Docker常用命令</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#docker&#x5E38;&#x7528;&#x547D;&#x4EE4;"><b></b>Docker&#x5E38;&#x7528;&#x547D;&#x4EE4;</a></li><ul><li><span class="title-icon "></span><a href="#&#x57FA;&#x7840;&#x547D;&#x4EE4;"><b></b>&#x57FA;&#x7840;&#x547D;&#x4EE4;</a></li><ul><li><span class="title-icon "></span><a href="#&#x542F;&#x52A8;docker"><b></b>&#x542F;&#x52A8;docker</a></li><li><span class="title-icon "></span><a href="#&#x5173;&#x95ED;docker"><b></b>&#x5173;&#x95ED;docker</a></li><li><span class="title-icon "></span><a href="#&#x91CD;&#x542F;docker"><b></b>&#x91CD;&#x542F;docker</a></li><li><span class="title-icon "></span><a href="#docker&#x8BBE;&#x7F6E;&#x968F;&#x670D;&#x52A1;&#x542F;&#x52A8;&#x800C;&#x81EA;&#x542F;&#x52A8;"><b></b>docker&#x8BBE;&#x7F6E;&#x968F;&#x670D;&#x52A1;&#x542F;&#x52A8;&#x800C;&#x81EA;&#x542F;&#x52A8;</a></li><li><span class="title-icon "></span><a href="#&#x67E5;&#x770B;docker-&#x8FD0;&#x884C;&#x72B6;&#x6001;"><b></b>&#x67E5;&#x770B;docker &#x8FD0;&#x884C;&#x72B6;&#x6001;</a></li><li><span class="title-icon "></span><a href="#&#x67E5;&#x770B;docker-&#x7248;&#x672C;&#x53F7;&#x4FE1;&#x606F;"><b></b>&#x67E5;&#x770B;docker &#x7248;&#x672C;&#x53F7;&#x4FE1;&#x606F;</a></li><li><span class="title-icon "></span><a href="#docker-&#x5E2E;&#x52A9;&#x547D;&#x4EE4;"><b></b>docker &#x5E2E;&#x52A9;&#x547D;&#x4EE4;</a></li></ul><li><span class="title-icon "></span><a href="#&#x955C;&#x50CF;&#x547D;&#x4EE4;"><b></b>&#x955C;&#x50CF;&#x547D;&#x4EE4;</a></li><ul><li><span class="title-icon "></span><a href="#&#x67E5;&#x770B;&#x81EA;&#x5DF1;&#x670D;&#x52A1;&#x5668;&#x4E2D;docker-&#x955C;&#x50CF;&#x5217;&#x8868;"><b></b>&#x67E5;&#x770B;&#x81EA;&#x5DF1;&#x670D;&#x52A1;&#x5668;&#x4E2D;docker &#x955C;&#x50CF;&#x5217;&#x8868;</a></li><li><span class="title-icon "></span><a href="#&#x641C;&#x7D22;&#x955C;&#x50CF;"><b></b>&#x641C;&#x7D22;&#x955C;&#x50CF;</a></li><li><span class="title-icon "></span><a href="#&#x62C9;&#x53D6;&#x955C;&#x50CF;"><b></b>&#x62C9;&#x53D6;&#x955C;&#x50CF;</a></li><li><span class="title-icon "></span><a href="#&#x8FD0;&#x884C;&#x955C;&#x50CF;"><b></b>&#x8FD0;&#x884C;&#x955C;&#x50CF;</a></li><li><span class="title-icon "></span><a href="#&#x5220;&#x9664;&#x955C;&#x50CF;"><b></b>&#x5220;&#x9664;&#x955C;&#x50CF;</a></li><li><span class="title-icon "></span><a href="#&#x5F3A;&#x5236;&#x5220;&#x9664;&#x955C;&#x50CF;"><b></b>&#x5F3A;&#x5236;&#x5220;&#x9664;&#x955C;&#x50CF;</a></li><li><span class="title-icon "></span><a href="#&#x4FDD;&#x5B58;&#x955C;&#x50CF;"><b></b>&#x4FDD;&#x5B58;&#x955C;&#x50CF;</a></li><li><span class="title-icon "></span><a href="#&#x52A0;&#x8F7D;&#x955C;&#x50CF;"><b></b>&#x52A0;&#x8F7D;&#x955C;&#x50CF;</a></li></ul><li><span class="title-icon "></span><a href="#&#x5BB9;&#x5668;&#x547D;&#x4EE4;"><b></b>&#x5BB9;&#x5668;&#x547D;&#x4EE4;</a></li><ul><li><span class="title-icon "></span><a href="#&#x67E5;&#x770B;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x5BB9;&#x5668;&#x5217;&#x8868;"><b></b>&#x67E5;&#x770B;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x5BB9;&#x5668;&#x5217;&#x8868;</a></li><li><span class="title-icon "></span><a href="#&#x67E5;&#x770B;&#x6240;&#x6709;&#x5BB9;&#x5668;"><b></b>&#x67E5;&#x770B;&#x6240;&#x6709;&#x5BB9;&#x5668;</a></li><li><span class="title-icon "></span><a href="#&#x5BB9;&#x5668;&#x7AEF;&#x53E3;&#x4E0E;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x53E3;&#x6620;&#x5C04;"><b></b>&#x5BB9;&#x5668;&#x7AEF;&#x53E3;&#x4E0E;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x53E3;&#x6620;&#x5C04;</a></li><li><span class="title-icon "></span><a href="#&#x8FDB;&#x5165;&#x5BB9;&#x5668;"><b></b>&#x8FDB;&#x5165;&#x5BB9;&#x5668;</a></li><li><span class="title-icon "></span><a href="#&#x9000;&#x51FA;&#x5BB9;&#x5668;"><b></b>&#x9000;&#x51FA;&#x5BB9;&#x5668;</a></li><li><span class="title-icon "></span><a href="#&#x505C;&#x6B62;&#x5BB9;&#x5668;"><b></b>&#x505C;&#x6B62;&#x5BB9;&#x5668;</a></li><li><span class="title-icon "></span><a href="#&#x91CD;&#x542F;&#x5BB9;&#x5668;"><b></b>&#x91CD;&#x542F;&#x5BB9;&#x5668;</a></li><li><span class="title-icon "></span><a href="#&#x542F;&#x52A8;&#x5BB9;&#x5668;"><b></b>&#x542F;&#x52A8;&#x5BB9;&#x5668;</a></li><li><span class="title-icon "></span><a href="#kill&#x5BB9;&#x5668;"><b></b>kill&#x5BB9;&#x5668;</a></li><li><span class="title-icon "></span><a href="#&#x5BB9;&#x5668;&#x6587;&#x4EF6;&#x62F7;&#x8D1D;"><b></b>&#x5BB9;&#x5668;&#x6587;&#x4EF6;&#x62F7;&#x8D1D;</a></li><li><span class="title-icon "></span><a href="#&#x67E5;&#x770B;&#x5BB9;&#x5668;&#x65E5;&#x5FD7;"><b></b>&#x67E5;&#x770B;&#x5BB9;&#x5668;&#x65E5;&#x5FD7;</a></li><li><span class="title-icon "></span><a href="#&#x5BB9;&#x5668;&#x81EA;&#x542F;"><b></b>&#x5BB9;&#x5668;&#x81EA;&#x542F;</a></li><li><span class="title-icon "></span><a href="#&#x6570;&#x636E;&#x6302;&#x8F7D;"><b></b>&#x6570;&#x636E;&#x6302;&#x8F7D;</a></li></ul><li><span class="title-icon "></span><a href="#&#x8FD0;&#x7EF4;&#x547D;&#x4EE4;"><b></b>&#x8FD0;&#x7EF4;&#x547D;&#x4EE4;</a></li></ul></ul></div><a href="#docker&#x5E38;&#x7528;&#x547D;&#x4EE4;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="docker&#x5E38;&#x7528;&#x547D;&#x4EE4;"><a name="docker&#x5E38;&#x7528;&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#docker&#x5E38;&#x7528;&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>Docker&#x5E38;&#x7528;&#x547D;&#x4EE4;</h1>
+<h2 id="&#x57FA;&#x7840;&#x547D;&#x4EE4;"><a name="&#x57FA;&#x7840;&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#&#x57FA;&#x7840;&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x57FA;&#x7840;&#x547D;&#x4EE4;</h2>
+<h3 id="&#x542F;&#x52A8;docker"><a name="&#x542F;&#x52A8;docker" class="anchor-navigation-ex-anchor" href="#&#x542F;&#x52A8;docker"><i class="fa fa-link" aria-hidden="true"></i></a>&#x542F;&#x52A8;docker</h3>
+<pre><code class="lang-shell">systemctl start docker
+</code></pre>
+<h3 id="&#x5173;&#x95ED;docker"><a name="&#x5173;&#x95ED;docker" class="anchor-navigation-ex-anchor" href="#&#x5173;&#x95ED;docker"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5173;&#x95ED;docker</h3>
+<pre><code class="lang-shell">systemctl stop docker
+</code></pre>
+<h3 id="&#x91CD;&#x542F;docker"><a name="&#x91CD;&#x542F;docker" class="anchor-navigation-ex-anchor" href="#&#x91CD;&#x542F;docker"><i class="fa fa-link" aria-hidden="true"></i></a>&#x91CD;&#x542F;docker</h3>
+<pre><code class="lang-shell">systemctl restart docker
+</code></pre>
+<h3 id="docker&#x8BBE;&#x7F6E;&#x968F;&#x670D;&#x52A1;&#x542F;&#x52A8;&#x800C;&#x81EA;&#x542F;&#x52A8;"><a name="docker&#x8BBE;&#x7F6E;&#x968F;&#x670D;&#x52A1;&#x542F;&#x52A8;&#x800C;&#x81EA;&#x542F;&#x52A8;" class="anchor-navigation-ex-anchor" href="#docker&#x8BBE;&#x7F6E;&#x968F;&#x670D;&#x52A1;&#x542F;&#x52A8;&#x800C;&#x81EA;&#x542F;&#x52A8;"><i class="fa fa-link" aria-hidden="true"></i></a>docker&#x8BBE;&#x7F6E;&#x968F;&#x670D;&#x52A1;&#x542F;&#x52A8;&#x800C;&#x81EA;&#x542F;&#x52A8;</h3>
+<pre><code class="lang-shell">systemctl enable docker
+</code></pre>
+<h3 id="&#x67E5;&#x770B;docker-&#x8FD0;&#x884C;&#x72B6;&#x6001;"><a name="&#x67E5;&#x770B;docker-&#x8FD0;&#x884C;&#x72B6;&#x6001;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x770B;docker-&#x8FD0;&#x884C;&#x72B6;&#x6001;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x770B;docker &#x8FD0;&#x884C;&#x72B6;&#x6001;</h3>
+<pre><code class="lang-shell">systemctl status docker
+</code></pre>
+<h3 id="&#x67E5;&#x770B;docker-&#x7248;&#x672C;&#x53F7;&#x4FE1;&#x606F;"><a name="&#x67E5;&#x770B;docker-&#x7248;&#x672C;&#x53F7;&#x4FE1;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x770B;docker-&#x7248;&#x672C;&#x53F7;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x770B;docker &#x7248;&#x672C;&#x53F7;&#x4FE1;&#x606F;</h3>
+<pre><code class="lang-shell">docker version
+Client:
+ Cloud integration: 1.0.17
+ Version:           20.10.8
+ API version:       1.41
+ Go version:        go1.16.6
+ Git commit:        3967b7d
+ Built:             Fri Jul 30 19:58:50 2021
+ OS/Arch:           windows/amd64
+ Context:           default
+ Experimental:      true
+
+Server: Docker Engine - Community
+ Engine:
+  Version:          20.10.8
+  API version:      1.41 (minimum version 1.12)
+  Go version:       go1.16.6
+  Git commit:       75249d8
+  Built:            Fri Jul 30 19:52:10 2021
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          1.4.9
+  GitCommit:        e25210fe30a0a703442421b0f60afac609f950a3
+ runc:
+  Version:          1.0.1
+  GitCommit:        v1.0.1-0-g4144b63
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+</code></pre>
+<pre><code class="lang-shell">docker info
+Client:
+ Context:    default
+ Debug Mode: false
+ Plugins:
+  buildx: Build with BuildKit (Docker Inc., v0.6.1-docker)
+  compose: Docker Compose (Docker Inc., v2.0.0-rc.1)
+  scan: Docker Scan (Docker Inc., v0.8.0)
+
+Server:
+ Containers: 7
+  Running: 3
+  Paused: 0
+  Stopped: 4
+ Images: 11
+ Server Version: 20.10.8
+ Storage Driver: overlay2
+  Backing Filesystem: extfs
+  Supports d_type: true
+  Native Overlay Diff: true
+  userxattr: false
+ Logging Driver: json-file
+ Cgroup Driver: cgroupfs
+ Cgroup Version: 1
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local logentries splunk syslog
+ Swarm: inactive
+ Runtimes: io.containerd.runc.v2 io.containerd.runtime.v1.linux runc
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: e25210fe30a0a703442421b0f60afac609f950a3
+ runc version: v1.0.1-0-g4144b63
+ init version: de40ad0
+ Security Options:
+  seccomp
+   Profile: default
+ Kernel Version: 5.4.72-microsoft-standard-WSL2
+ Operating System: Docker Desktop
+ OSType: linux
+ Architecture: x86_64
+ CPUs: 16
+ Total Memory: 12.02GiB
+ Name: docker-desktop
+ ID: G5Y7:RJTT:EOYK:JZZV:5ACO:ZWWM:6B6H:DWQ7:5OV2:N5JG:BDBE:VZNJ
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ Registry: https://index.docker.io/v1/
+ Labels:
+ Experimental: false
+ Insecure Registries:
+  127.0.0.0/8
+ Registry Mirrors:
+  https://4jon48pp.mirror.aliyuncs.com/
+ Live Restore Enabled: false
+</code></pre>
+<h3 id="docker-&#x5E2E;&#x52A9;&#x547D;&#x4EE4;"><a name="docker-&#x5E2E;&#x52A9;&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#docker-&#x5E2E;&#x52A9;&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>docker &#x5E2E;&#x52A9;&#x547D;&#x4EE4;</h3>
+<pre><code class="lang-shell">docker --help
+Usage:  docker [OPTIONS] COMMAND
+A self-sufficient runtime for containers
+Options:
+      --config string      Location of client config files
+  -c, --context string     Name of the context to use to connect to the
+                           daemon (overrides DOCKER_HOST env var and
+                           default context set with &quot;docker context use&quot;)
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level
+                           (&quot;debug&quot;|&quot;info&quot;|&quot;warn&quot;|&quot;error&quot;|&quot;fatal&quot;)
+                           (default &quot;info&quot;)
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA
+      --tlscert string     Path to TLS certificate file
+      --tlskey string      Path to TLS key file 
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+Management Commands:
+  builder     Manage builds
+  buildx*     Build with BuildKit (Docker Inc., v0.6.1-docker)
+  compose*    Docker Compose (Docker Inc., v2.0.0-rc.1)
+  config      Manage Docker configs
+  container   Manage containers
+  context     Manage contexts
+  image       Manage images
+  manifest    Manage Docker image manifests and manifest lists
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  scan*       Docker Scan (Docker Inc., v0.8.0)
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container&apos;s changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container&apos;s filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container&apos;s filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
+Run &apos;docker COMMAND --help&apos; for more information on a command.
+To get more help with docker, check out our guides at https://docs.docker.com/go/guides/
+</code></pre>
+<pre><code class="lang-shell">docker pull --help
+
+Usage:  docker pull [OPTIONS] NAME[:TAG|@DIGEST]
+
+Pull an image or a repository from a registry
+
+Options:
+  -a, --all-tags                Download all tagged images in the repository
+      --disable-content-trust   Skip image verification (default true)
+      --platform string         Set platform if server is multi-platform
+                                capable
+  -q, --quiet                   Suppress verbose output
+</code></pre>
+<h2 id="&#x955C;&#x50CF;&#x547D;&#x4EE4;"><a name="&#x955C;&#x50CF;&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#&#x955C;&#x50CF;&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x955C;&#x50CF;&#x547D;&#x4EE4;</h2>
+<h3 id="&#x67E5;&#x770B;&#x81EA;&#x5DF1;&#x670D;&#x52A1;&#x5668;&#x4E2D;docker-&#x955C;&#x50CF;&#x5217;&#x8868;"><a name="&#x67E5;&#x770B;&#x81EA;&#x5DF1;&#x670D;&#x52A1;&#x5668;&#x4E2D;docker-&#x955C;&#x50CF;&#x5217;&#x8868;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x770B;&#x81EA;&#x5DF1;&#x670D;&#x52A1;&#x5668;&#x4E2D;docker-&#x955C;&#x50CF;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x770B;&#x81EA;&#x5DF1;&#x670D;&#x52A1;&#x5668;&#x4E2D;docker &#x955C;&#x50CF;&#x5217;&#x8868;</h3>
+<pre><code class="lang-shell">docker images
+REPOSITORY                                            TAG                                                     IMAGE ID       CREATED         SIZE
+redis                                                 latest                                                  7faaec683238   4 months ago    113MB
+nacos/nacos-server                                    2.0.3                                                   433eb51fef8d   6 months ago    1.05GB
+docker/desktop-kubernetes                             kubernetes-v1.21.3-cni-v0.8.5-critools-v1.17.0-debian   4c3740f7297c   6 months ago    299MB
+registry.cn-hangzhou.aliyuncs.com/forcecop/forcecop   v1.0.0                                                  0bdccc5f76a6   8 months ago    1.82GB
+docker/desktop-kubernetes                             kubernetes-v1.21.1-cni-v0.8.5-critools-v1.17.0-debian   e94f03666724   9 months ago    302MB
+mysql                                                 5.6                                                     e26066fd423a   10 months ago   303MB
+docker/desktop-kubernetes                             kubernetes-v1.19.7-cni-v0.8.5-critools-v1.17.0-debian   93b3398dbfde   12 months ago   285MB
+chaosbladeio/chaosblade-demo                          latest                                                  1ef4d7419cfb   2 years ago     247MB
+jplock/zookeeper                                      3.4.11                                                  6b454cf5e33c   3 years ago     146MB
+riveryang/dubbo-admin                                 latest                                                  f562b039f6af   5 years ago     195MB
+jeromefromcn/dubbo-monitor                            latest                                                  42a956874c02   5 years ago     139MB
+</code></pre>
+<h3 id="&#x641C;&#x7D22;&#x955C;&#x50CF;"><a name="&#x641C;&#x7D22;&#x955C;&#x50CF;" class="anchor-navigation-ex-anchor" href="#&#x641C;&#x7D22;&#x955C;&#x50CF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x641C;&#x7D22;&#x955C;&#x50CF;</h3>
+<pre><code class="lang-shell">docker search &#x955C;&#x50CF;&#x540D;
+docker search --filter=STARS=9000 mysql &#x641C;&#x7D22; STARS &gt;9000&#x7684; mysql &#x955C;&#x50CF;
+NAME      DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
+mysql     MySQL is a widely used, open-source relation&#x2026;   12090     [OK]
+</code></pre>
+<h3 id="&#x62C9;&#x53D6;&#x955C;&#x50CF;"><a name="&#x62C9;&#x53D6;&#x955C;&#x50CF;" class="anchor-navigation-ex-anchor" href="#&#x62C9;&#x53D6;&#x955C;&#x50CF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x62C9;&#x53D6;&#x955C;&#x50CF;</h3>
+<p>&#x4E0D;&#x52A0;tag(&#x7248;&#x672C;&#x53F7;) &#x5373;&#x62C9;&#x53D6;docker&#x4ED3;&#x5E93;&#x4E2D; &#x8BE5;&#x955C;&#x50CF;&#x7684;&#x6700;&#x65B0;&#x7248;&#x672C;latest &#x52A0;:tag &#x5219;&#x662F;&#x62C9;&#x53D6;&#x6307;&#x5B9A;&#x7248;&#x672C;</p>
+<pre><code class="lang-shell">docker pull &#x955C;&#x50CF;&#x540D; 
+docker pull &#x955C;&#x50CF;&#x540D;:tag
+</code></pre>
+<h3 id="&#x8FD0;&#x884C;&#x955C;&#x50CF;"><a name="&#x8FD0;&#x884C;&#x955C;&#x50CF;" class="anchor-navigation-ex-anchor" href="#&#x8FD0;&#x884C;&#x955C;&#x50CF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD0;&#x884C;&#x955C;&#x50CF;</h3>
+<pre><code class="lang-shell">docker run &#x955C;&#x50CF;&#x540D;
+docker run &#x955C;&#x50CF;&#x540D;:Tag
+</code></pre>
+<h4 id="ex&#xFF1A;"><a name="ex&#xFF1A;" class="anchor-navigation-ex-anchor" href="#ex&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>ex&#xFF1A;</h4>
+<pre><code class="lang-shell">docker pull tomcat
+docker run tomcat
+</code></pre>
+<p>&#x53D1;&#x73B0;&#x51FA;&#x73B0;tomcat &#x9ED8;&#x8BA4;&#x5360;&#x7528;&#x7684;8080 &#x7AEF;&#x53E3; &#x8BF4;&#x660E;&#x8BE5;&#x955C;&#x50CF;&#x5DF2;&#x7ECF;&#x662F;&#x542F;&#x52A8;&#x4E86; &#xFF0C;&#x4F46;&#x662F;&#x597D;&#x50CF;&#x9F20;&#x6807;&#x6CA1;&#x6709;&#x56DE;&#x5230;&#x54B1;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x4E86; &#xFF0C;&#x8FD9;&#x600E;&#x4E48;&#x529E;&#x5462; &#xFF1F;
+&#x4F7F;&#x7528;Ctrl+C &#xFF08;&#x6CE8;&#xFF1A;&#x6B64;&#x65B9;&#x5F0F;&#x867D;&#x7136;&#x53EF;&#x4EE5;&#x9000;&#x51FA;&#x5BB9;&#x5668;&#xFF0C;&#x6B64;&#x547D;&#x4EE4;&#x662F;&#x9519;&#x8BEF;&#x7684;&#xFF0C;&#x8BE6;&#x7EC6;&#x8BF7;&#x89C1;&#x4E0B;&#x6587;&#x7684;&#x5BB9;&#x5668;&#x547D;&#x4EE4;&#xFF09;
+docker&#x4E2D; run &#x547D;&#x4EE4;&#x662F;&#x5341;&#x5206;&#x590D;&#x6742;&#x7684; &#x6709;&#x4EC0;&#x4E48;&#x6301;&#x4E45;&#x8FD0;&#x884C; &#x6620;&#x5C04;&#x7AEF;&#x53E3; &#x8BBE;&#x7F6E;&#x5BB9;&#x5668;&#x522B;&#x540D; &#x6570;&#x636E;&#x5377;&#x6302;&#x8F7D;&#x7B49;</p>
+<h3 id="&#x5220;&#x9664;&#x955C;&#x50CF;"><a name="&#x5220;&#x9664;&#x955C;&#x50CF;" class="anchor-navigation-ex-anchor" href="#&#x5220;&#x9664;&#x955C;&#x50CF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5220;&#x9664;&#x955C;&#x50CF;</h3>
+<p>&#x5F53;&#x524D;&#x955C;&#x50CF;&#x6CA1;&#x6709;&#x88AB;&#x4EFB;&#x4F55;&#x5BB9;&#x5668;&#x4F7F;&#x7528;&#x624D;&#x53EF;&#x4EE5;&#x5220;&#x9664;</p>
+<pre><code class="lang-shell">#&#x5220;&#x9664;&#x4E00;&#x4E2A;
+docker rmi -f &#x955C;&#x50CF;&#x540D;/&#x955C;&#x50CF;ID
+#&#x5220;&#x9664;&#x591A;&#x4E2A; &#x5176;&#x955C;&#x50CF;ID&#x6216;&#x955C;&#x50CF;&#x7528;&#x7528;&#x7A7A;&#x683C;&#x9694;&#x5F00;&#x5373;&#x53EF; 
+docker rmi -f &#x955C;&#x50CF;&#x540D;/&#x955C;&#x50CF;ID &#x955C;&#x50CF;&#x540D;/&#x955C;&#x50CF;ID &#x955C;&#x50CF;&#x540D;/&#x955C;&#x50CF;ID
+#&#x5220;&#x9664;&#x5168;&#x90E8;&#x955C;&#x50CF;  -a &#x610F;&#x601D;&#x4E3A;&#x663E;&#x793A;&#x5168;&#x90E8;, -q &#x610F;&#x601D;&#x4E3A;&#x53EA;&#x663E;&#x793A;ID
+docker rmi -f $(docker images -aq)
+</code></pre>
+<h3 id="&#x5F3A;&#x5236;&#x5220;&#x9664;&#x955C;&#x50CF;"><a name="&#x5F3A;&#x5236;&#x5220;&#x9664;&#x955C;&#x50CF;" class="anchor-navigation-ex-anchor" href="#&#x5F3A;&#x5236;&#x5220;&#x9664;&#x955C;&#x50CF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5F3A;&#x5236;&#x5220;&#x9664;&#x955C;&#x50CF;</h3>
+<pre><code class="lang-shell">docker image rm &#x955C;&#x50CF;&#x540D;&#x79F0;/&#x955C;&#x50CF;ID
+</code></pre>
+<h3 id="&#x4FDD;&#x5B58;&#x955C;&#x50CF;"><a name="&#x4FDD;&#x5B58;&#x955C;&#x50CF;" class="anchor-navigation-ex-anchor" href="#&#x4FDD;&#x5B58;&#x955C;&#x50CF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4FDD;&#x5B58;&#x955C;&#x50CF;</h3>
+<p>&#x5C06;&#x955C;&#x50CF;&#x4FDD;&#x5B58;&#x4E3A;tar&#x538B;&#x7F29;&#x6587;&#x4EF6;&#x8FD9;&#x6837;&#x65B9;&#x4FBF;&#x955C;&#x50CF;&#x8F6C;&#x79FB;&#x548C;&#x4FDD;&#x5B58; ,&#x7136;&#x540E;&#x53EF;&#x4EE5;&#x5728;&#x4EFB;&#x4F55;&#x4E00;&#x53F0;&#x5B89;&#x88C5;&#x4E86;docker&#x7684;&#x670D;&#x52A1;&#x5668;&#x4E0A; &#x52A0;&#x8F7D;&#x8FD9;&#x4E2A;&#x955C;&#x50CF;</p>
+<pre><code class="lang-shell">docker save &#x955C;&#x50CF;&#x540D;/&#x955C;&#x50CF;ID -o &#x955C;&#x50CF;&#x4FDD;&#x5B58;&#x5728;&#x54EA;&#x4E2A;&#x4F4D;&#x7F6E;&#x4E0E;&#x540D;&#x5B57;
+</code></pre>
+<h4 id="exmaple"><a name="exmaple" class="anchor-navigation-ex-anchor" href="#exmaple"><i class="fa fa-link" aria-hidden="true"></i></a>exmaple:</h4>
+<pre><code class="lang-shell">docker save tomcat -o /myimg.tar
+</code></pre>
+<h3 id="&#x52A0;&#x8F7D;&#x955C;&#x50CF;"><a name="&#x52A0;&#x8F7D;&#x955C;&#x50CF;" class="anchor-navigation-ex-anchor" href="#&#x52A0;&#x8F7D;&#x955C;&#x50CF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x52A0;&#x8F7D;&#x955C;&#x50CF;</h3>
+<p>&#x4EFB;&#x4F55;&#x88C5; docker &#x7684;&#x5730;&#x65B9;&#x52A0;&#x8F7D;&#x955C;&#x50CF;&#x4FDD;&#x5B58;&#x6587;&#x4EF6;,&#x4F7F;&#x5176;&#x6062;&#x590D;&#x4E3A;&#x4E00;&#x4E2A;&#x955C;&#x50CF;</p>
+<pre><code class="lang-shell">docker load -i &#x955C;&#x50CF;&#x4FDD;&#x5B58;&#x6587;&#x4EF6;&#x4F4D;&#x7F6E;
+</code></pre>
+<h2 id="&#x5BB9;&#x5668;&#x547D;&#x4EE4;"><a name="&#x5BB9;&#x5668;&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#&#x5BB9;&#x5668;&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5BB9;&#x5668;&#x547D;&#x4EE4;</h2>
+<p>docker&#x5BB9;&#x5668;&#x5C31;&#x597D;&#x6BD4;java&#x4E2D;&#x7684;new&#x51FA;&#x6765;&#x5BF9;&#x8C61;&#xFF08;docker run &#x955C;&#x50CF;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x8BE5;&#x955C;&#x50CF;&#x5177;&#x4F53;&#x5BB9;&#x5668;&#x5B9E;&#x4F8B;&#xFF09;,docker &#x5BB9;&#x5668;&#x7684;&#x542F;&#x52A8;&#x9700;&#x8981;&#x955C;&#x50CF;&#x7684;&#x652F;&#x6301;</p>
+<h3 id="&#x67E5;&#x770B;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x5BB9;&#x5668;&#x5217;&#x8868;"><a name="&#x67E5;&#x770B;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x5BB9;&#x5668;&#x5217;&#x8868;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x770B;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x5BB9;&#x5668;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x770B;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x5BB9;&#x5668;&#x5217;&#x8868;</h3>
+<pre><code class="lang-shell">docker ps
+</code></pre>
+<h3 id="&#x67E5;&#x770B;&#x6240;&#x6709;&#x5BB9;&#x5668;"><a name="&#x67E5;&#x770B;&#x6240;&#x6709;&#x5BB9;&#x5668;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x770B;&#x6240;&#x6709;&#x5BB9;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x770B;&#x6240;&#x6709;&#x5BB9;&#x5668;</h3>
+<p>&#x5305;&#x542B;&#x6B63;&#x5728;&#x8FD0;&#x884C; &#x548C;&#x5DF2;&#x505C;&#x6B62;&#x7684;</p>
+<pre><code class="lang-shell">docker ps -a
+</code></pre>
+<h3 id="&#x5BB9;&#x5668;&#x7AEF;&#x53E3;&#x4E0E;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x53E3;&#x6620;&#x5C04;"><a name="&#x5BB9;&#x5668;&#x7AEF;&#x53E3;&#x4E0E;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x53E3;&#x6620;&#x5C04;" class="anchor-navigation-ex-anchor" href="#&#x5BB9;&#x5668;&#x7AEF;&#x53E3;&#x4E0E;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x53E3;&#x6620;&#x5C04;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5BB9;&#x5668;&#x7AEF;&#x53E3;&#x4E0E;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x53E3;&#x6620;&#x5C04;</h3>
+<pre><code class="lang-shell">-p &#x5BBF;&#x4E3B;&#x673A;&#x7AEF;&#x53E3;:&#x5BB9;&#x5668;&#x7AEF;&#x53E3;
+docker run -itd --name redis002 -p 8888:6379 redis:5.0.5 /bin/bash
+</code></pre>
+<h3 id="&#x8FDB;&#x5165;&#x5BB9;&#x5668;"><a name="&#x8FDB;&#x5165;&#x5BB9;&#x5668;" class="anchor-navigation-ex-anchor" href="#&#x8FDB;&#x5165;&#x5BB9;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FDB;&#x5165;&#x5BB9;&#x5668;</h3>
+<pre><code class="lang-shell">docker exec -it &#x5BB9;&#x5668;&#x540D;/&#x5BB9;&#x5668;ID /bin/bash
+docker exec -it redis /bin/bash
+docker attach &#x5BB9;&#x5668;&#x540D;/&#x5BB9;&#x5668;ID
+</code></pre>
+<h3 id="&#x9000;&#x51FA;&#x5BB9;&#x5668;"><a name="&#x9000;&#x51FA;&#x5BB9;&#x5668;" class="anchor-navigation-ex-anchor" href="#&#x9000;&#x51FA;&#x5BB9;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9000;&#x51FA;&#x5BB9;&#x5668;</h3>
+<pre><code class="lang-shell">#-----&#x76F4;&#x63A5;&#x9000;&#x51FA;  &#x672A;&#x6DFB;&#x52A0; -d(&#x6301;&#x4E45;&#x5316;&#x8FD0;&#x884C;&#x5BB9;&#x5668;) &#x65F6; &#x6267;&#x884C;&#x6B64;&#x53C2;&#x6570; &#x5BB9;&#x5668;&#x4F1A;&#x88AB;&#x5173;&#x95ED;  
+exit
+# &#x4F18;&#x96C5;&#x63D0;&#x51FA; --- &#x65E0;&#x8BBA;&#x662F;&#x5426;&#x6DFB;&#x52A0;-d &#x53C2;&#x6570; &#x6267;&#x884C;&#x6B64;&#x547D;&#x4EE4;&#x5BB9;&#x5668;&#x90FD;&#x4E0D;&#x4F1A;&#x88AB;&#x5173;&#x95ED;
+Ctrl + p + q
+</code></pre>
+<h3 id="&#x505C;&#x6B62;&#x5BB9;&#x5668;"><a name="&#x505C;&#x6B62;&#x5BB9;&#x5668;" class="anchor-navigation-ex-anchor" href="#&#x505C;&#x6B62;&#x5BB9;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x505C;&#x6B62;&#x5BB9;&#x5668;</h3>
+<pre><code class="lang-shell">docker stop &#x5BB9;&#x5668;ID/&#x5BB9;&#x5668;&#x540D;
+</code></pre>
+<h3 id="&#x91CD;&#x542F;&#x5BB9;&#x5668;"><a name="&#x91CD;&#x542F;&#x5BB9;&#x5668;" class="anchor-navigation-ex-anchor" href="#&#x91CD;&#x542F;&#x5BB9;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x91CD;&#x542F;&#x5BB9;&#x5668;</h3>
+<pre><code class="lang-shell">docker restart &#x5BB9;&#x5668;ID/&#x5BB9;&#x5668;&#x540D;
+</code></pre>
+<h3 id="&#x542F;&#x52A8;&#x5BB9;&#x5668;"><a name="&#x542F;&#x52A8;&#x5BB9;&#x5668;" class="anchor-navigation-ex-anchor" href="#&#x542F;&#x52A8;&#x5BB9;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x542F;&#x52A8;&#x5BB9;&#x5668;</h3>
+<pre><code class="lang-shell">docker start &#x5BB9;&#x5668;ID/&#x5BB9;&#x5668;&#x540D;
+</code></pre>
+<h3 id="kill&#x5BB9;&#x5668;"><a name="kill&#x5BB9;&#x5668;" class="anchor-navigation-ex-anchor" href="#kill&#x5BB9;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>kill&#x5BB9;&#x5668;</h3>
+<pre><code class="lang-shell">docker kill &#x5BB9;&#x5668;ID/&#x5BB9;&#x5668;&#x540D;
+</code></pre>
+<h3 id="&#x5BB9;&#x5668;&#x6587;&#x4EF6;&#x62F7;&#x8D1D;"><a name="&#x5BB9;&#x5668;&#x6587;&#x4EF6;&#x62F7;&#x8D1D;" class="anchor-navigation-ex-anchor" href="#&#x5BB9;&#x5668;&#x6587;&#x4EF6;&#x62F7;&#x8D1D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5BB9;&#x5668;&#x6587;&#x4EF6;&#x62F7;&#x8D1D;</h3>
+<p>&#x65E0;&#x8BBA;&#x5BB9;&#x5668;&#x662F;&#x5426;&#x5F00;&#x542F; &#x90FD;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x62F7;&#x8D1D;</p>
+<pre><code class="lang-shell">#docker cp &#x5BB9;&#x5668;ID/&#x540D;&#x79F0;:&#x6587;&#x4EF6;&#x8DEF;&#x5F84;  &#x8981;&#x62F7;&#x8D1D;&#x5230;&#x5916;&#x90E8;&#x7684;&#x8DEF;&#x5F84;   |     &#x8981;&#x62F7;&#x8D1D;&#x5230;&#x5916;&#x90E8;&#x7684;&#x8DEF;&#x5F84;  &#x5BB9;&#x5668;ID/&#x540D;&#x79F0;:&#x6587;&#x4EF6;&#x8DEF;&#x5F84;
+#&#x4ECE;&#x5BB9;&#x5668;&#x5185; &#x62F7;&#x51FA;
+docker cp &#x5BB9;&#x5668;ID/&#x540D;&#x79F0;: &#x5BB9;&#x5668;&#x5185;&#x8DEF;&#x5F84;  &#x5BB9;&#x5668;&#x5916;&#x8DEF;&#x5F84;
+#&#x4ECE;&#x5916;&#x90E8; &#x62F7;&#x8D1D;&#x6587;&#x4EF6;&#x5230;&#x5BB9;&#x5668;&#x5185;
+docker  cp &#x5BB9;&#x5668;&#x5916;&#x8DEF;&#x5F84; &#x5BB9;&#x5668;ID/&#x540D;&#x79F0;: &#x5BB9;&#x5668;&#x5185;&#x8DEF;&#x5F84;
+</code></pre>
+<h3 id="&#x67E5;&#x770B;&#x5BB9;&#x5668;&#x65E5;&#x5FD7;"><a name="&#x67E5;&#x770B;&#x5BB9;&#x5668;&#x65E5;&#x5FD7;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x770B;&#x5BB9;&#x5668;&#x65E5;&#x5FD7;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x770B;&#x5BB9;&#x5668;&#x65E5;&#x5FD7;</h3>
+<pre><code class="lang-shell">docker logs -f --tail=&#x8981;&#x67E5;&#x770B;&#x672B;&#x5C3E;&#x591A;&#x5C11;&#x884C; &#x9ED8;&#x8BA4;all &#x5BB9;&#x5668;ID
+</code></pre>
+<h3 id="&#x5BB9;&#x5668;&#x81EA;&#x542F;"><a name="&#x5BB9;&#x5668;&#x81EA;&#x542F;" class="anchor-navigation-ex-anchor" href="#&#x5BB9;&#x5668;&#x81EA;&#x542F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5BB9;&#x5668;&#x81EA;&#x542F;</h3>
+<p>&#x542F;&#x52A8;&#x5BB9;&#x5668;&#x65F6;&#xFF0C;&#x4F7F;&#x7528;docker run&#x547D;&#x4EE4;&#x65F6; &#x6DFB;&#x52A0;&#x53C2;&#x6570;--restart=always&#x4FBF;&#x8868;&#x793A;&#xFF0C;&#x8BE5;&#x5BB9;&#x5668;&#x968F;docker&#x670D;&#x52A1;&#x542F;&#x52A8;&#x800C;&#x81EA;&#x52A8;&#x542F;&#x52A8;</p>
+<pre><code class="lang-shell">docker run -itd --name redis002 -p 8888:6379 --restart=always  redis:5.0.5 /bin/bash
+</code></pre>
+<h3 id="&#x6570;&#x636E;&#x6302;&#x8F7D;"><a name="&#x6570;&#x636E;&#x6302;&#x8F7D;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x636E;&#x6302;&#x8F7D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x636E;&#x6302;&#x8F7D;</h3>
+<pre><code class="lang-shell">-v &#x5BBF;&#x4E3B;&#x673A;&#x6587;&#x4EF6;&#x5B58;&#x50A8;&#x4F4D;&#x7F6E;:&#x5BB9;&#x5668;&#x5185;&#x6587;&#x4EF6;&#x4F4D;&#x7F6E;
+-v &#x5BBF;&#x4E3B;&#x673A;&#x6587;&#x4EF6;&#x5B58;&#x50A8;&#x4F4D;&#x7F6E;:&#x5BB9;&#x5668;&#x5185;&#x6587;&#x4EF6;&#x4F4D;&#x7F6E; -v &#x5BBF;&#x4E3B;&#x673A;&#x6587;&#x4EF6;&#x5B58;&#x50A8;&#x4F4D;&#x7F6E;:&#x5BB9;&#x5668;&#x5185;&#x6587;&#x4EF6;&#x4F4D;&#x7F6E; -v &#x5BBF;&#x4E3B;&#x673A;&#x6587;&#x4EF6;&#x5B58;&#x50A8;&#x4F4D;&#x7F6E;:&#x5BB9;&#x5668;&#x5185;&#x6587;&#x4EF6;&#x4F4D;&#x7F6E;
+</code></pre>
+<h2 id="&#x8FD0;&#x7EF4;&#x547D;&#x4EE4;"><a name="&#x8FD0;&#x7EF4;&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#&#x8FD0;&#x7EF4;&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD0;&#x7EF4;&#x547D;&#x4EE4;</h2>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Docker">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../../操作系统/" class="navigation navigation-next " aria-label="Next page: 操作系统">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Docker常用命令","level":"1.2.9.1","depth":3,"next":{"title":"操作系统","level":"1.3","depth":1,"path":"操作系统/README.md","ref":"操作系统/README.md","articles":[{"title":"IOS","level":"1.3.1","depth":2,"path":"操作系统/IOS/README.md","ref":"操作系统/IOS/README.md","articles":[{"title":"IOS模拟器命令xcrun_simctl系列","level":"1.3.1.1","depth":3,"path":"操作系统/IOS/IOS模拟器命令xcrun_simctl系列.md","ref":"操作系统/IOS/IOS模拟器命令xcrun_simctl系列.md","articles":[]}]},{"title":"Android","level":"1.3.2","depth":2,"path":"操作系统/Android/README.md","ref":"操作系统/Android/README.md","articles":[{"title":"Android性能问题分析神器Systrace","level":"1.3.2.1","depth":3,"path":"操作系统/Android/Android性能问题分析神器Systrace.md","ref":"操作系统/Android/Android性能问题分析神器Systrace.md","articles":[]}]},{"title":"Windows","level":"1.3.3","depth":2,"path":"操作系统/Windows/README.md","ref":"操作系统/Windows/README.md","articles":[{"title":"Windows系统下TCP参数优化","level":"1.3.3.1","depth":3,"path":"操作系统/Windows/Windows系统下TCP参数优化.md","ref":"操作系统/Windows/Windows系统下TCP参数优化.md","articles":[]},{"title":"Windows通过ssh连接远程服务器","level":"1.3.3.2","depth":3,"path":"操作系统/Windows/Windows通过ssh连接远程服务器.md","ref":"操作系统/Windows/Windows通过ssh连接远程服务器.md","articles":[]},{"title":"Windows中bat脚本延时执行","level":"1.3.3.3","depth":3,"path":"操作系统/Windows/Windows中bat脚本延时执行.md","ref":"操作系统/Windows/Windows中bat脚本延时执行.md","articles":[]}]},{"title":"Linux","level":"1.3.4","depth":2,"path":"操作系统/Linux/README.md","ref":"操作系统/Linux/README.md","articles":[{"title":"Linux使用SSH首次登陆无需确认","level":"1.3.4.1","depth":3,"path":"操作系统/Linux/Linux使用SSH首次登陆无需确认.md","ref":"操作系统/Linux/Linux使用SSH首次登陆无需确认.md","articles":[]},{"title":"SSH常用命令","level":"1.3.4.2","depth":3,"path":"操作系统/Linux/SSH常用命令.md","ref":"操作系统/Linux/SSH常用命令.md","articles":[]},{"title":"Linux中最常用的一套Sed技巧","level":"1.3.4.3","depth":3,"path":"操作系统/Linux/Linux中最常用的一套Sed技巧.md","ref":"操作系统/Linux/Linux中最常用的一套Sed技巧.md","articles":[]},{"title":"Linux中sed命令完全攻略","level":"1.3.4.4","depth":3,"path":"操作系统/Linux/Linux中sed命令完全攻略.md","ref":"操作系统/Linux/Linux中sed命令完全攻略.md","articles":[]},{"title":"CPULoad指标理解","level":"1.3.4.5","depth":3,"path":"操作系统/Linux/CPULoad指标理解.md","ref":"操作系统/Linux/CPULoad指标理解.md","articles":[]},{"title":"Linux执行shell脚本报语法错误","level":"1.3.4.6","depth":3,"path":"操作系统/Linux/Linux执行Shell脚本报语法错误.md","ref":"操作系统/Linux/Linux执行Shell脚本报语法错误.md","articles":[]},{"title":"Linux故障排查","level":"1.3.4.7","depth":3,"path":"操作系统/Linux/Linux故障排查.md","ref":"操作系统/Linux/Linux故障排查.md","articles":[]},{"title":"深入理解Linux的IO系统","level":"1.3.4.8","depth":3,"path":"操作系统/Linux/深入理解Linux的IO系统.md","ref":"操作系统/Linux/深入理解Linux的IO系统.md","articles":[]}]},{"title":"AIX","level":"1.3.5","depth":2,"path":"操作系统/AIX/README.md","ref":"操作系统/AIX/README.md","articles":[]},{"title":"AS400","level":"1.3.6","depth":2,"path":"操作系统/AS400/README.md","ref":"操作系统/AS400/README.md","articles":[{"title":"AS400常用命令","level":"1.3.6.1","depth":3,"path":"操作系统/AS400/AS400常用命令.md","ref":"操作系统/AS400/AS400常用命令.md","articles":[]}]}]},"previous":{"title":"Docker","level":"1.2.9","depth":2,"path":"工具/Docker/README.md","ref":"工具/Docker/README.md","articles":[{"title":"Docker常用命令","level":"1.2.9.1","depth":3,"path":"工具/Docker/Docker常用命令.md","ref":"工具/Docker/Docker常用命令.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-small","chapter-fold","code","-lunr","-search","search-pro","emphasize","splitter","ancre-navigation","-sharing","sharing-plus","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"emphasize":{},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ancre-navigation":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":false,"facebook":false,"weibo":true,"twitter":false,"pocket":false,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Roboytim","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"KnowledgeLib","language":"zh-hans","links":{"sidebar":{"主页":"https://github.com/mike0564/KnowledgeLib","Github源码":"https://github.com/mike0564/KnowledgeLib"}},"gitbook":"3.2.3","description":"对平时遇到的一些问题、知识进行记录总结"},"file":{"path":"工具/Docker/Docker常用命令.md","mtime":"2022-02-10T11:59:59.047Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-10T12:36:12.105Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
