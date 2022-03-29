@@ -361,6 +361,16 @@ docker run -itd --name redis002 -p 8888:6379 --restart=always  redis:5.0.5 /bin/
 -v 宿主机文件存储位置:容器内文件位置 -v 宿主机文件存储位置:容器内文件位置 -v 宿主机文件存储位置:容器内文件位置
 
 ```
-
-## 运维命令
-
+### 容器进程
+```shell
+##top支持 ps 命令参数，格式：docker top [OPTIONS] CONTAINER [ps OPTIONS]
+##列出redis容器中运行进程
+docker top redis
+##查看所有运行容器的进程信息
+for i in  `docker ps |grep Up|awk '{print $1}'`;do echo \ &&docker top $i; done
+```
+### 生成镜像
+```shell
+##基于当前redis容器创建一个新的镜像；参数：-a 提交的镜像作者；-c 使用Dockerfile指令来创建镜像；-m :提交时的说明文字；-p :在commit时，将容器暂停
+docker commit -a="DeepInThought" -m="my redis" [redis容器ID]  myredis:v1.1
+```
