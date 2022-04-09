@@ -153,6 +153,8 @@
     * [Redis](数据库/Redis/README.md)
         * [Redis监控以及指标](数据库/Redis/Redis监控以及指标.md)
 * [应用](应用/README.md)
+    * [MQ](应用/MQ/README.md)
+        * [RabbitMQ如何保证全链路中数据不丢失](应用/MQ/RabbitMQ如何保证全链路中数据不丢失.md)
     * [Nginx](应用/Nginx/README.md)
         * [Nginx配置参数中文说明](应用/Nginx/Nginx配置参数中文说明.md)
     * [Kafka](应用/Kafka/README.md)
