@@ -147,6 +147,7 @@
         * [MySql慢查询优化](数据库/Mysql/MySql慢查询优化.md)
         * [Mysql与Hbase对比](数据库/Mysql/Mysql与Hbase对比.md)
         * [Mysql实现读写分离](数据库/Mysql/Mysql实现读写分离.md)
+        * [Mysql中的explain](数据库/Mysql/Mysql中的explain.md)
     * [DB2](数据库/DB2/README.md)
         * [DB2高危操作LOAD命令风险详解](数据库/DB2/DB2高危操作LOAD命令风险详解.md)
     * [Informix](数据库/Informix/README.md)
