@@ -61,6 +61,7 @@
         * [常见内网穿透工具](工具/Other/常见内网穿透工具.md)
     * [Docker](工具/Docker/README.md)
         * [Docker常用命令](工具/Docker/Docker常用命令.md)
+        * [kubectl详细介绍](工具/Docker/kubectl详细介绍.md)
 * [操作系统](操作系统/README.md)
     * [IOS](操作系统/IOS/README.md)
         * [IOS模拟器命令xcrun_simctl系列](操作系统/IOS/IOS模拟器命令xcrun_simctl系列.md)
