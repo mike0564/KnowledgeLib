@@ -157,6 +157,7 @@
     * [Informix](数据库/Informix/README.md)
     * [Redis](数据库/Redis/README.md)
         * [Redis监控以及指标](数据库/Redis/Redis监控以及指标.md)
+        * [Redis集群常用命令](数据库/Redis/Redis集群常用命令.md)
 * [应用](应用/README.md)
     * [MQ](应用/MQ/README.md)
         * [RabbitMQ如何保证全链路中数据不丢失](应用/MQ/RabbitMQ如何保证全链路中数据不丢失.md)
